@@ -1,0 +1,50 @@
+import Head from 'next/head';
+import { ThemeProvider } from 'emotion-theming';
+import { Global } from '@emotion/core';
+import styled from '@emotion/styled';
+import { css } from '@styled-system/css';
+import { pasteBaseStyles } from '@twilio-paste/theme';
+import { Box } from '@twilio-paste/core';
+import { PortfolioTheme } from '../theme';
+import { ComponentProvider } from '../components/component-provider';
+const StyledBase = styled(Box)(pasteBaseStyles);
+const globalStyles = (props) =>
+  css({
+    html: {
+      fontSize: '100%',
+    },
+    body: {
+      margin: 0,
+      fontSize: 'fontSize30',
+    },
+  })(props);
+const App = ({ Component, pageProps }) => (
+  <>
+    <Head>
+      <title>aayush.fyi</title>
+      <link
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>:nerd_face:</text></svg>"
+        rel="icon"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+        rel="stylesheet"
+      />
+    </Head>
+    <ComponentProvider>
+      <ThemeProvider theme={PortfolioTheme}>
+        <Global styles={globalStyles({ theme: PortfolioTheme })} />
+        <StyledBase
+          as="main"
+          marginLeft={['space50', 'space50', 'auto']}
+          marginRight={['space50', 'space50', 'auto']}
+          marginTop={['space30', 'space30', 'space170']}
+          maxWidth="size80"
+        >
+          <Component {...pageProps} />
+        </StyledBase>
+      </ThemeProvider>
+    </ComponentProvider>
+  </>
+);
+export default App;
