@@ -1,7 +1,7 @@
 import { DefaultTheme } from '@twilio-paste/theme';
 export const PortfolioTheme = {
   ...DefaultTheme,
-  fonts: { fontFamilyText: '"Poppins", sans-serif' },
+  fonts: { fontFamilyText: '"Inter", sans-serif' },
   fontSizes: {
     fontSize10: '14px',
     fontSize20: '16px',
@@ -15,6 +15,21 @@ export const PortfolioTheme = {
     fontSize100: '48px',
     fontSize110: '72px',
   },
+  fontWeights:{
+    fontWeightBold: `756`
+  },
+  colors:{
+    colorBackgroundBrand: `#2c3e50`,
+    colorBackgroundBrandHighlight: `#F03838`,
+    colorTextLink: `#FCE2E0`
+  },
+  backgroundColors:{
+    colorBackgroundBrand: `#2c3e50`,
+    colorBackgroundBrandHighlight: `#F03838`
+  },
+  textColors:{
+    colorText: `#FCE2E0`,
+  }, 
   lineHeights: {
     lineHeight0: '0',
     lineHeight10: '24px',

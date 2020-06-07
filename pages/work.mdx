@@ -1,0 +1,33 @@
+---
+title: Work Portfolio
+date: '2020-05-29'
+---
+import Link from 'next/link'
+
+import { 
+    Grid,
+    Column,
+    Card,
+    Heading,
+    Paragraph,
+    Anchor,
+    Alert,
+    Stack
+    } from '@twilio-paste/core'
+
+<Grid>
+  <Column span={6} offset={1}>
+    <Heading as="h1" variant="heading10">Aayush&rsquo;s Work</Heading>
+    <Paragraph>Before we go too deep, say it with me: you are not your work. Your best work is yet to come. Don&rsquo;t let it ever validate or invalidate you.</Paragraph>
+    <Box backgroundColor="colorText">
+      <Stack orientation="horizontal" spacing="space60">
+        <Link href="/" passHref> 
+          <Anchor>← Home</Anchor>
+        </Link>
+        <Anchor>Writing</Anchor>        
+      </Stack>
+    </Box>
+  </Column>
+</Grid>
+
+

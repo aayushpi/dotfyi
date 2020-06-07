@@ -1,10 +1,8 @@
 ---
 title: aayush.fyi
 date: '2020-05-29'
-layout: post
 ---
 import Link from 'next/link'
-
 import { 
     Grid,
     Column,
@@ -12,23 +10,72 @@ import {
     Heading,
     Paragraph,
     Button,
-    Anchor
+    Anchor,
+    OrderedList, 
+    UnorderedList, 
+    ListItem,
+    Stack,
+    Text,
+    Separator,
+    Box,
+    Menu, 
+    MenuButton, 
+    MenuItem, 
+    useMenuState
     } from '@twilio-paste/core'
 
 <Grid>
-  <Column>
-    <Heading as="h1" variant="heading10">Aayush designs and prototypes to find a better way.</Heading>
-  </Column>
-  <Column>
-    <Paragraph> phone number in the inventory passes a rigorous 60-day screening process to verify capabilities and test for unwanted call traffic.</Paragraph>
+  <Column span={6} offset={2}>
+    <Heading as="h1" variant="heading10">I&rsquo;m Aayush Iyer. I work on building better products through design, and better design through systems.</Heading>
+    <Box backgroundColor="colorText">
+      <Stack orientation="horizontal" spacing="space60">
+        {/* <Link href="/about" passHref> 
+          <Anchor>About</Anchor>
+        </Link> */}
+        <Anchor>Work</Anchor>
+        <Link href="//twitter.com/aayush" passHref> 
+          <Anchor>Twitter</Anchor>
+        </Link>
+        <Anchor>Writing</Anchor>        
+      </Stack>
+    </Box>
   </Column>
 </Grid>
+<Box marginTop="space100">
+  <Grid gutter="space40">
+    <Column span={4} offset={2}>
+      <Heading as="h2" variant="heading20">Work Highlights</Heading>
+      <Heading as="h3" variant="heading40">Design at Twilio</Heading>
+      <Paragraph>I joined Twilio as their third Product Designer. Presently, I manage the Design Systems team, and am part of UX Leadership. My focus at Twilio has been on resilient UI engineering, and widening the spectrum of who gets to build and communicate with technology.</Paragraph>
+      <UnorderedList>
+        <ListItem>Paste: Twilio&rsquo;s design system</ListItem>
+        <ListItem>Studio: A drag &amp; drop coding tool</ListItem>
+        <ListItem>Autopilot: A low code bot builder</ListItem>
+      </UnorderedList>
+      <Paragraph>I&rsquo;m Aayush Iyer. I work on building better products through design, and better design through systems.</Paragraph>
+      <Paragraph>I&rsquo;m Aayush Iyer. I work on building better products through design, and better design through systems.</Paragraph>
+      <Heading as="h3" variant="heading40">Other work</Heading>
+      <Paragraph>The 17 years since my first job as a journalist, have shaped my approach towards building things. Along the way I&rsquo;ve built hardware jukeboxes, award-winning digital campaigns, and a whole host of really terrible software - they all inform where I got to and where I&rsquo;m going.</Paragraph>
+      <Link href="/work" passHref> 
+        <Anchor>All Work</Anchor>
+      </Link>
+    </Column>
+    <Column span={4}>
+      <Heading as="h2" variant="heading20">Recent Writing</Heading>
+      <Box as="div"
+        borderWidth="borderWidth10"
+        borderColor="colorBorderDark"
+        borderStyle="solid"
+        padding="space50"
+        marginBottom="space50"
+      >
+        <Text as="p">This space is intentionally left blank</Text>
+      </Box>
+      <Anchor>All Writing</Anchor>   
+    </Column>
+  </Grid>
+</Box>
+  
 
-<Link href="/posts/test" passHref> 
-    <Anchor>First Post</Anchor>
-</Link>
-Look, a button! 👇
+<!-- [asas](/posts/test) -->
 
-[asas](/posts/test)
-
-<Button>👋 Hello</Button>

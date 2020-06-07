@@ -1,0 +1,42 @@
+---
+title: aayush.fyi
+date: '2020-05-29'
+---
+import Link from 'next/link'
+
+import { 
+    Grid,
+    Column,
+    Card,
+    Heading,
+    Paragraph,
+    Button,
+    Anchor,
+    List,
+    Stack
+    } from '@twilio-paste/core'
+
+<Grid>
+  <Column span={3} offset={1}>
+    <Heading as="h1" variant="heading10">I&rsquo;m Aayush. <br />I design for a better way.</Heading>
+    <Box>
+      <Stack orientation="horizontal" spacing="space50">
+        <Link href="/about" passHref> 
+          <Anchor>About</Anchor>
+        </Link>
+        <Anchor>Work</Anchor>
+        <Anchor>Twitter</Anchor>
+      </Stack>
+    </Box>
+  </Column>
+  <Column>
+  
+  I’m working at Twilio on building better products through design, and better design through systems.
+
+  I care about helping people be their best selves, and being an ally to marginalized voices.I live in Oakland, CA with my two dogs: Thrace &amp; Tribbles.
+
+  In an act of extreme dogfooding, this website is built using <Link href="//paste.twilio.design" passHref><Anchor>Paste</Anchor></Link>. 
+  </Column>
+</Grid>
+
+
