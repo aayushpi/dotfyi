@@ -21,13 +21,13 @@ export const PortfolioTheme = {
   },
   colors:{
     colorBackgroundBrand: `#fce2e0`,
-    colorBackgroundBrandHighlight: `#F03838`,
     colorTextLink: `#2c3e50`
   },
-  // backgroundColors:{
-  //   colorBackgroundBrand: `#2c3e50`,
-  //   colorBackgroundBrandHighlight: `#F03838`
-  // },
+  // What is going on here?
+  backgroundColors:{
+    colorBackgroundBrandHighlight: `#F98585`,
+    colorBackgroundBody: `#FFFFFF`
+  },
   textColors:{
     colorText: `#2c3e50`,
   }, 
