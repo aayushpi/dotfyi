@@ -1,0 +1,105 @@
+---
+title: piq
+date: '2020-06-07'
+---
+import Link from 'next/link'
+
+import { 
+    Grid,
+    Column,
+    Card,
+    Heading,
+    Paragraph,
+    Anchor,
+    Alert,
+    Separator,
+    Stack,
+    ScreenReaderOnly,
+    Box,
+    Text,
+    AspectRatio
+    } from '@twilio-paste/core'
+
+<Grid gutter="space40">
+  <Column span={6} offset={1}>
+      <Box>
+      <Stack orientation="horizontal" spacing="space30">
+        <Link href="/" passHref> 
+          <Anchor><ScreenReaderOnly>Back to</ScreenReaderOnly> Home</Anchor>
+        </Link>
+        <Text as="span">/</Text>
+        <Link href="/work" passHref> 
+          <Anchor><ScreenReaderOnly>Back to</ScreenReaderOnly> Work</Anchor>
+        </Link>
+        <Text as="span">/</Text>
+      </Stack>
+    </Box>
+    <Heading as="h1" variant="heading10">piq: a jukebox for social spaces</Heading>
+  </Column>
+</Grid>
+<Grid>
+  <Column span={8} offset={1}>
+  <Alert variant="warning"><Text as="span"><strong>Archive content from 2011.</strong> Some of this content makes me cringe. However, it got me here so I'm leaving it for posterity.</Text></Alert>
+  <Paragraph>piq started as a project to improve the studio ambience of BDW - a graduate school in Boulder, Colorado. The very first prototype was built with a Raspberry PI and open-source software (the production version uses a specialized board and home-grown, organic and, gluten-free software.</Paragraph>
+      
+  <Paragraph>I designed and developed the original piq prototype in a sixteen-hour sprint that involved Caffeine, more Caffeine, jQuery Mobile, and a Raspberry PI. Once we decided to make a business out of it, I took on the role of CEO and focused on the Business Development, Visual Design and Marketing of piq. Of course, as is the case in any startup, you have to do everything. This is what I wrote, five weeks in:</Paragraph>
+
+  <Box>
+    <Separator orientation="horizontal" verticalSpacing="space50" />
+  </Box>
+
+  Three months ago, we committed to building piq: a social jukebox for homes and public spaces. My official title is CEO, but in a company with, at the time, one sale and five employees, it’s probably best to say that I try to do whatever’s most critical at this point. I’ve been exposed (possibly over-exposed), from the outside, to startup culture. The first four weeks have confirmed that’s its not as sexy from the inside, but a lot more gratifying (especially if you like pain). Here’s what I’ve learned:
+
+  <Box margin="space20">
+    <img src="/piq/prototypes.jpg" alt="piq prototypes" />
+  </Box>
+
+  Three months ago, we committed to building piq: a social jukebox for homes and public spaces. My official title is CEO, but in a company with, at the time, one sale and five employees, it’s probably best to say that I try to do whatever’s most critical at this point.
+
+  I’ve been exposed (possibly over-exposed), from the outside, to startup culture. The first four weeks have confirmed that’s its not as sexy from the inside, but a lot more gratifying (especially if you like pain). Here’s what I’ve learned:
+
+  ## Embrace Unfinished Work
+
+  Before piq, I worked in an advertising shop. And typical of most agencies, we always felt the need for polish: in presentations, early prototypes, final work: incomplete was unacceptable, and the term “beta” was frowned upon.
+
+  <Box margin="space20">
+    <img src="/piq/firstsale.jpg" alt="first sale" />
+  </Box>
+
+  Polish is comforting: you have the leisure to obsess over typefaces, get that exact gradient or convert your message into a haiku sized poem that inspires. The problem of course, is obvious: polish takes time. And couple this with the need for secrecy, the other great problem we faced, and you have the perfect storm: a product that’s in your head (or on paper, photoshop or code) and has been seen only by people around you that, for the most part, think alike.
+
+  Building a startup forces you to do exactly the opposite: our objective has always been about getting the product in the minds of people. And that means we don’t try to create the final vision of the interface (it started with plain-yet-effective jQuery Mobile), our first prototype was built out of the very same cardboard that the Raspberry Pi was shipped in, and there’s a clear mindset of “ship first, observe/ask later”.
+
+  This wasn’t easy. In fact, there’s nothing worse than seeing a potential customer wrestle with a clunky, or worse broken, interface element. The only thing that holds us back is the alternative: an endless Rabbit-hole where you’re only influenced by your own team and not the end customer.
+
+  <Box margin="space20">
+    <img src="/piq/prototypewithui.jpg" alt="first ui iteration" />
+  </Box>
+
+  But over time, it feels a lot better. We started taking comfort, and I daresay pride, in showing unfinished work: for one, it demonstrates your product at its very core, allowing people to react to the idea instead of say, your odd choice of Nimbus Sans Condensed for a paragraph. And then, there’s the momentum that prototyping creates: in a team with a tight deadline (taking a product from inception to production in three months), the pace of releases keeps us pushing.
+
+  David Ogilvy pioneered the idea of a “Divine Discontent” with one’s work: we like to be happy, but not satisfied. This allows us to be comfortable with the idea of work that’s perpetually incomplete, ever evolving.
+
+  ## Go Outside
+
+  piq’s customers are at home, in college, in coffee shops and offices, and at events. They’re certainly not at the studio we work out of. And obvious as that might sound, it takes a while to sink in. It also takes a lot more time, effort and conviction to step up to a random person on the street and make a connection about the product. But once you do it right, it’s the best kind of analytics: surveys don’t come close, pure data analytics can’t give you similar empathy, ever.
+
+  Many life lessons learned already.
+
+  <Box>
+    <Separator orientation="horizontal" verticalSpacing="space50" />
+  </Box>
+  <Box marginBottom="space50">
+      <Stack orientation="horizontal" spacing="space30">
+        <Link href="/" passHref> 
+          <Anchor><ScreenReaderOnly>Back to</ScreenReaderOnly> Home</Anchor>
+        </Link>
+        <Text as="span">/</Text>
+        <Link href="/work" passHref> 
+          <Anchor><ScreenReaderOnly>Back to</ScreenReaderOnly> Work</Anchor>
+        </Link>
+        <Text as="span">/</Text>
+      </Stack>
+    </Box>
+  </Column>
+</Grid>

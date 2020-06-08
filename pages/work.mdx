@@ -1,6 +1,6 @@
 ---
 title: Work Portfolio
-date: '2020-05-29'
+date: '2020-06-07'
 ---
 import Link from 'next/link'
 
@@ -12,20 +12,79 @@ import {
     Paragraph,
     Anchor,
     Alert,
-    Stack
+    Separator,
+    Stack,
+    ScreenReaderOnly,
+    Box,
+    Text
     } from '@twilio-paste/core'
 
-<Grid>
+<Grid gutter="space40">
   <Column span={6} offset={1}>
+      <Box>
+      <Stack orientation="horizontal" spacing="space30">
+        <Link href="/" passHref> 
+          <Anchor>← <ScreenReaderOnly>Back to</ScreenReaderOnly> Home</Anchor>
+        </Link>
+        <Text as="span">/</Text>
+      </Stack>
+    </Box>
     <Heading as="h1" variant="heading10">Aayush&rsquo;s Work</Heading>
     <Paragraph>Before we go too deep, say it with me: you are not your work. Your best work is yet to come. Don&rsquo;t let it ever validate or invalidate you.</Paragraph>
-    <Box backgroundColor="colorText">
-      <Stack orientation="horizontal" spacing="space60">
-        <Link href="/" passHref> 
-          <Anchor>← Home</Anchor>
-        </Link>
-        <Anchor>Writing</Anchor>        
+  </Column>
+</Grid>
+<Grid>
+  <Column span={8} offset={1}>
+    <Box 
+      as="div"
+      marginTop="space50">
+      <Heading as="h2">UX at Twilio</Heading>
+      <Paragraph>I joined Twilio as their third Product Designer. Presently, I manage the Design Systems team, and am part of UX Leadership. My focus at Twilio has been on resilient UI engineering, and widening the spectrum of who gets to build and communicate with technology.</Paragraph>
+      <ScreenReaderOnly>A few things I built at Twilio:</ScreenReaderOnly>
+      <Stack orientation="horizontal" spacing="space30">
+        <Box 
+          width="size60"
+          borderRadius="borderRadius20"
+          borderStyle="solid"
+          borderWidth="borderWidth10"
+          borderColor="colorBorder"
+          boxShadow="shadowCard"
+          padding="space30"
+          backgroundColor="colorBackgroundBody"
+        >
+          <Heading as="h3" variant="heading40">Paste: Twilio&rsquo;s Design System</Heading>
+          <Paragraph>
+            <Link href="//paste.twilio.design" passHref><Anchor>Paste</Anchor></Link> is used to build accessible, consistent, and high quality customer experiences at Twilio. It was also Twilio&rsquo;s fifth (and dare I say, final) attempt at building a design system. I began building Paste whilst still contributing as a Product Designer in late 2018. Today, I lead a dedicated team that develops and maintains the system.
+          </Paragraph>
+        </Box>
+        <Box 
+          width="size60"
+          borderRadius="borderRadius20"
+          borderStyle="solid"
+          borderWidth="borderWidth10"
+          borderColor="colorBorder"
+          boxShadow="shadowCard"
+          padding="space30"
+          backgroundColor="colorBackgroundBody"
+        >
+          <Heading as="h3" variant="heading40">Studio: A drag &amp; drop coding tool</Heading>
+          <Paragraph>
+            <Link href="//www.twilio.com/studio" passHref><Anchor>Studio</Anchor></Link> is a visual drag &amp;drop interface to use all of Twilio's services in a low-code way. It&rsquo;s ideal for prototyping and getting critical tasks such as emergency hotlines up and running. Equally, it is a great introduction to development.
+          </Paragraph>
+        </Box>
       </Stack>
+    </Box>
+  </Column>
+</Grid>
+<Grid>
+  <Column span={8} offset={1}>
+    <Box 
+      as="div"
+      marginTop="space50">
+      <Heading as="h2">Other work</Heading>
+      <Link href="/work/piq" passHref> 
+        <Anchor>piq</Anchor>
+      </Link>
     </Box>
   </Column>
 </Grid>

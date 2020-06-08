@@ -15,20 +15,21 @@ export const PortfolioTheme = {
     fontSize100: '48px',
     fontSize110: '72px',
   },
+  // Very messy overrides. Need to systemize this better.
   fontWeights:{
     fontWeightBold: `756`
   },
   colors:{
-    colorBackgroundBrand: `#2c3e50`,
+    colorBackgroundBrand: `#fce2e0`,
     colorBackgroundBrandHighlight: `#F03838`,
-    colorTextLink: `#FCE2E0`
+    colorTextLink: `#2c3e50`
   },
-  backgroundColors:{
-    colorBackgroundBrand: `#2c3e50`,
-    colorBackgroundBrandHighlight: `#F03838`
-  },
+  // backgroundColors:{
+  //   colorBackgroundBrand: `#2c3e50`,
+  //   colorBackgroundBrandHighlight: `#F03838`
+  // },
   textColors:{
-    colorText: `#FCE2E0`,
+    colorText: `#2c3e50`,
   }, 
   lineHeights: {
     lineHeight0: '0',

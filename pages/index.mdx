@@ -24,15 +24,14 @@ import {
     useMenuState
     } from '@twilio-paste/core'
 
-<Grid>
+<Grid gutter="space40">
   <Column span={6} offset={2}>
-    <Heading as="h1" variant="heading10">I&rsquo;m Aayush Iyer. I work on building better products through design, and better design through systems.</Heading>
+    <Heading as="h1" variant="heading10">I&rsquo;m <Box as="span" backgroundColor="colorBackgroundBrandHighlight">Aayush Iyer</Box>. I work on building better products through design, and better design through systems.</Heading>
     <Box backgroundColor="colorText">
       <Stack orientation="horizontal" spacing="space60">
-        {/* <Link href="/about" passHref> 
-          <Anchor>About</Anchor>
-        </Link> */}
-        <Anchor>Work</Anchor>
+        <Link href="/work" passHref> 
+          <Anchor>Work</Anchor>
+         </Link>
         <Link href="//twitter.com/aayush" passHref> 
           <Anchor>Twitter</Anchor>
         </Link>
@@ -52,8 +51,6 @@ import {
         <ListItem>Studio: A drag &amp; drop coding tool</ListItem>
         <ListItem>Autopilot: A low code bot builder</ListItem>
       </UnorderedList>
-      <Paragraph>I&rsquo;m Aayush Iyer. I work on building better products through design, and better design through systems.</Paragraph>
-      <Paragraph>I&rsquo;m Aayush Iyer. I work on building better products through design, and better design through systems.</Paragraph>
       <Heading as="h3" variant="heading40">Other work</Heading>
       <Paragraph>The 17 years since my first job as a journalist, have shaped my approach towards building things. Along the way I&rsquo;ve built hardware jukeboxes, award-winning digital campaigns, and a whole host of really terrible software - they all inform where I got to and where I&rsquo;m going.</Paragraph>
       <Link href="/work" passHref> 
@@ -75,6 +72,18 @@ import {
     </Column>
   </Grid>
 </Box>
+<Box as="section"
+  backgroundColor="colorBackgroundBrand"
+  paddingBottom="space50"
+  marginTop="space50"
+>
+  <Grid gutter="space40">
+    <Column span={4} offset={1}>
+      <Paragraph>The universe is chaos. Be kind</Paragraph>
+    </Column>
+  </Grid>
+</Box>
+
   
 
 <!-- [asas](/posts/test) -->
