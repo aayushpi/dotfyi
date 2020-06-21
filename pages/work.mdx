@@ -24,7 +24,7 @@ import {
       <Box>
       <Stack orientation="horizontal" spacing="space30">
         <Link href="/" passHref> 
-          <Anchor>← <ScreenReaderOnly>Back to</ScreenReaderOnly> Home</Anchor>
+          <Anchor><ScreenReaderOnly>Back to</ScreenReaderOnly> Home</Anchor>
         </Link>
         <Text as="span">/</Text>
       </Stack>
@@ -33,60 +33,78 @@ import {
     <Paragraph>Before we go too deep, say it with me: you are not your work. Your best work is yet to come. Don&rsquo;t let it ever validate or invalidate you.</Paragraph>
   </Column>
 </Grid>
-<Grid>
-  <Column span={8} offset={1}>
+
+<Grid gutter="space10">
+  <Column span={1} offset={1}>
     <Box 
-      as="div"
-      marginTop="space50">
-      <Heading as="h2">UX at Twilio</Heading>
-      <Paragraph>I joined Twilio as their third Product Designer. Presently, I manage the Design Systems team, and am part of UX Leadership. My focus at Twilio has been on resilient UI engineering, and widening the spectrum of who gets to build and communicate with technology.</Paragraph>
-      <ScreenReaderOnly>A few things I built at Twilio:</ScreenReaderOnly>
-      <Stack orientation="horizontal" spacing="space30">
-        <Box 
-          width="size60"
-          borderRadius="borderRadius20"
-          borderStyle="solid"
-          borderWidth="borderWidth10"
-          borderColor="colorBorder"
-          boxShadow="shadowCard"
-          padding="space30"
-          backgroundColor="colorBackgroundBody"
-        >
-          <Heading as="h3" variant="heading40">Paste: Twilio&rsquo;s Design System</Heading>
-          <Paragraph>
-            <Link href="//paste.twilio.design" passHref><Anchor>Paste</Anchor></Link> is used to build accessible, consistent, and high quality customer experiences at Twilio. It was also Twilio&rsquo;s fifth (and dare I say, final) attempt at building a design system. I began building Paste whilst still contributing as a Product Designer in late 2018. Today, I lead a dedicated team that develops and maintains the system.
-          </Paragraph>
-        </Box>
-        <Box 
-          width="size60"
-          borderRadius="borderRadius20"
-          borderStyle="solid"
-          borderWidth="borderWidth10"
-          borderColor="colorBorder"
-          boxShadow="shadowCard"
-          padding="space30"
-          backgroundColor="colorBackgroundBody"
-        >
-          <Heading as="h3" variant="heading40">Studio: A drag &amp; drop coding tool</Heading>
-          <Paragraph>
-            <Link href="//www.twilio.com/studio" passHref><Anchor>Studio</Anchor></Link> is a visual drag &amp;drop interface to use all of Twilio's services in a low-code way. It&rsquo;s ideal for prototyping and getting critical tasks such as emergency hotlines up and running. Equally, it is a great introduction to development.
-          </Paragraph>
-        </Box>
-      </Stack>
+    width="size10"
+    >
+      <img src="/paste/paste.svg" alt="Paste" />
     </Box>
   </Column>
-</Grid>
-<Grid>
-  <Column span={8} offset={1}>
-    <Box 
-      as="div"
-      marginTop="space50">
-      <Heading as="h2">Other work</Heading>
-      <Link href="/work/piq" passHref> 
-        <Anchor>piq</Anchor>
-      </Link>
-    </Box>
+  <Column span={3}>
+    <Heading as="h2" variant="heading50">Paste: Twilio&rsquo;s Design System</Heading>
+    <Paragraph>
+      Paste supports the work of accessible, consistent, and high quality customer experiences at Twilio.
+    </Paragraph>
+  </Column>
+  <Column span={5}>
+    <Heading as="h3" variant="heading60">Links, talks, and related writing</Heading>
+    <Stack orientation="vertical" spacing="space30">
+      <Link href="//paste.twilio.design" passHref><Anchor>Explore Paste Design System</Anchor></Link>
+    </Stack>
   </Column>
 </Grid>
+<Grid gutter="space10">
+  <Column span={1} offset={1}>
+    <Box 
+    width="size10"
+    >
+      <img src="/paste/paste.svg" alt="Paste" />
+    </Box>
+  </Column>
+  <Column span={3}>
+    <Heading as="h2" variant="heading50">Twilio Studio</Heading>
+    <Paragraph>
+      Studio is a visual, drag &amp; drop, interface to Twilio&rsquo;s APIs. With it, you can quickly prototype and even productionize communications in a low-code way.
+    </Paragraph>
+  </Column>
+  <Column span={5}>
+    <Heading as="h3" variant="heading60">Links, talks, and related writing</Heading>
+    <Stack orientation="vertical" spacing="space30">
+      <Link href="//www.twilio.com/studio" passHref><Anchor>Explore Twilio Studio</Anchor></Link>
+      <Link href="//youtu.be/VBjVi4mV0Qk" passHref><Anchor>Introducing Studio at Signal Conference 2017, London</Anchor></Link>
+    </Stack>
+  </Column>
+</Grid>
+<Grid gutter="space10">
+  <Column span={1} offset={1}>
+    <Box 
+    width="size10"
+    >
+      <img src="/paste/paste.svg" alt="Paste" />
+    </Box>
+  </Column>
+  <Column span={3}>
+    <Heading as="h2" variant="heading50">Twilio Studio</Heading>
+    <Paragraph>
+      Studio is a visual, drag &amp; drop, interface to Twilio&rsquo;s APIs. With it, you can quickly prototype and even productionize communications in a low-code way.
+    </Paragraph>
+  </Column>
+  <Column span={5}>
+    <Heading as="h3" variant="heading60">Links, talks, and related writing</Heading>
+    <Stack orientation="vertical" spacing="space30">
+      <Link href="//www.twilio.com/studio" passHref><Anchor>Explore Twilio Studio</Anchor></Link>
+      <Link href="//youtu.be/VBjVi4mV0Qk" passHref><Anchor>Introducing Studio at Signal Conference 2017, London</Anchor></Link>
+    </Stack>
+  </Column>
+</Grid>
+<Box as="section"
+  paddingBottom="space50"
+  marginTop="space50"
+>
+</Box>
+
+
 
 

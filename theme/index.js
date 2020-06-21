@@ -21,15 +21,18 @@ export const PortfolioTheme = {
   },
   colors:{
     colorBackgroundBrand: `#fce2e0`,
-    colorTextLink: `#2c3e50`
+    colorTextLink: `#2c3e50`,
+    colorBackgroundNeutralLightest: `#FFFFFF`,
+    colorBackgroundBody: `#FFFFFF`
   },
   // What is going on here?
   backgroundColors:{
     colorBackgroundBrandHighlight: `#F98585`,
-    colorBackgroundBody: `#FFFFFF`
+    colorBackgroundBody: `#FFFFFF`,
+    colorBackgroundNeutralLightest: `#FFFFFF`
   },
   textColors:{
-    colorText: `#2c3e50`,
+    colorText: `#2c3e50`
   }, 
   lineHeights: {
     lineHeight0: '0',
