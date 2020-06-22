@@ -16,7 +16,10 @@ import {
     Stack,
     ScreenReaderOnly,
     Box,
-    Text
+    Text,
+    MediaObject,
+    MediaFigure,
+    MediaBody,
     } from '@twilio-paste/core'
 
 <Grid gutter="space40">
@@ -34,19 +37,21 @@ import {
   </Column>
 </Grid>
 
-<Grid gutter="space10">
-  <Column span={1} offset={1}>
-    <Box 
-    width="size10"
-    >
-      <img src="/paste/paste.svg" alt="Paste" />
-    </Box>
-  </Column>
-  <Column span={3}>
-    <Heading as="h2" variant="heading50">Paste: Twilio&rsquo;s Design System</Heading>
-    <Paragraph>
-      Paste supports the work of accessible, consistent, and high quality customer experiences at Twilio.
-    </Paragraph>
+<Grid gutter="space40">
+  <Column span={5} offset={1}>
+    <MediaObject as="div">
+      <MediaFigure 
+        as="div"
+        spacing="space60"
+      >
+        <Box backgroundColor="colorBackgroundDark" height="sizeIcon100" width="sizeIcon100">
+        <img src="/paste/paste.svg" alt="Paste" />
+        </Box>
+      </MediaFigure>
+      <MediaBody as="div">
+        <Heading as="h2" variant="heading10">Paste is <Box as="span" backgroundColor="colorBackgroundBrandHighlight">Twilio&rsquo;s design system</Box> and supports the work of building accessible, consistent, and high quality customer experiences.</Heading>
+      </MediaBody>
+    </MediaObject>    
   </Column>
   <Column span={5}>
     <Heading as="h3" variant="heading60">Links, talks, and related writing</Heading>
@@ -55,15 +60,9 @@ import {
     </Stack>
   </Column>
 </Grid>
+
 <Grid gutter="space10">
-  <Column span={1} offset={1}>
-    <Box 
-    width="size10"
-    >
-      <img src="/paste/paste.svg" alt="Paste" />
-    </Box>
-  </Column>
-  <Column span={3}>
+  <Column span={3} offset={1}>
     <Heading as="h2" variant="heading50">Twilio Studio</Heading>
     <Paragraph>
       Studio is a visual, drag &amp; drop, interface to Twilio&rsquo;s APIs. With it, you can quickly prototype and even productionize communications in a low-code way.
@@ -77,25 +76,24 @@ import {
     </Stack>
   </Column>
 </Grid>
-<Grid gutter="space10">
-  <Column span={1} offset={1}>
-    <Box 
-    width="size10"
-    >
-      <img src="/paste/paste.svg" alt="Paste" />
-    </Box>
+<Grid>
+  <Column span={11} offset={1}>
+    <Heading as="h2" variant="heading20">Archive content that&rsquo;s probably not aged too well</Heading>
   </Column>
-  <Column span={3}>
-    <Heading as="h2" variant="heading50">Twilio Studio</Heading>
+</Grid>
+<Grid gutter="space10">
+  <Column span={3} offset={1}>
+    <Heading as="h2" variant="heading50">piq</Heading>
     <Paragraph>
-      Studio is a visual, drag &amp; drop, interface to Twilio&rsquo;s APIs. With it, you can quickly prototype and even productionize communications in a low-code way.
+      piq is a hardware headless jukebox for social spaces. It was a Kickstarter project in 2013 that failed to hit its funding goal, but was a valuable design exercise.
     </Paragraph>
   </Column>
   <Column span={5}>
     <Heading as="h3" variant="heading60">Links, talks, and related writing</Heading>
     <Stack orientation="vertical" spacing="space30">
-      <Link href="//www.twilio.com/studio" passHref><Anchor>Explore Twilio Studio</Anchor></Link>
-      <Link href="//youtu.be/VBjVi4mV0Qk" passHref><Anchor>Introducing Studio at Signal Conference 2017, London</Anchor></Link>
+      <Link href="//aayushisin.netlify.app/#piq" passHref><Anchor>Read about piq</Anchor></Link>
+      <Link href="//youtu.be/eIMHxpT_cjc" passHref><Anchor>Introducing piq at a fundraising event</Anchor></Link>
+      <Link href="//medium.com/design-startups/a12142e9ab28" passHref><Anchor>Notes from building piq</Anchor></Link>
     </Stack>
   </Column>
 </Grid>
