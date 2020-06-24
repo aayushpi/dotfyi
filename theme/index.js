@@ -23,16 +23,21 @@ export const PortfolioTheme = {
     colorBackgroundBrand: `#fce2e0`,
     colorTextLink: `#2c3e50`,
     colorBackgroundNeutralLightest: `#FFFFFF`,
-    colorBackgroundBody: `#FFFFFF`
+    colorBackgroundBody: `#FFFFFF`,
+    colorBackgroundInverse: `#2c3e50`,
+    colorTextInverse: `#fce2e0`
   },
   // What is going on here?
   backgroundColors:{
     colorBackgroundBrandHighlight: `#F98585`,
     colorBackgroundBody: `#FFFFFF`,
-    colorBackgroundNeutralLightest: `#FFFFFF`
+    colorBackgroundNeutralLightest: `#FFFFFF`,
+    colorBackgroundInverse: `#2c3e50`,
+    colorTextInverse: `#fce2e0`
   },
   textColors:{
-    colorText: `#2c3e50`
+    colorText: `#2c3e50`,
+    colorTextInverse: `#fce2e0`
   }, 
   lineHeights: {
     lineHeight0: '0',

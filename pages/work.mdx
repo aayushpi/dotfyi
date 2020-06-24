@@ -132,6 +132,29 @@ import {
   <Grid gutter="space10">
     <Column span={3} offset={1}>
       <Heading as="h2" variant="heading50">
+        Vouch
+      </Heading>
+      <Paragraph>
+        Vouch was a lending startup that hypothesized an alternate solution for credit-worthiness.
+      </Paragraph>
+    </Column>
+    <Column span={5}>
+      <Heading as="h3" variant="heading60">
+        Links, talks, and related writing
+      </Heading>
+      <Stack orientation="vertical" spacing="space30">
+        <Link href="//aayushisin.netlify.app/#vouch" passHref>
+          <Anchor>Read about Vouch</Anchor>
+        </Link>
+      </Stack>
+    </Column>
+  </Grid>
+</Box>
+
+<Box marginTop="space120">
+  <Grid gutter="space10">
+    <Column span={3} offset={1}>
+      <Heading as="h2" variant="heading50">
         piq
       </Heading>
       <Paragraph>
@@ -158,4 +181,46 @@ import {
     </Column>
   </Grid>
 </Box>
-<Box as="section" paddingBottom="space50" marginTop="space50"></Box>
+
+<Box as="section"
+  marginTop="space100"
+  paddingTop="space100"
+  paddingBottom="space100"
+  backgroundColor="colorBackgroundInverse"
+>
+  <Grid gutter="space40">
+    <Column span={3} offset={1}>
+      <Text
+        as="p"
+        color="colorTextInverse"
+      >
+        This site is being built, in an act of extreme dogfooding, with <Link href="//paste.twilio.design/" passHref><Text
+        as="a" color="colorTextInverse">Paste</Text></Link>. It also uses <Link href="//nextjs.org/" passHref><Text
+        as="a" color="colorTextInverse">Next.js</Text></Link>, which is nice. It was mostly possible due to <Link href="//simontaggart.com/" passHref><Text
+        as="a" color="colorTextInverse">Simon Taggart</Text></Link>, who patiently handled my 101 Qs.
+      </Text>
+    </Column>
+    <Column span={2} offset={1}>
+      <Box>
+        <Stack orientation="vertical" spacing="space30">
+          <Link href="/work" passHref> 
+            <Text as="a" color="colorTextInverse">Work</Text>
+          </Link>
+          <Link href="//twitter.com/aayush" passHref> 
+            <Text as="a" color="colorTextInverse">Twitter</Text>
+          </Link>
+        </Stack>
+      </Box>
+    </Column>
+    <Column span={3}>
+      <Box>
+        <Stack orientation="vertical" spacing="space30">
+          <Text as="p" color="colorTextInverse">Black Lives Matter.</Text>
+          <Text as="p" color="colorTextInverse">No man is illegal.</Text>
+          <Text as="p" color="colorTextInverse">Sex worker rights are labor rights.</Text>
+          <Text as="p" color="colorTextInverse">Our liberation is bound together.</Text>
+        </Stack>
+      </Box>
+    </Column>
+  </Grid>
+</Box>
