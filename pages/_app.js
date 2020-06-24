@@ -38,9 +38,6 @@ const App = ({ Component, pageProps }) => (
       <Global styles={globalStyles({ theme: PortfolioTheme })} />
         <StyledBase
           as="main"
-          marginLeft={['space50', 'space50', 'auto']}
-          marginRight={['space50', 'space50', 'auto']}
-          marginTop={['space30', 'space30', 'space170']}
           maxWidth="size200"
         >
           <Component {...pageProps} />

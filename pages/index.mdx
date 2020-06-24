@@ -59,9 +59,6 @@ import {
       <Paragraph>I joined Twilio in 2017 as their third Product Designer. Today, I manage the Design Systems team, and am part of UX Leadership. My focus at Twilio has been on resilient UI design &amp; engineering, and widening the spectrum of who gets to build and communicate with technology.</Paragraph>
       <Heading as="h3" variant="heading40">Other work</Heading>
       <Paragraph>The 17 years since my first job as a journalist have shaped my approach towards building things. Along the way I&rsquo;ve built hardware jukeboxes, award-winning digital campaigns, and a whole host of really terrible software - somehow, they all informed where I got to and where I&rsquo;m going.</Paragraph>
-      <Link href="/work" passHref> 
-        <Anchor>All Work</Anchor>
-      </Link>
     </Column>
   </Grid>
 </Box>
@@ -71,8 +68,8 @@ import {
   paddingBottom="space100"
   backgroundColor="colorBackgroundInverse"
 >
-  <Grid gutter="space40">
-    <Column span={3} offset={1}>
+  <Grid gutter={["space0","space0","space100"]}>
+    <Column span={[8,8,2]} offset={[1,1,1]}>
       <Text
         as="p"
         color="colorTextInverse"
@@ -83,7 +80,7 @@ import {
         as="a" color="colorTextInverse">Simon Taggart</Text></Link>, who patiently handled my 101 Qs.
       </Text>
     </Column>
-    <Column span={2} offset={1}>
+    <Column span={[8,8,2]} offset={[1,1,1]}>
       <Box>
         <Stack orientation="vertical" spacing="space30">
           <Link href="/work" passHref> 
@@ -95,7 +92,7 @@ import {
         </Stack>
       </Box>
     </Column>
-    <Column span={3}>
+    <Column span={[8,8,3]} offset={[1,1,0]}>
       <Box>
         <Stack orientation="vertical" spacing="space30">
           <Text as="p" color="colorTextInverse">Black Lives Matter.</Text>

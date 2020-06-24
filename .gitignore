@@ -29,3 +29,4 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+.mdx-data/1f61a31ac33bb5b6e31e2dd1d65ace22.json
