@@ -25,7 +25,8 @@ export const PortfolioTheme = {
     colorBackgroundNeutralLightest: `#FFFFFF`,
     colorBackgroundBody: `#FFFFFF`,
     colorBackgroundInverse: `#2c3e50`,
-    colorTextInverse: `#fce2e0`
+    colorTextInverse: `#fce2e0`,
+    colorBorderLight: `#2c3e50`
   },
   // What is going on here?
   backgroundColors:{
@@ -33,12 +34,16 @@ export const PortfolioTheme = {
     colorBackgroundBody: `#FFFFFF`,
     colorBackgroundNeutralLightest: `#FFFFFF`,
     colorBackgroundInverse: `#2c3e50`,
-    colorTextInverse: `#fce2e0`
+    colorTextInverse: `#fce2e0`,
+    colorBorderLight: `#2c3e50`
   },
   textColors:{
     colorText: `#2c3e50`,
     colorTextInverse: `#fce2e0`
-  }, 
+  },
+  borderColors:{
+    colorBorderLight: `#2c3e50`
+  },
   lineHeights: {
     lineHeight0: '0',
     lineHeight10: '24px',

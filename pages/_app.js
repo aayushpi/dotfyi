@@ -40,7 +40,7 @@ const App = ({ Component, pageProps }) => (
           as="main"
           marginLeft={['space50', 'space50', 'auto']}
           marginRight={['space50', 'space50', 'auto']}
-          marginTop={['space30', 'space30', 'space170']}
+          marginTop={['space30', 'space30', 'space200']}
           maxWidth="size200"
         >
           <Component {...pageProps} />
