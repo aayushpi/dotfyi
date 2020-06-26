@@ -1,0 +1,179 @@
+---
+title: Scaling design system support
+date: "2020-06-25"
+---
+
+import Link from "next/link";
+
+import {
+  Grid,
+  Column,
+  Card,
+  Heading,
+  Paragraph,
+  Anchor,
+  Alert,
+  Separator,
+  Stack,
+  ScreenReaderOnly,
+  Box,
+  Text,
+  OrderedList,
+  UnorderedList,
+  ListItem,
+  MediaObject,
+  MediaFigure,
+  MediaBody,
+} from "@twilio-paste/core";
+
+<Grid gutter="space40">
+  <Column span={4} offset={1}>
+    <Box>
+      <Stack orientation="horizontal" spacing="space30">
+        <Link href="/" passHref>
+          <Anchor>
+            <ScreenReaderOnly>Back to</ScreenReaderOnly> Home
+          </Anchor>
+        </Link>
+        <Text as="span">/</Text>
+        <Link href="/" passHref>
+          <Anchor>Writing</Anchor>
+        </Link>
+        <Text as="span">/</Text>
+      </Stack>
+    </Box>
+    <Heading as="h1" variant="heading10">
+      Scaling design system <Box as="span" backgroundColor="colorBackgroundBrandHighlight">support</Box>
+    </Heading>
+    <Paragraph>
+      Paste, a design system for Twilio’s customer experiences was launched in
+      the second half of 2018. It was our fifth attempt at building a UI
+      platform, and happened when Twilio was projecting revenue estimates of
+      over half a million dollars. At the time, more than 2 million developers
+      had used 25+ products at Twilio, each of which had their own versions of
+      UI frameworks, and significant design patten drift.
+    </Paragraph>
+    <Paragraph>
+      None of this is uncommon at the start of UI systemization, but the scale
+      of the company definitely triggered some unique challenges. And while the
+      expected problems of API design, tokenization, and component reviews were
+      crucial tasks to kick off, we chose instead to focus on support.
+    </Paragraph>
+    <Heading as="h2" variant="heading20">
+      Why start with support?
+    </Heading>
+    <Paragraph>
+      I believe that at the heart of it, a good design system does two things
+      effectively:
+    </Paragraph>
+    <OrderedList>
+      <ListItem>
+        Ensure that people feel like they have agency and involvement as their
+        own hacks and workarounds are replaced with systemized paved paths.
+      </ListItem>
+      <ListItem>
+        Attenuate the thrash of constant change for teams, so they can trust
+        they system and focus on delivery.
+      </ListItem>
+    </OrderedList>
+    <Paragraph>
+      To put it brusquely, as a leader, design systems is change and feelings
+      management. And supporting teams who may not have the space to consider
+      the long-term journey of a platform team is critical to doing this right.
+    </Paragraph>
+    <Paragraph>
+      Support is crucial, and we did get it wrong early. A particularly low
+      point in our journey early on, was when a delivery engineer reached out to
+      understand how they may use the legacy component libraries to achieve a
+      basic layout, and were deeply disappointed by how much friction there is
+      to get something going. We definitely lost the trust of that engineer, and
+      likely have to work a lot to regain that trust.
+    </Paragraph>
+    <Heading as="h2" variant="heading20">
+      The different stages of support
+    </Heading>
+    <Paragraph>
+      Good support systems scale dynamically with an ebb and flow that responds
+      to team size, organizational events, and stages of adoption. Over three
+      years, we’ve seen three decided shifts in how we support our customers.
+    </Paragraph>
+    <Heading as="h3" variant="heading40">
+      The Town Crier (Pre-Market)
+    </Heading>
+    <Paragraph>
+      Before we built Paste, the Design System team was about a 10% of my time
+      as a Product Designer, and two contract engineers. At the time, I had an
+      understanding of the benefits of a design system, but building was deep in
+      the unfamiliar territory. Instead of building a new component system, we
+      chose instead to establish ownership through support.
+    </Paragraph>
+  </Column>
+</Grid>
+
+<Box
+  as="section"
+  marginTop="space50"
+  paddingTop="space100"
+  paddingBottom="space100"
+  backgroundColor="colorBackgroundInverse"
+>
+  <Grid gutter="space40">
+    <Column span={3} offset={1}>
+      <Text as="p" color="colorTextInverse">
+        This site is being built, in an act of extreme dogfooding, with{" "}
+        <Link href="//paste.twilio.design/" passHref>
+          <Text as="a" color="colorTextInverse">
+            Paste
+          </Text>
+        </Link>
+        . It also uses{" "}
+        <Link href="//nextjs.org/" passHref>
+          <Text as="a" color="colorTextInverse">
+            Next.js
+          </Text>
+        </Link>
+        , which is nice. It was mostly possible due to{" "}
+        <Link href="//simontaggart.com/" passHref>
+          <Text as="a" color="colorTextInverse">
+            Simon Taggart
+          </Text>
+        </Link>
+        , who patiently handled my 101 Qs.
+      </Text>
+    </Column>
+    <Column span={2} offset={1}>
+      <Box>
+        <Stack orientation="vertical" spacing="space30">
+          <Link href="/work" passHref>
+            <Text as="a" color="colorTextInverse">
+              Work
+            </Text>
+          </Link>
+          <Link href="//twitter.com/aayush" passHref>
+            <Text as="a" color="colorTextInverse">
+              Twitter
+            </Text>
+          </Link>
+        </Stack>
+      </Box>
+    </Column>
+    <Column span={3}>
+      <Box>
+        <Stack orientation="vertical" spacing="space30">
+          <Text as="p" color="colorTextInverse">
+            Black Lives Matter.
+          </Text>
+          <Text as="p" color="colorTextInverse">
+            No man is illegal.
+          </Text>
+          <Text as="p" color="colorTextInverse">
+            Sex worker rights are labor rights.
+          </Text>
+          <Text as="p" color="colorTextInverse">
+            Our liberation is bound together.
+          </Text>
+        </Stack>
+      </Box>
+    </Column>
+  </Grid>
+</Box>
