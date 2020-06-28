@@ -10,7 +10,7 @@ export const SiteFooter = () => (
     backgroundColor="colorBackgroundInverse"
   >
     <Grid gutter={["space0", "space0", "space0"]}>
-      <Column span={[8, 8, 2]} offset={[1, 1, 1]}>
+      <Column span={[12, 12, 2]} offset={[0, 0, 1]}>
         <Text as="p" color="colorTextInverse">
           This site is being built, in an act of extreme dogfooding, with{" "}
           <Link href="//paste.twilio.design/" passHref>
@@ -33,7 +33,7 @@ export const SiteFooter = () => (
           , who patiently handled my 101 Qs.
         </Text>
       </Column>
-      <Column span={[8, 8, 2]} offset={[1, 1, 1]}>
+      <Column span={[12, 12, 2]} offset={[0, 0, 1]}>
         <Box>
           <Stack orientation="vertical" spacing="space30">
             <Link href="/work" passHref>
@@ -49,7 +49,7 @@ export const SiteFooter = () => (
           </Stack>
         </Box>
       </Column>
-      <Column span={[8, 8, 3]} offset={[1, 1, 0]}>
+      <Column span={[12, 12, 2]} offset={[0, 0, 1]}>
         <Box>
           <Stack orientation="vertical" spacing="space30">
             <Text as="p" color="colorTextInverse">
