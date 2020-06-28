@@ -25,7 +25,7 @@ import {
 import {SiteFooter} from '../components/footer'
 
 <Grid>
-  <Column span={6} offset={1}>
+  <Column span={[12,12,6]} offset={[0,0,1]}>
     <Box>
       <Stack orientation="horizontal" spacing="space30">
         <Link href="/" passHref>
@@ -44,19 +44,19 @@ import {SiteFooter} from '../components/footer'
 
 <Box marginTop="space160">
   <Grid>
-    <Column span={5} offset={1}>
+    <Column span={[12,12,5]} offset={[0,0,1]}>
       <MediaObject as="div">
-        <MediaFigure as="div" spacing="space60">
+        <MediaFigure as="div" spacing={["space0","space0","space60"]}>
           <Box
             backgroundColor="colorBackgroundDark"
-            height="sizeIcon100"
-            width="sizeIcon100"
+            height={["sizeIcon0","sizeIcon0","sizeIcon100"]}
+            width={["sizeIcon0","sizeIcon0","sizeIcon100"]}
           >
             <img src="/paste/paste.svg" alt="Paste" />
           </Box>
         </MediaFigure>
         <MediaBody as="div">
-          <Heading as="h2" variant="heading10">
+          <Heading as="h2" variant={["heading50","heading30","heading10"]}>
             Paste is{" "}
             <Box as="span" backgroundColor="colorBackgroundBrandHighlight">
               Twilio&rsquo;s design system
@@ -67,11 +67,11 @@ import {SiteFooter} from '../components/footer'
         </MediaBody>
       </MediaObject>
     </Column>
-    <Column span={5} offset={1}>
+    <Column span={[12,12,5]} offset={[0,0,1]}>
       <Heading as="h3" variant="heading60">
         Links, talks, and related writing
       </Heading>
-      <Stack orientation="vertical" spacing="space30">
+      <Stack orientation={"vertical"} spacing="space30">
         <Link href="//paste.twilio.design" passHref>
           <Anchor>Explore Paste Design System</Anchor>
         </Link>
@@ -82,7 +82,7 @@ import {SiteFooter} from '../components/footer'
 
 <Box marginTop="space80">
   <Grid>
-    <Column span={11} offset={1}>
+    <Column span={[12,12,12]} offset={[0,0,1]}>
       <Heading as="h3" variant="heading30">
         Past work
       </Heading>
@@ -92,7 +92,7 @@ import {SiteFooter} from '../components/footer'
 
 <Box marginTop="space120">
   <Grid>
-    <Column span={3} offset={1}>
+    <Column span={[12,12,3]} offset={[0,0,1]}>
       <Heading as="h2" variant="heading50">
         Twilio Studio
       </Heading>
@@ -102,7 +102,7 @@ import {SiteFooter} from '../components/footer'
         in a low-code way.
       </Paragraph>
     </Column>
-    <Column span={5} offset={1}>
+    <Column span={[12,12,5]} offset={[0,0,1]}>
       <Heading as="h3" variant="heading60">
         Links, talks, and related writing
       </Heading>
@@ -120,7 +120,7 @@ import {SiteFooter} from '../components/footer'
 
 <Box marginTop="space160">
   <Grid>
-    <Column span={11} offset={1}>
+    <Column span={[12,12,12]} offset={[0,0,1]}>
       <Heading as="h3" variant="heading30">
         Archive content
       </Heading>
@@ -130,7 +130,7 @@ import {SiteFooter} from '../components/footer'
 
 <Box marginTop="space120">
   <Grid>
-    <Column span={3} offset={1}>
+    <Column span={[12,12,3]} offset={[0,0,1]}>
       <Heading as="h2" variant="heading50">
         Vouch
       </Heading>
@@ -138,7 +138,7 @@ import {SiteFooter} from '../components/footer'
         Vouch was a lending startup that hypothesized an alternate solution for credit-worthiness.
       </Paragraph>
     </Column>
-    <Column span={5} offset={1}>
+    <Column span={[12,12,5]} offset={[0,0,1]}>
       <Heading as="h3" variant="heading60">
         Links, talks, and related writing
       </Heading>
@@ -153,7 +153,7 @@ import {SiteFooter} from '../components/footer'
 
 <Box marginTop="space120">
   <Grid>
-    <Column span={3} offset={1}>
+    <Column span={[12,12,3]} offset={[0,0,1]}>
       <Heading as="h2" variant="heading50">
         piq
       </Heading>
@@ -163,7 +163,7 @@ import {SiteFooter} from '../components/footer'
         a valuable design exercise.
       </Paragraph>
     </Column>
-    <Column span={5} offset={1}>
+    <Column span={[12,12,5]} offset={[0,0,1]}>
       <Heading as="h3" variant="heading60">
         Links, talks, and related writing
       </Heading>

@@ -27,8 +27,8 @@ import { SiteFooter } from "../components/footer";
 
 <Box>
   <Grid>
-    <Column span={4} offset={1}>
-      <Heading as="h1" variant="heading10">
+    <Column span={[12,12,4]} offset={[0,0,1]}>
+      <Heading as="h1" variant={["heading20","heading10","heading10"]}>
         I&rsquo;m{" "}
         <Box as="span" backgroundColor="colorBackgroundBrandHighlight">
           Aayush Iyer
@@ -37,7 +37,7 @@ import { SiteFooter } from "../components/footer";
         through systems.
       </Heading>
       <Box backgroundColor="colorText">
-        <Stack orientation="horizontal" spacing="space60">
+        <Stack orientation={["vertical","vertical","horizontal"]} spacing="space60">
           <Link href="/work" passHref>
             <Anchor>Work</Anchor>
           </Link>
@@ -50,14 +50,14 @@ import { SiteFooter } from "../components/footer";
   </Grid>
   <Box marginTop="space100">
     <Grid>
-      <Column span={4} offset={1}>
+      <Column span={[12,12,4]} offset={[0,0,1]}>
         <Heading as="h2" variant="heading20">
           Recent Writing
         </Heading>
         <Separator orientation="horizontal" verticalSpacing="space50" />
         <Text as="p">This space is unfortunately blank</Text>
       </Column>
-      <Column span={4} offset={1}>
+      <Column span={[12,12,4]} offset={[0,0,1]}>
         <Heading as="h2" variant="heading20">
           Work
         </Heading>
