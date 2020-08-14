@@ -1,8 +1,5 @@
 import Head from 'next/head';
-import { ThemeProvider } from 'emotion-theming';
-import { Global } from '@emotion/core';
-import styled from '@emotion/styled';
-import { css } from '@styled-system/css';
+import { StylingGlobals, styled, ThemeProvider, css } from '@twilio-paste/styling-library';
 import { pasteBaseStyles } from '@twilio-paste/theme';
 import { Box } from '@twilio-paste/core';
 import { PortfolioTheme } from '../theme';
@@ -35,7 +32,7 @@ const App = ({ Component, pageProps }) => (
     </Head>
     <ComponentProvider>
       <ThemeProvider theme={PortfolioTheme}>
-      <Global styles={globalStyles({ theme: PortfolioTheme })} />
+      <StylingGlobals styles={globalStyles({ theme: PortfolioTheme })} />
         <StyledBase
           as="main"
           marginLeft={['space50', 'space50', 'auto']}
