@@ -7,7 +7,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@mdx-js/loader": "1.6.5",
+    "@mdx-js/loader": "1.6.16",
     "@next/mdx": "9.4.4",
     "@twilio-paste/animation-library": "0.2.1",
     "@twilio-paste/core": "2.16.29",
