@@ -11,7 +11,7 @@
 # next.js
 /.next/
 /out/
-/.mdx-data/
+/.mdx-data/*
 
 # production
 /build
