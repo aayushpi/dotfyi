@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@mdx-js/loader": "1.6.16",
-    "@next/mdx": "9.4.4",
+    "@next/mdx": "9.5.2",
     "@twilio-paste/animation-library": "0.2.1",
     "@twilio-paste/core": "2.16.29",
     "@twilio-paste/design-tokens": "6.1.1",
