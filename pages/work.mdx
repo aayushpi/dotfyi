@@ -21,11 +21,13 @@ import {
   MediaObject,
   MediaFigure,
   MediaBody,
+  Flex,
 } from "@twilio-paste/core";
-import {SiteFooter} from '../components/footer'
+import { LinkExternalIcon } from "@twilio-paste/icons/cjs/LinkExternalIcon";
+import { SiteFooter } from "../components/footer";
 
 <Grid>
-  <Column span={[12,12,6]} offset={[0,0,1]}>
+  <Column span={[12, 12, 6]} offset={[0, 0, 1]}>
     <Box>
       <Stack orientation="horizontal" spacing="space30">
         <Link href="/" passHref>
@@ -44,19 +46,19 @@ import {SiteFooter} from '../components/footer'
 
 <Box marginTop="space160">
   <Grid>
-    <Column span={[12,12,5]} offset={[0,0,1]}>
+    <Column span={[12, 12, 5]} offset={[0, 0, 1]}>
       <MediaObject as="div">
-        <MediaFigure as="div" spacing={["space0","space0","space60"]}>
+        <MediaFigure as="div" spacing={["space0", "space0", "space60"]}>
           <Box
             backgroundColor="colorBackgroundDark"
-            height={["sizeIcon0","sizeIcon0","sizeIcon100"]}
-            width={["sizeIcon0","sizeIcon0","sizeIcon100"]}
+            height={["sizeIcon0", "sizeIcon0", "sizeIcon100"]}
+            width={["sizeIcon0", "sizeIcon0", "sizeIcon100"]}
           >
             <img src="/paste/paste.svg" alt="Paste" />
           </Box>
         </MediaFigure>
         <MediaBody as="div">
-          <Heading as="h2" variant={["heading50","heading30","heading10"]}>
+          <Heading as="h2" variant={["heading50", "heading30", "heading10"]}>
             Paste is{" "}
             <Box as="span" backgroundColor="colorBackgroundBrandHighlight">
               Twilio&rsquo;s design system
@@ -67,14 +69,20 @@ import {SiteFooter} from '../components/footer'
         </MediaBody>
       </MediaObject>
     </Column>
-    <Column span={[12,12,5]} offset={[0,0,1]}>
+    <Column span={[12, 12, 5]} offset={[0, 0, 1]}>
       <Heading as="h3" variant="heading60">
         Links, talks, and related writing
       </Heading>
       <Stack orientation={"vertical"} spacing="space30">
-        <Link href="//paste.twilio.design" passHref>
-          <Anchor>Explore Paste Design System</Anchor>
-        </Link>
+        <Flex display="inline-flex" vAlignContent="center">
+          <Link href="//paste.twilio.design" passHref>
+            <Anchor>Explore Paste Design System</Anchor>
+          </Link>
+          <LinkExternalIcon
+                decorative={false}
+                title="Opens an external resource"
+              />
+        </Flex>
       </Stack>
     </Column>
   </Grid>
@@ -82,7 +90,7 @@ import {SiteFooter} from '../components/footer'
 
 <Box marginTop="space80">
   <Grid>
-    <Column span={[12,12,12]} offset={[0,0,1]}>
+    <Column span={[12, 12, 12]} offset={[0, 0, 1]}>
       <Heading as="h3" variant="heading30">
         Past work
       </Heading>
@@ -92,7 +100,7 @@ import {SiteFooter} from '../components/footer'
 
 <Box marginTop="space120">
   <Grid>
-    <Column span={[12,12,3]} offset={[0,0,1]}>
+    <Column span={[12, 12, 3]} offset={[0, 0, 1]}>
       <Heading as="h2" variant="heading50">
         Twilio Studio
       </Heading>
@@ -102,17 +110,29 @@ import {SiteFooter} from '../components/footer'
         in a low-code way.
       </Paragraph>
     </Column>
-    <Column span={[12,12,5]} offset={[0,0,1]}>
+    <Column span={[12, 12, 5]} offset={[0, 0, 1]}>
       <Heading as="h3" variant="heading60">
         Links, talks, and related writing
       </Heading>
       <Stack orientation="vertical" spacing="space30">
+        <Flex display="inline-flex" vAlignContent="center">
         <Link href="//www.twilio.com/studio" passHref>
           <Anchor>Explore Twilio Studio</Anchor>
         </Link>
+        <LinkExternalIcon
+                decorative={false}
+                title="Opens an external resource"
+              />
+        </Flex>
+        <Flex display="inline-flex" vAlignContent="center">
         <Link href="//youtu.be/VBjVi4mV0Qk" passHref>
-          <Anchor>Introducing Studio at Signal Conference 2017, London</Anchor>
+          <Anchor>Introducing Studio at Signal 2017</Anchor>
         </Link>
+        <LinkExternalIcon
+                decorative={false}
+                title="Opens an external resource"
+              />
+        </Flex>
       </Stack>
     </Column>
   </Grid>
@@ -120,7 +140,7 @@ import {SiteFooter} from '../components/footer'
 
 <Box marginTop="space160">
   <Grid>
-    <Column span={[12,12,12]} offset={[0,0,1]}>
+    <Column span={[12, 12, 12]} offset={[0, 0, 1]}>
       <Heading as="h3" variant="heading30">
         Archive content
       </Heading>
@@ -130,22 +150,29 @@ import {SiteFooter} from '../components/footer'
 
 <Box marginTop="space120">
   <Grid>
-    <Column span={[12,12,3]} offset={[0,0,1]}>
+    <Column span={[12, 12, 3]} offset={[0, 0, 1]}>
       <Heading as="h2" variant="heading50">
         Vouch
       </Heading>
       <Paragraph>
-        Vouch was a lending startup that hypothesized an alternate solution for credit-worthiness.
+        Vouch was a lending startup that hypothesized an alternate solution for
+        credit-worthiness.
       </Paragraph>
     </Column>
-    <Column span={[12,12,5]} offset={[0,0,1]}>
+    <Column span={[12, 12, 5]} offset={[0, 0, 1]}>
       <Heading as="h3" variant="heading60">
         Links, talks, and related writing
       </Heading>
       <Stack orientation="vertical" spacing="space30">
+        <Flex display="inline-flex" vAlignContent="center">
         <Link href="//aayushisin.netlify.app/#vouch" passHref>
           <Anchor>Read about Vouch</Anchor>
         </Link>
+        <LinkExternalIcon
+                decorative={false}
+                title="Opens an external resource"
+              />
+        </Flex>
       </Stack>
     </Column>
   </Grid>
@@ -153,7 +180,7 @@ import {SiteFooter} from '../components/footer'
 
 <Box marginTop="space120">
   <Grid>
-    <Column span={[12,12,3]} offset={[0,0,1]}>
+    <Column span={[12, 12, 3]} offset={[0, 0, 1]}>
       <Heading as="h2" variant="heading50">
         piq
       </Heading>
@@ -163,20 +190,38 @@ import {SiteFooter} from '../components/footer'
         a valuable design exercise.
       </Paragraph>
     </Column>
-    <Column span={[12,12,5]} offset={[0,0,1]}>
+    <Column span={[12, 12, 5]} offset={[0, 0, 1]}>
       <Heading as="h3" variant="heading60">
         Links, talks, and related writing
       </Heading>
       <Stack orientation="vertical" spacing="space30">
+        <Flex display="inline-flex" vAlignContent="center">
         <Link href="//aayushisin.netlify.app/#piq" passHref>
           <Anchor>Read about piq</Anchor>
         </Link>
+        <LinkExternalIcon
+                decorative={false}
+                title="Opens an external resource"
+              />
+        </Flex>
+        <Flex display="inline-flex" vAlignContent="center">
         <Link href="//youtu.be/eIMHxpT_cjc" passHref>
           <Anchor>Introducing piq at a fundraising event</Anchor>
         </Link>
+        <LinkExternalIcon
+                decorative={false}
+                title="Opens an external resource"
+              />
+        </Flex>
+        <Flex display="inline-flex" vAlignContent="center">
         <Link href="//medium.com/design-startups/a12142e9ab28" passHref>
           <Anchor>Notes from building piq</Anchor>
         </Link>
+        <LinkExternalIcon
+                decorative={false}
+                title="Opens an external resource"
+              />
+        </Flex>
       </Stack>
     </Column>
   </Grid>

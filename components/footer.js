@@ -1,6 +1,15 @@
 import react from "react";
 import Link from "next/link";
-import { Grid, Column, Stack, Text, Box } from "@twilio-paste/core";
+import {
+  Grid,
+  Anchor,
+  Column,
+  Stack,
+  Text,
+  Box,
+  Flex,
+} from "@twilio-paste/core";
+import { LinkExternalIcon } from "@twilio-paste/icons/cjs/LinkExternalIcon";
 export const SiteFooter = () => (
   <Box
     as="section"
@@ -13,23 +22,44 @@ export const SiteFooter = () => (
       <Column span={[12, 12, 2]} offset={[0, 0, 1]}>
         <Text as="p" color="colorTextInverse">
           This site is being built, in an act of extreme dogfooding, with{" "}
+          <Flex display="inline-flex" vAlignContent="center">
           <Link href="//paste.twilio.design/" passHref>
             <Text as="a" color="colorTextInverse">
               Paste
             </Text>
           </Link>
+          <LinkExternalIcon
+                decorative={false}
+                title="Opens an external resource"
+                color="colorTextInverse"
+              />
+          </Flex>
           . It also uses{" "}
+          <Flex display="inline-flex" vAlignContent="center">
           <Link href="//nextjs.org/" passHref>
             <Text as="a" color="colorTextInverse">
               Next.js
             </Text>
           </Link>
+          <LinkExternalIcon
+                decorative={false}
+                title="Opens an external resource"
+                color="colorTextInverse"
+              />
+          </Flex>
           , which is nice. It was mostly possible due to{" "}
+          <Flex display="inline-flex" vAlignContent="center">
           <Link href="//simontaggart.com/" passHref>
             <Text as="a" color="colorTextInverse">
               Simon Taggart
-            </Text>
+            </Text>            
           </Link>
+          <LinkExternalIcon
+                decorative={false}
+                title="Opens an external resource"
+                color="colorTextInverse"
+              />
+          </Flex>
           , who patiently handled my 101 Qs.
         </Text>
       </Column>
@@ -41,11 +71,18 @@ export const SiteFooter = () => (
                 Work
               </Text>
             </Link>
-            <Link href="//twitter.com/aayush" passHref>
-              <Text as="a" color="colorTextInverse">
-                Twitter
-              </Text>
-            </Link>
+            <Flex display="inline-flex" vAlignContent="center">
+              <Link href="//twitter.com/aayush" passHref>
+                <Text as="a" color="colorTextInverse">
+                  Twitter
+                </Text>
+              </Link>
+              <LinkExternalIcon
+                decorative={false}
+                title="Opens an external resource"
+                color="colorTextInverse"
+              />
+            </Flex>
           </Stack>
         </Box>
       </Column>
