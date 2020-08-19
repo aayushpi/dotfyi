@@ -1782,10 +1782,10 @@
   resolved "https://registry.yarnpkg.com/@twilio-paste/heading/-/heading-2.0.29.tgz#329ca68f8790ab82497456632233d158789e412d"
   integrity sha512-uVNjdJ1WJMazei4AsWNDKSSbm+OgChalLJI0XmDDslIkCMs30rVcSTRarSOn5r1iGneMxEtMEA3v75zxXo26aA==
 
-"@twilio-paste/icons@3.0.3":
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/@twilio-paste/icons/-/icons-3.0.3.tgz#1d0eba9b86b408a86962ac9bf61761d39bd00ee5"
-  integrity sha512-GojgsMXctGyyFHT0sPP5TLlkH5wzuaTKRtDav24q6Lh/KHLWPxgM+rfxpmsRlAmoph2q87Qy8qk6zYhECHeQWQ==
+"@twilio-paste/icons@3.0.4":
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/@twilio-paste/icons/-/icons-3.0.4.tgz#145dba0ebe02b506c7dc9ebffd1f5f791281e062"
+  integrity sha512-DiSQlFs+PKTN/n88FF76TSwcDL1wQGPPPZ4WMPbL80F+y5Wyizbf38CletSPqCUWE8oqcv4L+JIy4IaI8fH45g==
 
 "@twilio-paste/list@^0.2.29":
   version "0.2.29"
