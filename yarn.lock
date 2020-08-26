@@ -1900,10 +1900,10 @@
   resolved "https://registry.yarnpkg.com/@twilio-paste/text/-/text-2.2.13.tgz#0ec18c68f23d4b73da92877afd556f373f505396"
   integrity sha512-zoqYcXiw4sV0zVKHaK4jve7OReFZHcVYIWlGmsKYqWapR2bnNVQmHKOjLWz9tr/DD95D5UmgBDMCzV68JmJM8A==
 
-"@twilio-paste/theme@3.2.14":
-  version "3.2.14"
-  resolved "https://registry.yarnpkg.com/@twilio-paste/theme/-/theme-3.2.14.tgz#573a30b102e465c1407a6513b05ed6614356c6ec"
-  integrity sha512-fzrdQRsa2euyNnQ1G/N1O/emkOKnWl5M3DZCMyguPyMeERUqbc5Z8n2LgEVgn54flsNQlgfKHcsn8WHf6KVf/Q==
+"@twilio-paste/theme@3.2.16":
+  version "3.2.16"
+  resolved "https://registry.yarnpkg.com/@twilio-paste/theme/-/theme-3.2.16.tgz#7b8c34404f2c1e8b02186ba4a776f983309a16db"
+  integrity sha512-4QRI0Z7DkyYzISZZhf7DoXSQRBLBCmVjqTz7wgSbc8pspXQdF1yKvTU89tHCK0E+KKOtlIMONmf0IR+00uxIHA==
 
 "@twilio-paste/tooltip-primitive@^0.1.2":
   version "0.1.2"
