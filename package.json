@@ -18,7 +18,7 @@
     "@twilio-paste/style-props": "1.5.5",
     "@twilio-paste/styling-library": "0.1.2",
     "@twilio-paste/theme": "3.2.18",
-    "@twilio-paste/types": "3.0.19",
+    "@twilio-paste/types": "3.0.21",
     "next": "latest",
     "next-mdx-enhanced": "3.1.0",
     "prop-types": "15.7.2",
