@@ -21,7 +21,6 @@ export const PortfolioTheme = {
   },
   colors:{
     colorBackgroundBrand: `#fce2e0`,
-    colorTextLink: `#2c3e50`,
     colorBackgroundNeutralLightest: `#FFFFFF`,
     colorBackgroundBody: `#FFFFFF`,
     colorBackgroundInverse: `#2c3e50`,
@@ -35,11 +34,12 @@ export const PortfolioTheme = {
     colorBackgroundNeutralLightest: `#FFFFFF`,
     colorBackgroundInverse: `#2c3e50`,
     colorTextInverse: `#fce2e0`,
-    colorBorderLight: `#2c3e50`
+    colorBorderLight: `#2c3e50`,
   },
   textColors:{
     colorText: `#2c3e50`,
-    colorTextInverse: `#fce2e0`
+    colorTextInverse: `#fce2e0`,
+    colorTextLink: `#2c3e50`
   },
   borderColors:{
     colorBorderLight: `#2c3e50`
