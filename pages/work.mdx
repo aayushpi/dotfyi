@@ -21,10 +21,13 @@ import {
   MediaObject,
   MediaFigure,
   MediaBody,
+  Flex,
 } from "@twilio-paste/core";
+import { LinkExternalIcon } from "@twilio-paste/icons/cjs/LinkExternalIcon";
+import { SiteFooter } from "../components/footer";
 
-<Grid gutter="space40">
-  <Column span={6} offset={1}>
+<Grid>
+  <Column span={[12, 12, 6]} offset={[0, 0, 1]}>
     <Box>
       <Stack orientation="horizontal" spacing="space30">
         <Link href="/" passHref>
@@ -38,25 +41,24 @@ import {
     <Heading as="h1" variant="heading10">
       Aayush&rsquo;s Work
     </Heading>
-    {/* <Paragraph>Before we go too deep, say it with me: you are not your work. Your best work is yet to come. Don&rsquo;t let it ever validate or invalidate you.</Paragraph> */}
   </Column>
 </Grid>
 
 <Box marginTop="space160">
-  <Grid gutter="space40">
-    <Column span={5} offset={1}>
+  <Grid>
+    <Column span={[12, 12, 5]} offset={[0, 0, 1]}>
       <MediaObject as="div">
-        <MediaFigure as="div" spacing="space60">
+        <MediaFigure as="div" spacing={["space0", "space0", "space60"]}>
           <Box
             backgroundColor="colorBackgroundDark"
-            height="sizeIcon100"
-            width="sizeIcon100"
+            height={["sizeIcon0", "sizeIcon0", "sizeIcon100"]}
+            width={["sizeIcon0", "sizeIcon0", "sizeIcon100"]}
           >
             <img src="/paste/paste.svg" alt="Paste" />
           </Box>
         </MediaFigure>
         <MediaBody as="div">
-          <Heading as="h2" variant="heading10">
+          <Heading as="h2" variant={["heading50", "heading30", "heading10"]}>
             Paste is{" "}
             <Box as="span" backgroundColor="colorBackgroundBrandHighlight">
               Twilio&rsquo;s design system
@@ -67,14 +69,20 @@ import {
         </MediaBody>
       </MediaObject>
     </Column>
-    <Column span={5}>
+    <Column span={[12, 12, 5]} offset={[0, 0, 1]}>
       <Heading as="h3" variant="heading60">
         Links, talks, and related writing
       </Heading>
-      <Stack orientation="vertical" spacing="space30">
-        <Link href="//paste.twilio.design" passHref>
-          <Anchor>Explore Paste Design System</Anchor>
-        </Link>
+      <Stack orientation={"vertical"} spacing="space30">
+        <Flex display="inline-flex" vAlignContent="center">
+          <Link href="//paste.twilio.design" passHref>
+            <Anchor>Explore Paste Design System</Anchor>
+          </Link>
+          <LinkExternalIcon
+                decorative={false}
+                title="Opens an external resource"
+              />
+        </Flex>
       </Stack>
     </Column>
   </Grid>
@@ -82,7 +90,7 @@ import {
 
 <Box marginTop="space80">
   <Grid>
-    <Column span={11} offset={1}>
+    <Column span={[12, 12, 12]} offset={[0, 0, 1]}>
       <Heading as="h3" variant="heading30">
         Past work
       </Heading>
@@ -91,8 +99,8 @@ import {
 </Box>
 
 <Box marginTop="space120">
-  <Grid gutter="space10">
-    <Column span={3} offset={1}>
+  <Grid>
+    <Column span={[12, 12, 3]} offset={[0, 0, 1]}>
       <Heading as="h2" variant="heading50">
         Twilio Studio
       </Heading>
@@ -102,17 +110,29 @@ import {
         in a low-code way.
       </Paragraph>
     </Column>
-    <Column span={5}>
+    <Column span={[12, 12, 5]} offset={[0, 0, 1]}>
       <Heading as="h3" variant="heading60">
         Links, talks, and related writing
       </Heading>
       <Stack orientation="vertical" spacing="space30">
+        <Flex display="inline-flex" vAlignContent="center">
         <Link href="//www.twilio.com/studio" passHref>
           <Anchor>Explore Twilio Studio</Anchor>
         </Link>
+        <LinkExternalIcon
+                decorative={false}
+                title="Opens an external resource"
+              />
+        </Flex>
+        <Flex display="inline-flex" vAlignContent="center">
         <Link href="//youtu.be/VBjVi4mV0Qk" passHref>
-          <Anchor>Introducing Studio at Signal Conference 2017, London</Anchor>
+          <Anchor>Introducing Studio at Signal 2017</Anchor>
         </Link>
+        <LinkExternalIcon
+                decorative={false}
+                title="Opens an external resource"
+              />
+        </Flex>
       </Stack>
     </Column>
   </Grid>
@@ -120,7 +140,7 @@ import {
 
 <Box marginTop="space160">
   <Grid>
-    <Column span={11} offset={1}>
+    <Column span={[12, 12, 12]} offset={[0, 0, 1]}>
       <Heading as="h3" variant="heading30">
         Archive content
       </Heading>
@@ -129,31 +149,38 @@ import {
 </Box>
 
 <Box marginTop="space120">
-  <Grid gutter="space10">
-    <Column span={3} offset={1}>
+  <Grid>
+    <Column span={[12, 12, 3]} offset={[0, 0, 1]}>
       <Heading as="h2" variant="heading50">
         Vouch
       </Heading>
       <Paragraph>
-        Vouch was a lending startup that hypothesized an alternate solution for credit-worthiness.
+        Vouch was a lending startup that hypothesized an alternate solution for
+        credit-worthiness.
       </Paragraph>
     </Column>
-    <Column span={5}>
+    <Column span={[12, 12, 5]} offset={[0, 0, 1]}>
       <Heading as="h3" variant="heading60">
         Links, talks, and related writing
       </Heading>
       <Stack orientation="vertical" spacing="space30">
+        <Flex display="inline-flex" vAlignContent="center">
         <Link href="//aayushisin.netlify.app/#vouch" passHref>
           <Anchor>Read about Vouch</Anchor>
         </Link>
+        <LinkExternalIcon
+                decorative={false}
+                title="Opens an external resource"
+              />
+        </Flex>
       </Stack>
     </Column>
   </Grid>
 </Box>
 
 <Box marginTop="space120">
-  <Grid gutter="space10">
-    <Column span={3} offset={1}>
+  <Grid>
+    <Column span={[12, 12, 3]} offset={[0, 0, 1]}>
       <Heading as="h2" variant="heading50">
         piq
       </Heading>
@@ -163,64 +190,40 @@ import {
         a valuable design exercise.
       </Paragraph>
     </Column>
-    <Column span={5}>
+    <Column span={[12, 12, 5]} offset={[0, 0, 1]}>
       <Heading as="h3" variant="heading60">
         Links, talks, and related writing
       </Heading>
       <Stack orientation="vertical" spacing="space30">
+        <Flex display="inline-flex" vAlignContent="center">
         <Link href="//aayushisin.netlify.app/#piq" passHref>
           <Anchor>Read about piq</Anchor>
         </Link>
+        <LinkExternalIcon
+                decorative={false}
+                title="Opens an external resource"
+              />
+        </Flex>
+        <Flex display="inline-flex" vAlignContent="center">
         <Link href="//youtu.be/eIMHxpT_cjc" passHref>
           <Anchor>Introducing piq at a fundraising event</Anchor>
         </Link>
+        <LinkExternalIcon
+                decorative={false}
+                title="Opens an external resource"
+              />
+        </Flex>
+        <Flex display="inline-flex" vAlignContent="center">
         <Link href="//medium.com/design-startups/a12142e9ab28" passHref>
           <Anchor>Notes from building piq</Anchor>
         </Link>
+        <LinkExternalIcon
+                decorative={false}
+                title="Opens an external resource"
+              />
+        </Flex>
       </Stack>
     </Column>
   </Grid>
 </Box>
-
-<Box as="section"
-  marginTop="space50"
-  paddingTop="space100"
-  paddingBottom="space100"
-  backgroundColor="colorBackgroundInverse"
->
-  <Grid gutter="space40">
-    <Column span={3} offset={1}>
-      <Text
-        as="p"
-        color="colorTextInverse"
-      >
-        This site is being built, in an act of extreme dogfooding, with <Link href="//paste.twilio.design/" passHref><Text
-        as="a" color="colorTextInverse">Paste</Text></Link>. It also uses <Link href="//nextjs.org/" passHref><Text
-        as="a" color="colorTextInverse">Next.js</Text></Link>, which is nice. It was mostly possible due to <Link href="//simontaggart.com/" passHref><Text
-        as="a" color="colorTextInverse">Simon Taggart</Text></Link>, who patiently handled my 101 Qs.
-      </Text>
-    </Column>
-    <Column span={2} offset={1}>
-      <Box>
-        <Stack orientation="vertical" spacing="space30">
-          <Link href="/work" passHref> 
-            <Text as="a" color="colorTextInverse">Work</Text>
-          </Link>
-          <Link href="//twitter.com/aayush" passHref> 
-            <Text as="a" color="colorTextInverse">Twitter</Text>
-          </Link>
-        </Stack>
-      </Box>
-    </Column>
-    <Column span={3}>
-      <Box>
-        <Stack orientation="vertical" spacing="space30">
-          <Text as="p" color="colorTextInverse">Black Lives Matter.</Text>
-          <Text as="p" color="colorTextInverse">No man is illegal.</Text>
-          <Text as="p" color="colorTextInverse">Sex worker rights are labor rights.</Text>
-          <Text as="p" color="colorTextInverse">Our liberation is bound together.</Text>
-        </Stack>
-      </Box>
-    </Column>
-  </Grid>
-</Box>
+<SiteFooter />
