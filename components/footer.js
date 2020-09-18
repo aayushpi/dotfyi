@@ -18,7 +18,7 @@ export const SiteFooter = () => (
     paddingBottom="space100"
     backgroundColor="colorBackgroundInverse"
   >
-    <Grid gutter={["space0", "space0", "space0"]}>
+    <Grid>
       <Column span={[12, 12, 2]} offset={[0, 0, 1]}>
         <Text as="p" color="colorTextInverse">
           This site is being built, in an act of extreme dogfooding, with{" "}
