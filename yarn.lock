@@ -1465,10 +1465,10 @@
   resolved "https://registry.yarnpkg.com/@next/react-refresh-utils/-/react-refresh-utils-9.4.4.tgz#d94cbb3b354a07f1f5b80e554d6b9e34aba99e41"
   integrity sha512-9nKENeWRI6kQk44TbeqleIVtNLfcS3klVUepzl/ZCqzR5Bi06uqBCD277hdVvG/wL1pxA+R/pgJQLqnF5E2wPQ==
 
-"@popperjs/core@^2.4.0":
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.4.0.tgz#0e1bdf8d021e7ea58affade33d9d607e11365915"
-  integrity sha512-NMrDy6EWh9TPdSRiHmHH2ye1v5U0gBD7pRYwSwJvomx7Bm4GG04vu63dYiVzebLOx2obPpJugew06xVP0Nk7hA==
+"@popperjs/core@^2.4.4":
+  version "2.4.4"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.4.4.tgz#11d5db19bd178936ec89cd84519c4de439574398"
+  integrity sha512-1oO6+dN5kdIA3sKPZhRGJTfGVP4SWV6KqlMOwry4J3HfyD68sl/3KmG7DeYUzvN+RbhXDnv/D8vNNB8168tAMg==
 
 "@reach/dialog@0.11.2":
   version "0.11.2"
@@ -1835,14 +1835,14 @@
   resolved "https://registry.yarnpkg.com/@twilio-paste/popover/-/popover-1.0.21.tgz#8334a1e7625cbe7c166736981128d222650037cd"
   integrity sha512-rfyNUPEdy5U7druO7raufvYUOtTVcA2AUc3U1/gkhBzvMfsk6Y2UPS6QIHcxnKF/h///BmHYuBs8EGTsxkM8Pw==
 
-"@twilio-paste/reakit-library@0.6.2":
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/@twilio-paste/reakit-library/-/reakit-library-0.6.2.tgz#c006d6d4b722b4a4f380ab41130825d1e0bec330"
-  integrity sha512-GTti18y8YPokVMrGvkDNUdt2dDrzaROeT4mDFqX+OrXuXWBXA3nCvNknq5HP3aA+tzU37337f/2XUk0ziESlwA==
+"@twilio-paste/reakit-library@0.7.1":
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/@twilio-paste/reakit-library/-/reakit-library-0.7.1.tgz#a25dd4ea434df8655ffb8892516a8ac50a2ccfed"
+  integrity sha512-VEuAAWNy2AXk7TZ0XzKxXYLJYBBPgnSipSIPmU8WVcN/KdZsqkGiLbjAP96LqWtvgzEgpV63Ou9XolH86aCybQ==
   dependencies:
-    reakit "1.0.4"
-    reakit-system "0.12.2"
-    reakit-utils "0.12.1"
+    reakit "1.2.3"
+    reakit-system "0.14.3"
+    reakit-utils "0.14.3"
 
 "@twilio-paste/screen-reader-only@^1.1.12":
   version "1.1.12"
@@ -6186,35 +6186,42 @@ readdirp@~3.4.0:
   dependencies:
     picomatch "^2.2.1"
 
-reakit-system@0.12.2, reakit-system@^0.12.2:
-  version "0.12.2"
-  resolved "https://registry.yarnpkg.com/reakit-system/-/reakit-system-0.12.2.tgz#f1a8c3341f75f3e52eb75ef4ff10663c70bbe6de"
-  integrity sha512-+/tZ/atDbHhDOapcIxniNZd7z0cze1L9MJBEnvykqM/bdqUE59Eb/OQ6odPZwK35gcN1lNyZtw7DgnFrmsDi4w==
+reakit-system@0.14.3:
+  version "0.14.3"
+  resolved "https://registry.yarnpkg.com/reakit-system/-/reakit-system-0.14.3.tgz#4dd56e86a31c2ee0af817f98a55d2744571f3b41"
+  integrity sha512-o+sX3R0ByRW4L0HCrCy3w1I4tbUCZ3G7l/JXAWQ8dvMqC1rSaTt+V1CA3pnHw+dLnj+Z0sOP/XafP+j4sMJYsg==
   dependencies:
-    reakit-utils "^0.12.1"
+    reakit-utils "^0.14.3"
 
-reakit-utils@0.12.1, reakit-utils@^0.12.1:
-  version "0.12.1"
-  resolved "https://registry.yarnpkg.com/reakit-utils/-/reakit-utils-0.12.1.tgz#716edd0a468ed4472c7b780450125478d6dce898"
-  integrity sha512-P66TYzmQFD5CqNWcRvbPb6B5nXRLfiWqwTJhVGDUeOJTSdlnjfsBuOIauojfuS+p4yeyFVsUFsFwuBM6uZ8F3A==
-
-reakit-warning@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/reakit-warning/-/reakit-warning-0.3.1.tgz#92a1985595137a5d339b4a4f0909f4128116104b"
-  integrity sha512-kFGASQG1ogpyknF0vlfab2emptCuW4a2Ku0SOeNkD+WGkMytJMNqrklqqfuWFEPqpuWGkBduOLbmEEyVLgSLZg==
+reakit-system@^0.14.3:
+  version "0.14.4"
+  resolved "https://registry.yarnpkg.com/reakit-system/-/reakit-system-0.14.4.tgz#93e3883ad441bfa6167bede147dc7cee5db51ec1"
+  integrity sha512-nQlo+fLKttGfEMzLJP9ubvALVUZXAhil2gEXpu26Gzvd4Mk4ywhBcAVhX0GrkesDx5Qzo2E0J5OYytPTeXvo5Q==
   dependencies:
-    reakit-utils "^0.12.1"
+    reakit-utils "0.14.3"
 
-reakit@1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/reakit/-/reakit-1.0.4.tgz#da2f1d842fcb63a6a5c2f5d59e48b531686aa22c"
-  integrity sha512-v9tZoO40IBA7zX4SypyGco9z6+mDGcn/JsZfYRA+Qvmh2FjLX08m7FwhkQMgwccygHaZP+nEgVIsE6QUroCWrw==
+reakit-utils@0.14.3, reakit-utils@^0.14.3:
+  version "0.14.3"
+  resolved "https://registry.yarnpkg.com/reakit-utils/-/reakit-utils-0.14.3.tgz#ea77684c2126ec41a26f02ef2b154e47a100371e"
+  integrity sha512-EQlalje+8UiybchMobZi6LrwbBBrqMFOG7f8Z5RJQil1Szt6SFP5BXfAIFj9J3gZunCXVk/NRaiyTdTbFiZ1CA==
+
+reakit-warning@^0.5.3:
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/reakit-warning/-/reakit-warning-0.5.4.tgz#78bcbf0a11b0f963d61c8796e1c60f6f1eaad33f"
+  integrity sha512-11EFsGnnT/Y5wVa6OJl3IlfzAl1P77aANlXnuiS5ToDd94xGCwOWM563YtjYaNlZppD/fC9S5p7YOa6W0LlmoQ==
   dependencies:
-    "@popperjs/core" "^2.4.0"
+    reakit-utils "0.14.3"
+
+reakit@1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/reakit/-/reakit-1.2.3.tgz#3a144e836366bd4d3388665bd0ee39d5ad595853"
+  integrity sha512-bxtrH9O5beHGWzlVzRr+C6idUiV58/rRzBTmw1nu6Wj+hX0yjJDGlSlOLD/oOufhLCjjBGP8s8U3NuLuq4Xv+g==
+  dependencies:
+    "@popperjs/core" "^2.4.4"
     body-scroll-lock "^3.0.2"
-    reakit-system "^0.12.2"
-    reakit-utils "^0.12.1"
-    reakit-warning "^0.3.1"
+    reakit-system "^0.14.3"
+    reakit-utils "^0.14.3"
+    reakit-warning "^0.5.3"
 
 reflect.ownkeys@^0.2.0:
   version "0.2.0"
