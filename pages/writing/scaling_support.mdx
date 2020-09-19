@@ -24,7 +24,7 @@ import {
   MediaObject,
   MediaFigure,
   MediaBody,
-  Avatar
+  Avatar,
 } from "@twilio-paste/core";
 import { SiteFooter } from "../../components/footer";
 
@@ -45,12 +45,23 @@ import { SiteFooter } from "../../components/footer";
       </Stack>
     </Box>
     <Heading as="h1" variant="heading10">
-      Scaling design system <Box as="span" backgroundColor="colorBackgroundBrandHighlight">support</Box>
+      Scaling design system{" "}
+      <Box as="span" backgroundColor="colorBackgroundBrandHighlight">
+        support
+      </Box>
     </Heading>
     <Paragraph>
-      Here's a situation you might encounter while building a design system (or any platform) where there was none before: you'll begin your journey by [doing things that don't scale](http://paulgraham.com/ds.html). Then at a certain inflection point, a change will be necessary: it might be technical or procedural, but is almost always *also* cultural. We saw this as the design systems teams was incubated and eventually scaled organization wide.
+      Here's a situation you might encounter while building a design system (or
+      any platform) where there was none before: you'll begin your journey by{" "}
+      <Link href="//www.paulgraham.com/" passHref>
+        <Anchor>doing things that don't scale</Anchor>
+      </Link>
+      . Then at a certain inflection point, a change will be necessary: it might
+      be technical or procedural, but is almost always *also* cultural. We saw
+      this as the design systems teams was incubated and eventually scaled
+      organization wide.
     </Paragraph>
-    </Column>
+  </Column>
 </Grid>
 <Grid gutter="space40">
   <Column span={4} offset={1}>
@@ -58,171 +69,205 @@ import { SiteFooter } from "../../components/footer";
       Stage 1: Support as incubation
     </Heading>
     <Paragraph>
-      In 2018, we didn’t have a design system at Twilio. This meant that the most efficient way to express a UI solution involved copying older implementations and adopting popular code snippets and packages. In and of itself, this was fine: however, it did create situations where a UI compromise was necessary.
+      In 2018, we didn’t have a design system at Twilio. This meant that the
+      most efficient way to express a UI solution involved copying older
+      implementations and adopting popular code snippets and packages. In and of
+      itself, this was fine: however, it did create situations where a UI
+      compromise was necessary.
     </Paragraph>
     <Paragraph>
-      Since we were just incubating and weren't fully staffed or bought-in by the organization, we took small steps. One such step was the creation of a *help* slack channel. Here, no matter what your UI question was, we'd attempt to solve it. What's more, we wanted to solve it quickly. While this approach didn't allow for the best answer for each experience, it did allow us to take diving catches that built trust with designers, PMs, and engineers.
+      Since we were just incubating and weren't fully staffed or bought-in by
+      the organization, we took small steps. One such step was the creation of a
+      *help* slack channel. Here, no matter what your UI question was, we'd
+      attempt to solve it. What's more, we wanted to solve it quickly. While
+      this approach didn't allow for the best answer for each experience, it did
+      allow us to take diving catches that built trust with designers, PMs, and
+      engineers.
     </Paragraph>
   </Column>
-  <Column>
-  <Box display="flex" justifyContent="flex-start">
-  <Stack orientation="vertical" spacing="space60"><MediaObject as="div">
-  <MediaBody>
-  <Box
-  as="div"
-  color="colorTextInverse"
-  backgroundColor="colorBackgroundInverse"
-  borderRadius="borderRadius20"
-  borderTopRightRadius="borderRadius0"
-  fontSize="fontSize30"
-  lineHeight="lineHeight20"
-  padding="space30"
-  maxWidth="size30"
-  >
-  My build broke, can you help?
-  </Box>
-  <Text as="div" color="colorText" fontSize="fontSize20" textAlign="right">
-  Engineer X
-  </Text>
-  </MediaBody>
-  </MediaObject>
-  <MediaObject as="div">
-  <MediaBody>
-  <Box
-  as="div"
-  color="colorTextInverse"
-  backgroundColor="colorBackgroundInverse"
-  borderRadius="borderRadius20"
-  borderTopRightRadius="borderRadius0"
-  fontSize="fontSize30"
-  lineHeight="lineHeight20"
-  padding="space30"
-  maxWidth="size30"
-  >
-  Do we have icons to indicate a loading state?
-  </Box>
-  <Text as="div" color="colorText" fontSize="fontSize20" textAlign="right">
-  Designer Y
-  </Text>
-  </MediaBody>
-  </MediaObject></Stack>
-</Box>
+  <Column span={3} offset={1}>
+    <Stack orientation="vertical" spacing="space60">
+      <Box display="flex" justifyContent="flex-start">
+        <MediaObject as="div">
+          <MediaBody>
+            <Box
+              as="div"
+              color="colorTextInverse"
+              backgroundColor="colorBackgroundInverse"
+              borderRadius="borderRadius30"
+              borderBottomLeftRadius="borderRadius0"
+              fontSize="fontSize30"
+              lineHeight="lineHeight20"
+              padding="space30"
+              maxWidth="size30"
+            >
+              My build broke, can you help?
+            </Box>
+            <Text
+              as="div"
+              color="colorText"
+              fontSize="fontSize50"
+              marginTop="space10"
+            >
+              🧒🏽
+            </Text>
+          </MediaBody>
+        </MediaObject>
+      </Box>
+      <Box display="flex" justifyContent="flex-end">
+        <MediaObject as="div">
+          <MediaBody>
+            <Box
+              as="div"
+              color="colorText"
+              backgroundColor="colorBackgroundUser"
+              borderRadius="borderRadius20"
+              borderBottomRightRadius="borderRadius0"
+              fontSize="fontSize30"
+              lineHeight="lineHeight20"
+              padding="space30"
+              maxWidth="size30"
+            >
+              Sure! What's the error? What component were you trying to use?
+              What version of React are you on?
+            </Box>
+            <Text
+              as="div"
+              color="colorText"
+              fontSize="fontSize50"
+              marginTop="space10"
+              textAlign="right"
+            >
+              😀
+            </Text>
+          </MediaBody>
+        </MediaObject>
+      </Box>
+    </Stack>
   </Column>
-  </Grid>
-  <Grid gutter="space40">
+</Grid>
+<Grid gutter="space40">
   <Column span={4} offset={1}>
-   <Heading as="h2" variant="heading20">
+    <Heading as="h2" variant="heading20">
       Stage 2: Support as we scaled
     </Heading>
     <Paragraph>
-      Fast forward about a year, and Paste was just about begging a steep adoption curve. Unlike our legacy libraries (which had larger, more complex monolithic components), we had moved to an approach of small, accessible, and composable pieces that could be mixed and matched. As designers and engineers were beginning to use the system as a baseline for their UIs. In doing so, there was a lot of relearning and undoing old habits. We started getting increasingly complex questions around accessibility, composition, UI reviews, and of course Typescript errors. We’d see upwards of 10 questions a day, and the team began to feel it.
+      Fast forward about a year, and Paste was just about begging a steep
+      adoption curve. Unlike our legacy libraries (which had larger, more
+      complex monolithic components), we had moved to an approach of small,
+      accessible, and composable pieces that could be mixed and matched. As
+      designers and engineers were beginning to use the system as a baseline for
+      their UIs. In doing so, there was a lot of relearning and undoing old
+      habits. We started getting increasingly complex questions around
+      accessibility, composition, UI reviews, and of course Typescript errors.
+      We’d see upwards of 10 questions a day, and the team began to feel it.
     </Paragraph>
     <Paragraph>
       To do so, we investigated why our support model was failing at scale:
     </Paragraph>
     <UnorderedList>
       <ListItem>
-        The *immediacy* of Slack meant it was easier for people to get answers to their questions through a Slack message than go to the doc site to look for an answer.
+        The *immediacy* of Slack meant it was easier for people to get answers
+        to their questions through a Slack message than go to the doc site to
+        look for an answer.
       </ListItem>
-    <ListItem>Slack messages are ephemeral and teams around the world would routinely wake up to a host of new information that they’d just not see, leading to repeated questions.</ListItem>
-    <ListItem>The quality of incoming requests was affected by the medium: “My build broke can you help?” instead of “My build (screenshot attached) failed, I am currently doing _x_, and tried to do _y_”</ListItem>
+      <ListItem>
+        Slack messages are ephemeral and teams around the world would routinely
+        wake up to a host of new information that they’d just not see, leading
+        to repeated questions.
+      </ListItem>
+      <ListItem>
+        The quality of incoming requests was affected by the medium: “My build
+        broke can you help?” instead of “My build (screenshot attached) failed,
+        I am currently doing _x_, and tried to do _y_”
+      </ListItem>
     </UnorderedList>
     <Separator orientation="horizontal" verticalSpacing="space50" />
     <Paragraph>
-      A change was necessary: we needed to evolve our discussions from "What's fast and cheap?" to "What's right?"
+      A change was necessary: we needed to evolve our discussions from "What's
+      fast and cheap?" to "What's right?"
     </Paragraph>
-    <Paragraph>To address the rising tide of support questions, the team stepped back. We set up better structures for documentation, assigned rotating helpers who led support conversations through the week, and moved all support conversations from Slack to GitHub discussions.</Paragraph>
-    <Paragraph>Except, our customers still expected support on Slack.</Paragraph>
-    <Paragraph>This was a cultural change: moving the support model from Slack to a new platform was at the very least, a significant inconvenience. At worst, it was a breach of trust that the system was founded on. Managing how our users felt about this change was an important criteria for success. We’d need to inform people of the change, and then remind them of it enough till the habit was broken and remade. And we had to hope that in all of this, they still trusted us.</Paragraph>
-    </Column>
-   <Column>
-  <Box display="flex" justifyContent="flex-start">
-  <Stack orientation="vertical" spacing="space60"><MediaObject as="div">
-  <MediaBody>
-  <Box
-  as="div"
-  color="colorTextInverse"
-  backgroundColor="colorBackgroundInverse"
-  borderRadius="borderRadius20"
-  borderTopRightRadius="borderRadius0"
-  fontSize="fontSize30"
-  lineHeight="lineHeight20"
-  padding="space30"
-  maxWidth="size30"
-  >
-  My build broke, can you help?
-  </Box>
-  <Text as="div" color="colorText" fontSize="fontSize20" textAlign="right">
-  Engineer X
-  </Text>
-  </MediaBody>
-  </MediaObject>
-  <MediaObject as="div">
-  <MediaBody>
-  <Box
-  as="div"
-  color="colorTextInverse"
-  backgroundColor="colorBackgroundInverse"
-  borderRadius="borderRadius20"
-  borderTopRightRadius="borderRadius0"
-  fontSize="fontSize30"
-  lineHeight="lineHeight20"
-  padding="space30"
-  maxWidth="size30"
-  >
-  Do we have icons to indicate a loading state?
-  </Box>
-  <Text as="div" color="colorText" fontSize="fontSize20" textAlign="right">
-  Designer Y
-  </Text>
-  </MediaBody>
-  </MediaObject>
-  <MediaObject as="div">
-  <MediaBody>
-  <Box
-  as="div"
-  color="colorTextInverse"
-  backgroundColor="colorBackgroundInverse"
-  borderRadius="borderRadius20"
-  borderTopRightRadius="borderRadius0"
-  fontSize="fontSize30"
-  lineHeight="lineHeight20"
-  padding="space30"
-  maxWidth="size30"
-  >
-  Do we have icons to indicate a loading state?
-  </Box>
-  <Text as="div" color="colorText" fontSize="fontSize20" textAlign="right">
-  Designer Y
-  </Text>
-  </MediaBody>
-  </MediaObject>
-
-  <MediaObject as="div">
-  <MediaBody>
-  <Box
-  as="div"
-  color="colorTextInverse"
-  backgroundColor="colorBackgroundInverse"
-  borderRadius="borderRadius20"
-  borderTopRightRadius="borderRadius0"
-  fontSize="fontSize30"
-  lineHeight="lineHeight20"
-  padding="space30"
-  maxWidth="size30"
-  >
-  Do we have icons to indicate a loading state?
-  </Box>
-  <Text as="div" color="colorText" fontSize="fontSize20" textAlign="right">
-  Designer Y
-  </Text>
-  </MediaBody>
-  </MediaObject>
-  </Stack>
-</Box>
+    <Paragraph>
+      To address the rising tide of support questions, the team stepped back. We
+      set up better structures for documentation, assigned rotating helpers who
+      led support conversations through the week, and moved all support
+      conversations from Slack to GitHub discussions.
+    </Paragraph>
+    <Paragraph>
+      Except, our customers still expected support on Slack.
+    </Paragraph>
+    <Paragraph>
+      This was a cultural change: moving the support model from Slack to a new
+      platform was at the very least, a significant inconvenience. At worst, it
+      was a breach of trust that the system was founded on. Managing how our
+      users felt about this change was an important criteria for success. We’d
+      need to inform people of the change, and then remind them of it enough
+      till the habit was broken and remade. And we had to hope that in all of
+      this, they still trusted us.
+    </Paragraph>
   </Column>
-    </Grid>
-  <Grid gutter="space40">
+  <Column span={3} offset={1}>
+    <Stack orientation="vertical" spacing="space60">
+      <Box display="flex" justifyContent="flex-start">
+        <MediaObject as="div">
+          <MediaBody>
+            <Box
+              as="div"
+              color="colorTextInverse"
+              backgroundColor="colorBackgroundInverse"
+              borderRadius="borderRadius30"
+              borderBottomRightRadius="borderRadius0"
+              fontSize="fontSize30"
+              lineHeight="lineHeight20"
+              padding="space30"
+              maxWidth="size30"
+            >
+              My build broke, can you help?
+            </Box>
+            <Text
+              as="div"
+              color="colorText"
+              fontSize="fontSize50"
+              marginTop="space10"
+              textAlign="right"
+            >
+              🧒🏽
+            </Text>
+          </MediaBody>
+        </MediaObject>
+      </Box>
+      <Box display="flex" justifyContent="flex-end">
+        <MediaObject as="div">
+          <MediaBody>
+            <Box
+              as="div"
+              color="colorText"
+              backgroundColor="colorBackgroundUser"
+              borderRadius="borderRadius20"
+              borderBottomLeftRadius="borderRadius0"
+              fontSize="fontSize30"
+              lineHeight="lineHeight20"
+              padding="space30"
+              maxWidth="size30"
+            >
+              Sure! What's the error? What component were you trying to use?
+              What version of React are you on?
+            </Box>
+            <Text
+              as="div"
+              color="colorText"
+              fontSize="fontSize50"
+              marginTop="space10"
+            >
+              😀
+            </Text>
+          </MediaBody>
+        </MediaObject>
+      </Box>
+    </Stack>
+  </Column>
+</Grid>
+<Grid gutter="space40">
   <Column span={4} offset={1}>
     <Heading as="h2" variant="heading20">
       Making the support change
@@ -230,61 +275,95 @@ import { SiteFooter } from "../../components/footer";
     <Heading as="h3" variant="heading30">
       How we announced it
     </Heading>
-    <Paragraph>We made the change official by announcing a new support model at an All Hands meeting. It was made alongside many positive announcements. That helped absorb the initial blow, but was also missed by quite a few folks. Keeping this change going meant we’d need to be persistent. support We’d need to politely, but firmly say no to every request unless it came from the right channel. That being said, design systems are also *feelings* management: it was hard to have a team that routinely said *yes, and* to every request now  point to an external URL for any help.</Paragraph>
+    <Paragraph>
+      We made the change official by announcing a new support model at an All
+      Hands meeting. It was made alongside many positive announcements. That
+      helped absorb the initial blow, but was also missed by quite a few folks.
+      Keeping this change going meant we’d need to be persistent. support We’d
+      need to politely, but firmly say no to every request unless it came from
+      the right channel. That being said, design systems are also *feelings*
+      management: it was hard to have a team that routinely said *yes, and* to
+      every request now point to an external URL for any help.
+    </Paragraph>
     <Heading as="h3" variant="heading30">
       Enter the automations
     </Heading>
-    <Paragraph>We addressed new users first: using Slack’s workflow builder, I built a bot that DM’d anyone who joined our Slack channel for the first time with a greeting, important information, and a link to our support area.</Paragraph>
-    
     <Paragraph>
-      And while that helped, we knew that we still had hundreds of people still active in the channel with a previous social contract.
+      We addressed new users first: using Slack’s workflow builder, I built a
+      bot that DM’d anyone who joined our Slack channel for the first time with
+      a greeting, important information, and a link to our support area.
     </Paragraph>
-    
     <Paragraph>
-      To remedy this, we built another bot: This one was a little less discrete. For every new question that showed up in Slack, it posted a response suggesting the user redirect this question to a support channel.
+      And while that helped, we knew that we still had hundreds of people still
+      active in the channel with a previous social contract.
     </Paragraph>
-    
     <Paragraph>
-      We sweated the details on the copy of this. It had to be polite, sufficiently firm and also provide reasons why we were making this change. We also included an escalation path: while the chances of hitting this button are extremely rare (given that our design system does not directly deploy to customers), it did give customers peace of mind in knowing that urgent requests were still handled in this channel.
+      To remedy this, we built another bot: This one was a little less discrete.
+      For every new question that showed up in Slack, it posted a response
+      suggesting the user redirect this question to a support channel.
     </Paragraph>
-    
     <Paragraph>
-      For a number of reasons, this couldn’t be automatic: we set it to respond to an emoji reaction as a trigger. Since we’re mostly picky, we sweated on the perfect reaction too: it can’t be snarky, it can’t be rude: it had to convey the message that we’re doing this for a higher bar of documentation. So we turned to one of our favorite Twilio company values: Wwrite It Ddown. By using it as an emoji, we framed the redirection as an application of company values, and not personal hubris.
+      We sweated the details on the copy of this. It had to be polite,
+      sufficiently firm and also provide reasons why we were making this change.
+      We also included an escalation path: while the chances of hitting this
+      button are extremely rare (given that our design system does not directly
+      deploy to customers), it did give customers peace of mind in knowing that
+      urgent requests were still handled in this channel.
     </Paragraph>
-    
+    <Paragraph>
+      For a number of reasons, this couldn’t be automatic: we set it to respond
+      to an emoji reaction as a trigger. Since we’re mostly picky, we sweated on
+      the perfect reaction too: it can’t be snarky, it can’t be rude: it had to
+      convey the message that we’re doing this for a higher bar of
+      documentation. So we turned to one of our favorite Twilio company values:
+      Wwrite It Ddown. By using it as an emoji, we framed the redirection as an
+      application of company values, and not personal hubris.
+    </Paragraph>
+
     <Paragraph>
       We launched this about two months ago. Here’s what we’ve observed so far:
     </Paragraph>
-    
-    
-    <UnorderedList><ListItem>
-    Slack support requests have dropped from 10+ a day to ~ 3 a week. Some of these are redirected to GitHub, but others are managed directly.
-    </ListItem>
-    
-    <ListItem>
-    GitHub discussions did _*not*_ increase to 10+ a day (it did increase significantly, but nowhere as close) A hypothesis we have for this is that customers are more willing to try a few things out if the immediacy of Slack is not available.
-    </ListItem>
-    
-    <ListItem>
-    The quality of discussions increased somewhat. We still have a ways to go. Our hypothesis here is that independent of the medium, we probably have a lot more that we can do to help frame better conversations around UI.
-    </ListItem>
-    <ListItem>
-      Change is hard. Customers miss the immediacy of Slack, and the informal tone of support.
-    </ListItem>
-  </UnorderedList>
-  <Paragraph>
-    There’s still unanswered questions about design system support at Twilio. In the year ahead, we hope to:
-  </Paragraph>
-  <UnorderedList>
-    
-    <ListItem>
-      Make support more conversational, and less transactional: each support question should influence the design and direction of the system.
-    </ListItem>
-    
-    <ListItem>
-      Move discussions from 1:1 conversations to 1:many—like a good design problem, there are a number of ways to tackle a specific problem. Diverse perspectives usually lead to better outcomes.
-    </ListItem>
+
+    <UnorderedList>
+      <ListItem>
+        Slack support requests have dropped from 10+ a day to ~ 3 a week. Some
+        of these are redirected to GitHub, but others are managed directly.
+      </ListItem>
+
+      <ListItem>
+        GitHub discussions did _*not*_ increase to 10+ a day (it did increase
+        significantly, but nowhere as close) A hypothesis we have for this is
+        that customers are more willing to try a few things out if the immediacy
+        of Slack is not available.
+      </ListItem>
+
+      <ListItem>
+        The quality of discussions increased somewhat. We still have a ways to
+        go. Our hypothesis here is that independent of the medium, we probably
+        have a lot more that we can do to help frame better conversations around
+        UI.
+      </ListItem>
+      <ListItem>
+        Change is hard. Customers miss the immediacy of Slack, and the informal
+        tone of support.
+      </ListItem>
     </UnorderedList>
-</Column>
+    <Paragraph>
+      There’s still unanswered questions about design system support at Twilio.
+      In the year ahead, we hope to:
+    </Paragraph>
+    <UnorderedList>
+      <ListItem>
+        Make support more conversational, and less transactional: each support
+        question should influence the design and direction of the system.
+      </ListItem>
+
+      <ListItem>
+        Move discussions from 1:1 conversations to 1:many—like a good design
+        problem, there are a number of ways to tackle a specific problem.
+        Diverse perspectives usually lead to better outcomes.
+      </ListItem>
+    </UnorderedList>
+  </Column>
 </Grid>
 <SiteFooter />
