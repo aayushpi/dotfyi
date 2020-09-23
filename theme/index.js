@@ -35,7 +35,8 @@ export const PortfolioTheme = {
     colorBackgroundInverse: `#2c3e50`,
     colorTextInverse: `#fce2e0`,
     colorBorderLight: `#2c3e50`,
-    colorBackgroundUser: `#F98585`
+    colorBackgroundUser: `#F98585`,
+    colorBackgroundPrimary: `#2c3e50`
   },
   textColors:{
     colorText: `#2c3e50`,
@@ -43,7 +44,10 @@ export const PortfolioTheme = {
     colorTextLink: `#2c3e50`
   },
   borderColors:{
-    colorBorderLight: `#2c3e50`
+    colorBorderLight: `#2c3e50`,
+  },
+  boxShadowColors:{
+    shadowBorderPrimary: `#2c3e50`
   },
   lineHeights: {
     lineHeight0: '0',

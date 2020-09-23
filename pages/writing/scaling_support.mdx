@@ -7,6 +7,7 @@ import Link from "next/link";
 
 import {
   Grid,
+  Button,
   Column,
   Card,
   Heading,
@@ -27,6 +28,7 @@ import {
   Avatar,
 } from "@twilio-paste/core";
 import { SiteFooter } from "../../components/footer";
+let emergency = "flex";
 
 <Grid gutter="space40">
   <Column span={4} offset={1}>
@@ -57,8 +59,8 @@ import { SiteFooter } from "../../components/footer";
         <Anchor>doing things that don't scale</Anchor>
       </Link>
       . Then at a certain inflection point, a change will be necessary: it might
-      be technical or procedural, but is almost always *also* cultural. We saw
-      this as the design systems teams was incubated and eventually scaled
+      be technical or procedural, but is almost always <strong>also</strong> cultural.
+      We saw this as the design systems teams was incubated and eventually scaled
       organization wide.
     </Paragraph>
   </Column>
@@ -216,7 +218,7 @@ import { SiteFooter } from "../../components/footer";
               color="colorTextInverse"
               backgroundColor="colorBackgroundInverse"
               borderRadius="borderRadius30"
-              borderBottomRightRadius="borderRadius0"
+              borderBottomLeftRadius="borderRadius0"
               fontSize="fontSize30"
               lineHeight="lineHeight20"
               padding="space30"
@@ -229,7 +231,6 @@ import { SiteFooter } from "../../components/footer";
               color="colorText"
               fontSize="fontSize50"
               marginTop="space10"
-              textAlign="right"
             >
               🧒🏽
             </Text>
@@ -244,14 +245,41 @@ import { SiteFooter } from "../../components/footer";
               color="colorText"
               backgroundColor="colorBackgroundUser"
               borderRadius="borderRadius20"
+              borderBottomRightRadius="borderRadius0"
+              fontSize="fontSize30"
+              lineHeight="lineHeight20"
+              padding="space30"
+              maxWidth="size30"
+            >
+              Sure! What's the error? What component we--
+            </Box>
+            <Text
+              as="div"
+              color="colorText"
+              fontSize="fontSize50"
+              marginTop="space10"
+              textAlign="right"
+            >
+              😀
+            </Text>
+          </MediaBody>
+        </MediaObject>
+      </Box>
+      <Box display="flex" justifyContent="flex-start">
+        <MediaObject as="div">
+          <MediaBody>
+            <Box
+              as="div"
+              color="colorTextInverse"
+              backgroundColor="colorBackgroundInverse"
+              borderRadius="borderRadius30"
               borderBottomLeftRadius="borderRadius0"
               fontSize="fontSize30"
               lineHeight="lineHeight20"
               padding="space30"
               maxWidth="size30"
             >
-              Sure! What's the error? What component were you trying to use?
-              What version of React are you on?
+              What component can I use to make multiple selections from a list?
             </Box>
             <Text
               as="div"
@@ -259,7 +287,146 @@ import { SiteFooter } from "../../components/footer";
               fontSize="fontSize50"
               marginTop="space10"
             >
-              😀
+              👩🏼‍🦰
+            </Text>
+          </MediaBody>
+        </MediaObject>
+      </Box>
+      <Box display="flex" justifyContent="flex-end">
+        <MediaObject as="div">
+          <MediaBody>
+            <Box
+              as="div"
+              color="colorText"
+              backgroundColor="colorBackgroundUser"
+              borderRadius="borderRadius20"
+              borderBottomRightRadius="borderRadius0"
+              fontSize="fontSize30"
+              lineHeight="lineHeight20"
+              padding="space30"
+              maxWidth="size30"
+            >
+              You could use a Combobox. However for now --
+            </Box>
+            <Text
+              as="div"
+              color="colorText"
+              fontSize="fontSize50"
+              marginTop="space10"
+              textAlign="right"
+            >
+              🙂
+            </Text>
+          </MediaBody>
+        </MediaObject>
+      </Box>
+      <Box display="flex" justifyContent="flex-start">
+        <MediaObject as="div">
+          <MediaBody>
+            <Box
+              as="div"
+              color="colorTextInverse"
+              backgroundColor="colorBackgroundInverse"
+              borderRadius="borderRadius30"
+              borderBottomLeftRadius="borderRadius0"
+              fontSize="fontSize30"
+              lineHeight="lineHeight20"
+              padding="space30"
+              maxWidth="size30"
+            >
+              <strong>@here</strong> Hey folks where can I find the Sketch files
+              for Paste?
+            </Box>
+            <Text
+              as="div"
+              color="colorText"
+              fontSize="fontSize50"
+              marginTop="space10"
+            >
+              👨🏻
+            </Text>
+          </MediaBody>
+        </MediaObject>
+      </Box>
+      <Box display="flex" justifyContent="flex-end">
+        <MediaObject as="div">
+          <MediaBody>
+            <Box
+              as="div"
+              color="colorText"
+              backgroundColor="colorBackgroundUser"
+              borderRadius="borderRadius20"
+              borderBottomRightRadius="borderRadius0"
+              fontSize="fontSize30"
+              lineHeight="lineHeight20"
+              padding="space30"
+              maxWidth="size30"
+            >
+              It's in the Getting Started section.
+            </Box>
+            <Text
+              as="div"
+              color="colorText"
+              fontSize="fontSize50"
+              marginTop="space10"
+              textAlign="right"
+            >
+              😐
+            </Text>
+          </MediaBody>
+        </MediaObject>
+      </Box>
+      <Box display="flex" justifyContent="flex-start">
+        <MediaObject as="div">
+          <MediaBody>
+            <Box
+              as="div"
+              color="colorTextInverse"
+              backgroundColor="colorBackgroundInverse"
+              borderRadius="borderRadius30"
+              borderBottomLeftRadius="borderRadius0"
+              fontSize="fontSize30"
+              lineHeight="lineHeight20"
+              padding="space30"
+              maxWidth="size30"
+            >
+              Do you have an updated ETA on tables?
+            </Box>
+            <Text
+              as="div"
+              color="colorText"
+              fontSize="fontSize50"
+              marginTop="space10"
+            >
+              🧕🏼
+            </Text>
+          </MediaBody>
+        </MediaObject>
+      </Box>
+      <Box display="flex" justifyContent="flex-end">
+        <MediaObject as="div">
+          <MediaBody>
+            <Box
+              as="div"
+              color="colorText"
+              backgroundColor="colorBackgroundUser"
+              borderRadius="borderRadius20"
+              borderBottomRightRadius="borderRadius0"
+              fontSize="fontSize30"
+              lineHeight="lineHeight20"
+              padding="space30"
+              maxWidth="size30"
+            >
+              Not yet, still working on it!
+            </Box>
+            <Text
+              as="div"
+              color="colorText"
+              fontSize="fontSize50"
+              marginTop="space10"
+              textAlign="right"
+            >
+              😖
             </Text>
           </MediaBody>
         </MediaObject>
@@ -285,6 +452,10 @@ import { SiteFooter } from "../../components/footer";
       management: it was hard to have a team that routinely said *yes, and* to
       every request now point to an external URL for any help.
     </Paragraph>
+  </Column>
+</Grid>
+<Grid gutter="space40">
+  <Column span={4} offset={1}>
     <Heading as="h3" variant="heading30">
       Enter the automations
     </Heading>
@@ -316,54 +487,164 @@ import { SiteFooter } from "../../components/footer";
       the perfect reaction too: it can’t be snarky, it can’t be rude: it had to
       convey the message that we’re doing this for a higher bar of
       documentation. So we turned to one of our favorite Twilio company values:
-      Wwrite It Ddown. By using it as an emoji, we framed the redirection as an
+      Write It Ddown. By using it as an emoji, we framed the redirection as an
       application of company values, and not personal hubris.
     </Paragraph>
-
     <Paragraph>
       We launched this about two months ago. Here’s what we’ve observed so far:
     </Paragraph>
-
-    <UnorderedList>
-      <ListItem>
-        Slack support requests have dropped from 10+ a day to ~ 3 a week. Some
-        of these are redirected to GitHub, but others are managed directly.
-      </ListItem>
-
-      <ListItem>
-        GitHub discussions did _*not*_ increase to 10+ a day (it did increase
-        significantly, but nowhere as close) A hypothesis we have for this is
-        that customers are more willing to try a few things out if the immediacy
-        of Slack is not available.
-      </ListItem>
-
-      <ListItem>
-        The quality of discussions increased somewhat. We still have a ways to
-        go. Our hypothesis here is that independent of the medium, we probably
-        have a lot more that we can do to help frame better conversations around
-        UI.
-      </ListItem>
-      <ListItem>
-        Change is hard. Customers miss the immediacy of Slack, and the informal
-        tone of support.
-      </ListItem>
-    </UnorderedList>
-    <Paragraph>
-      There’s still unanswered questions about design system support at Twilio.
-      In the year ahead, we hope to:
-    </Paragraph>
-    <UnorderedList>
-      <ListItem>
-        Make support more conversational, and less transactional: each support
-        question should influence the design and direction of the system.
-      </ListItem>
-
-      <ListItem>
-        Move discussions from 1:1 conversations to 1:many—like a good design
-        problem, there are a number of ways to tackle a specific problem.
-        Diverse perspectives usually lead to better outcomes.
-      </ListItem>
-    </UnorderedList>
+  </Column>
+  <Column span={3} offset={1}>
+    <Stack orientation="vertical" spacing="space60">
+      <Box display="flex" justifyContent="flex-start">
+        <MediaObject as="div">
+          <MediaBody>
+            <Box
+              as="div"
+              color="colorTextInverse"
+              backgroundColor="colorBackgroundInverse"
+              borderRadius="borderRadius30"
+              fontSize="fontSize30"
+              lineHeight="lineHeight20"
+              padding="space30"
+              maxWidth="size30"
+            >
+              👩🏻‍🎤 joined design system help.
+            </Box>
+          </MediaBody>
+        </MediaObject>
+      </Box>
+      <Box display="flex" justifyContent="flex-start">
+        <MediaObject as="div">
+          <MediaBody>
+            <Box
+              as="div"
+              color="colorText"
+              backgroundColor="colorBackgroundUser"
+              borderRadius="borderRadius20"
+              borderBottomRightRadius="borderRadius0"
+              fontSize="fontSize30"
+              lineHeight="lineHeight20"
+              padding="space30"
+            >
+              Hey 👩🏻‍🎤! Welcome to design system help!
+              <br />
+              📖 Start by{" "}
+              <Link href="//paste.twilio.design/" passHref>
+                <Anchor>exploring our docs</Anchor>
+              </Link>
+              <br />❓ Still need help?{" "}
+              <Link href="//github.com/twilio-labs/paste/discussions">
+                <Anchor>Start a discussion</Anchor>
+              </Link>
+              <br />
+              🕐 Expect a 1 day response time
+              <br />
+              🚨 Extremely urgent request, post in Slack!
+            </Box>
+            <Text
+              as="div"
+              color="colorText"
+              fontSize="fontSize50"
+              marginTop="space10"
+              textAlign="right"
+            >
+              🤖
+            </Text>
+          </MediaBody>
+        </MediaObject>
+      </Box>
+      <Box display="flex" justifyContent="flex-start">
+        <MediaObject as="div">
+          <MediaBody>
+            <Box
+              as="div"
+              color="colorTextInverse"
+              backgroundColor="colorBackgroundInverse"
+              borderRadius="borderRadius30"
+              borderBottomLeftRadius="borderRadius0"
+              fontSize="fontSize30"
+              lineHeight="lineHeight20"
+              padding="space30"
+              maxWidth="size30"
+            >
+              Is there a way to style Paste components? className props don't seem to work!
+            </Box>
+            <Text
+              as="div"
+              color="colorText"
+              fontSize="fontSize50"
+              marginTop="space10"
+            >
+              👩🏼‍🦰
+            </Text>
+          </MediaBody>
+        </MediaObject>
+      </Box>
+      <Box display="flex" justifyContent="flex-end">
+        <MediaObject as="div">
+          <MediaBody>
+            <Box
+              as="div"
+              color="colorText"
+              backgroundColor="colorBackgroundUser"
+              borderRadius="borderRadius20"
+              borderBottomRightRadius="borderRadius0"
+              fontSize="fontSize30"
+              lineHeight="lineHeight20"
+              padding="space30"
+              maxWidth="size30"
+            >
+              Hi! Post your question on <Link href="//github.com/twilio-labs/paste/discussions" passHref>
+                <Anchor>
+                  GitHub
+                </Anchor>
+              </Link>! If this is an extremely urgent request press the emergency button!
+              <Box marginTop="space20">
+                <Button variant="primary" size="small" onClick={() => {let emergency = "none"}}>Emergency</Button>
+              </Box>
+            </Box>
+            <Text
+              as="div"
+              color="colorText"
+              fontSize="fontSize50"
+              marginTop="space10"
+              textAlign="right"
+            >
+             🤖 
+            </Text>
+          </MediaBody>
+        </MediaObject>
+      </Box>
+      <Box display={emergency} justifyContent="flex-end">
+        <MediaObject as="div">
+          <MediaBody>
+            <Box
+              as="div"
+              color="colorText"
+              backgroundColor="colorBackgroundUser"
+              borderRadius="borderRadius20"
+              borderBottomRightRadius="borderRadius0"
+              fontSize="fontSize30"
+              lineHeight="lineHeight20"
+              padding="space30"
+              maxWidth="size30"
+            >
+              Hi there, we intentionally haven't introduced classNames in Paste. Read about it in our doc site!
+            </Box>
+            <Text
+              as="div"
+              color="colorText"
+              fontSize="fontSize50"
+              marginTop="space10"
+              textAlign="right"
+            >
+              🙂
+            </Text>
+          </MediaBody>
+        </MediaObject>
+      </Box>
+    </Stack>
   </Column>
 </Grid>
 <SiteFooter />
