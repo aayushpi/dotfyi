@@ -12,7 +12,7 @@
     "@twilio-paste/animation-library": "0.2.1",
     "@twilio-paste/core": "2.16.55",
     "@twilio-paste/design-tokens": "6.2.2",
-    "@twilio-paste/dropdown-library": "0.1.2",
+    "@twilio-paste/dropdown-library": "1.0.0",
     "@twilio-paste/icons": "3.5.2",
     "@twilio-paste/reakit-library": "0.7.1",
     "@twilio-paste/style-props": "1.7.1",
