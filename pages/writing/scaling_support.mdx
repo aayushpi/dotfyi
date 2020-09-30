@@ -28,7 +28,80 @@ import {
   Avatar,
 } from "@twilio-paste/core";
 import { SiteFooter } from "../../components/footer";
-let emergency = "flex";
+const triggerEmergency = (props) => {
+  const [displayProp, setDisplayProp] = React.useState('none');
+  return (
+    <>
+    <Box display="flex" justifyContent="flex-end">
+        <MediaObject as="div">
+          <MediaBody>
+            <Box
+              as="div"
+              color="colorText"
+              backgroundColor="colorBackgroundUser"
+              borderRadius="borderRadius20"
+              borderBottomRightRadius="borderRadius0"
+              fontSize="fontSize30"
+              lineHeight="lineHeight20"
+              padding="space30"
+              maxWidth="size30"
+            >
+              Hi! Post your question on <Link href="//github.com/twilio-labs/paste/discussions" passHref>
+                <Anchor>
+                  GitHub
+                </Anchor>
+              </Link>! If this is an extremely urgent request press the emergency button, and a DSYS team member will get back to you!
+              <Box marginTop="space20">
+                <Button variant="primary" size="small" onClick={()=> {
+      setDisplayProp('flex');}}>Emergency</Button>
+              </Box>
+              <Box display={displayProp} marginTop="space40">
+                Aye aye! Paging a team member now. Hang tight!
+              </Box>
+            </Box>
+            <Text
+              as="div"
+              color="colorText"
+              fontSize="fontSize50"
+              marginTop="space10"
+              textAlign="right"
+            >
+             🤖 
+            </Text>
+          </MediaBody>
+        </MediaObject>
+      </Box>
+    <Box display={displayProp} justifyContent="flex-end">
+        <MediaObject as="div">
+          <MediaBody>
+            <Box
+              as="div"
+              color="colorText"
+              backgroundColor="colorBackgroundUser"
+              borderRadius="borderRadius20"
+              borderBottomRightRadius="borderRadius0"
+              fontSize="fontSize30"
+              lineHeight="lineHeight20"
+              padding="space30"
+              maxWidth="size30"
+            >
+              Hi there, we intentionally haven't introduced classNames in Paste. Read about it in our doc site!
+            </Box>
+            <Text
+              as="div"
+              color="colorText"
+              fontSize="fontSize50"
+              marginTop="space10"
+              textAlign="right"
+            >
+              🙂
+            </Text>
+          </MediaBody>
+        </MediaObject>
+      </Box>
+    </>
+  )
+}
 
 <Grid gutter="space40">
   <Column span={4} offset={1}>
@@ -581,69 +654,7 @@ let emergency = "flex";
           </MediaBody>
         </MediaObject>
       </Box>
-      <Box display="flex" justifyContent="flex-end">
-        <MediaObject as="div">
-          <MediaBody>
-            <Box
-              as="div"
-              color="colorText"
-              backgroundColor="colorBackgroundUser"
-              borderRadius="borderRadius20"
-              borderBottomRightRadius="borderRadius0"
-              fontSize="fontSize30"
-              lineHeight="lineHeight20"
-              padding="space30"
-              maxWidth="size30"
-            >
-              Hi! Post your question on <Link href="//github.com/twilio-labs/paste/discussions" passHref>
-                <Anchor>
-                  GitHub
-                </Anchor>
-              </Link>! If this is an extremely urgent request press the emergency button!
-              <Box marginTop="space20">
-                <Button variant="primary" size="small" onClick={() => {let emergency = "none"}}>Emergency</Button>
-              </Box>
-            </Box>
-            <Text
-              as="div"
-              color="colorText"
-              fontSize="fontSize50"
-              marginTop="space10"
-              textAlign="right"
-            >
-             🤖 
-            </Text>
-          </MediaBody>
-        </MediaObject>
-      </Box>
-      <Box display={emergency} justifyContent="flex-end">
-        <MediaObject as="div">
-          <MediaBody>
-            <Box
-              as="div"
-              color="colorText"
-              backgroundColor="colorBackgroundUser"
-              borderRadius="borderRadius20"
-              borderBottomRightRadius="borderRadius0"
-              fontSize="fontSize30"
-              lineHeight="lineHeight20"
-              padding="space30"
-              maxWidth="size30"
-            >
-              Hi there, we intentionally haven't introduced classNames in Paste. Read about it in our doc site!
-            </Box>
-            <Text
-              as="div"
-              color="colorText"
-              fontSize="fontSize50"
-              marginTop="space10"
-              textAlign="right"
-            >
-              🙂
-            </Text>
-          </MediaBody>
-        </MediaObject>
-      </Box>
+      {triggerEmergency()}
     </Stack>
   </Column>
 </Grid>
