@@ -1940,10 +1940,10 @@
   resolved "https://registry.yarnpkg.com/@twilio-paste/text/-/text-2.3.6.tgz#6ddddf0de0cb0bc2049e5259bc636cf6ea9ddf7f"
   integrity sha512-i72ZvpRlqN3+8Ck03lEzbXLB7sL3skUQmSN0/c3BXSQe+QxJVOoLrUvbedRZBG4z9Fl0aERRB9VLz6v3KVcl7Q==
 
-"@twilio-paste/theme@3.2.22":
-  version "3.2.22"
-  resolved "https://registry.yarnpkg.com/@twilio-paste/theme/-/theme-3.2.22.tgz#b9c9ebc7e12de5f8e511377dcfda1204ead7dda1"
-  integrity sha512-QYTiy3q2daYVGVR7DhMWsgDIAY8XOMOVvHW6gLV8cz6N+QCccLmdeV0mntYsyN1ok/W9msiYVoGuBV1SQXIe3A==
+"@twilio-paste/theme@3.2.27":
+  version "3.2.27"
+  resolved "https://registry.yarnpkg.com/@twilio-paste/theme/-/theme-3.2.27.tgz#84930e82ecb7ef7469b0f585edc3d24fe8d2ba2e"
+  integrity sha512-NZE7ciEWRFXjc/hdSbmBiE6JXQrkO8vGAGcBkq9Yyw+0407bRpQyMa5uUMVwfAvwk9u5xNk5gYAcK1mX8HZCSg==
 
 "@twilio-paste/toast@^0.1.1":
   version "0.1.1"
