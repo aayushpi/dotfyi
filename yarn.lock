@@ -1924,10 +1924,10 @@
   resolved "https://registry.yarnpkg.com/@twilio-paste/radio-group/-/radio-group-1.1.4.tgz#841bea865e7575f70ebae5d40fa22937be454d91"
   integrity sha512-Vu1bkMqUfX9mNFX1s2mI3btlnQuE+GEMyK6PPYVAfcVuUCctZ2VOHPdgIT7P7yuUn75bKqMOe2wMt408eSwUJQ==
 
-"@twilio-paste/reakit-library@0.7.2":
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/@twilio-paste/reakit-library/-/reakit-library-0.7.2.tgz#6c2fda54f3e549e8aa5117a057b789a6b111e291"
-  integrity sha512-Po53Cpq6BZGEkpXUt6rfTlXbIIVT7mahsjGnRahxFkrzXDuCJRCoVWGLOeUe1cht8yV+xGnJ77z7XXBIDKRqYg==
+"@twilio-paste/reakit-library@0.7.4":
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/@twilio-paste/reakit-library/-/reakit-library-0.7.4.tgz#140bf1419e6486d3f9fe1e9517b498e467b7a1a4"
+  integrity sha512-HMo1XBe4vOwa/FLgMW0nGsMmlvcn3jJa1SLOi6oIahTX9oIFD7hTA6/MbNB8EkWW/E2EYGqI5tUGWaA29rec1A==
   dependencies:
     reakit "1.2.3"
     reakit-system "0.14.3"
