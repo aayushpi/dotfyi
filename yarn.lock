@@ -1970,10 +1970,10 @@
   dependencies:
     csstype "^2.6.10"
 
-"@twilio-paste/styling-library@0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@twilio-paste/styling-library/-/styling-library-0.1.2.tgz#22b1e71b6d58435829700289c430dd38b74f83d9"
-  integrity sha512-2ozOpEAY/gp8hFYhdRPlLM0LxadHIOmUJnf/h1PHMMC6VLFBnRLNWtxioq3No4N+sJnnv6CGZ4fhUSR4OPfHxA==
+"@twilio-paste/styling-library@0.1.4":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@twilio-paste/styling-library/-/styling-library-0.1.4.tgz#07b4e4ceae0a7af9293296e8a2efc257fdbf1c48"
+  integrity sha512-L+59uN1RsIsCi/SOyUhOt8rm1XNhOMr62YBIbE4GmdlIu4OL4oFrRno/h7hx91/WFAw2wU4wqYTFKgXp+1RROg==
   dependencies:
     "@emotion/core" "10.0.28"
     "@emotion/styled" "10.0.27"
