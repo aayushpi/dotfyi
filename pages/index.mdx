@@ -44,9 +44,6 @@ import { SiteFooter } from "../components/footer";
           orientation={["vertical", "vertical", "horizontal"]}
           spacing="space60"
         >
-          <Link href="/writing" passHref>
-            <Anchor>Writing</Anchor>
-          </Link>
           <Link href="/work" passHref>
             <Anchor>Work</Anchor>
           </Link>
@@ -69,8 +66,11 @@ import { SiteFooter } from "../components/footer";
         <Heading as="h2" variant="heading20">
           Recent Writing
         </Heading>
-        <Separator orientation="horizontal" verticalSpacing="space50" />
-        <Text as="p">This space is unfortunately blank</Text>
+        <Link href="/writing/scaling_support" passHref>
+          <Anchor>
+            Growing Pains: How We Scaled Our Design System Support
+          </Anchor>
+        </Link>
       </Column>
       <Column span={[12, 12, 4]} offset={[0, 0, 1]}>
         <Heading as="h2" variant="heading20">
