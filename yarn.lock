@@ -1800,10 +1800,10 @@
     "@twilio-paste/tooltip-primitive" "^0.1.5"
     "@twilio-paste/truncate" "^1.0.12"
 
-"@twilio-paste/design-tokens@6.3.3":
-  version "6.3.3"
-  resolved "https://registry.yarnpkg.com/@twilio-paste/design-tokens/-/design-tokens-6.3.3.tgz#94c16c59fcb3ab0f4765533ae42ab4f4ff9f2987"
-  integrity sha512-MQfo3ssSjuPkJv8PBAkJWuOkA/r1uC/DJCXo74f3ppvNqau9i3+ida3p26HbEyiYld7b5oGp4jXRcqb2AjQcjQ==
+"@twilio-paste/design-tokens@6.3.5":
+  version "6.3.5"
+  resolved "https://registry.yarnpkg.com/@twilio-paste/design-tokens/-/design-tokens-6.3.5.tgz#8bf0fdf490ef924215b5ab51765c5381f6fff126"
+  integrity sha512-ex32n7FkG10vuZwqGb3cd7xaqs5+Nic+ilg/x64GVD8z5Zs9VuULJ3blMOhYTzIIqQ4/59lcpbYnoM/cdfb/FA==
 
 "@twilio-paste/disclosure-primitive@^0.2.4":
   version "0.2.4"
