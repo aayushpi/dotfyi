@@ -4,6 +4,7 @@ import { pasteBaseStyles } from '@twilio-paste/theme';
 import { Box } from '@twilio-paste/core';
 import { PortfolioTheme } from '../theme';
 import { ComponentProvider } from '../components/component-provider';
+import { SiteFooter } from "../components/footer";
 const StyledBase = styled(Box)(pasteBaseStyles);
 const globalStyles = (props) =>
   css({
@@ -35,13 +36,19 @@ const App = ({ Component, pageProps }) => (
       <StylingGlobals styles={globalStyles({ theme: PortfolioTheme })} />
         <StyledBase
           as="main"
-          marginLeft={['space50', 'space50', 'auto']}
-          marginRight={['space50', 'space50', 'auto']}
-          marginTop={['space30', 'space30', 'space200']}
-          maxWidth="size200"
         >
+        <Box
+        as="section"
+        marginLeft={['space50', 'space50', 'auto']}
+        marginRight={['space50 ', 'space50', 'auto']}
+        marginTop={['space30', 'space30', 'space200']}
+        maxWidth="size200">
           <Component {...pageProps} />
+        </Box>  
+          <SiteFooter />
+
         </StyledBase>
+        
       </ThemeProvider>
     </ComponentProvider>
   </>
