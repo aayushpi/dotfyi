@@ -186,46 +186,48 @@ const triggerEmergency = (props) => {
   );
 };
 
-<Grid gutter="space40">
-  <Column span={4} offset={1}>
-    <Box>
-      <Stack orientation="horizontal" spacing="space30">
-        <Link href="/" passHref>
-          <Anchor>
-            <ScreenReaderOnly>Back to</ScreenReaderOnly> Home
-          </Anchor>
-        </Link>
-        <Text as="span">/</Text>
-        <Link href="/" passHref>
-          <Anchor>Writing</Anchor>
-        </Link>
-        <Text as="span">/</Text>
-      </Stack>
-    </Box>
-    <Heading as="h1" variant="heading10">
-      Growing Pains: How We{" "}
-      <Box as="span" backgroundColor="colorBackgroundBrandHighlight">
-        Scaled Our Design System Support
+<Box marginBottom="space60">
+  <Grid gutter="space40">
+    <Column span={4} offset={1}>
+      <Box>
+        <Stack orientation="horizontal" spacing="space30">
+          <Link href="/" passHref>
+            <Anchor>
+              <ScreenReaderOnly>Back to</ScreenReaderOnly> Home
+            </Anchor>
+          </Link>
+          <Text as="span">/</Text>
+          <Link href="/" passHref>
+            <Anchor>Writing</Anchor>
+          </Link>
+          <Text as="span">/</Text>
+        </Stack>
       </Box>
-    </Heading>
+      <Heading as="h1" variant="heading10">
+        Growing Pains: How We{" "}
+        <Box as="span" backgroundColor="colorBackgroundBrandHighlight">
+          Scaled Our Design System Support
+        </Box>
+      </Heading>
+    </Column>
+  </Grid>
+</Box>
+<Grid gutter="space40">
+  <Column span={5} offset={1}>
     <Paragraph>
       While building platforms for the first time, your team and their customers
       go through a multitude of changes. Customers learn new ways to work and
       give up their own ways of working. And while most of these can be
       positive, inertia and muscle memory pose challenges that might be
       technical or operational, but almost always <strong>also</strong>{" "}
-      cultural. We saw this as our{" "}
+      cultural. We saw this as the{" "}
       <Link href="//paste.twilio.design/" passHref>
-        <Anchor>design system</Anchor>
+        <Anchor>Twilio design system</Anchor>
       </Link>{" "}
       was incubated and eventually scaled organization wide. Here are some of
       the ways we scaled our support, helping our customers and ourselves
       through these stages.
     </Paragraph>
-  </Column>
-</Grid>
-<Grid gutter="space40">
-  <Column span={4} offset={1}>
     <Heading as="h2" variant="heading20">
       Stage 1: Support as incubation
     </Heading>
@@ -308,7 +310,7 @@ const triggerEmergency = (props) => {
   </Column>
 </Grid>
 <Grid gutter="space40">
-  <Column span={4} offset={1}>
+  <Column span={5} offset={1}>
     <Heading as="h2" variant="heading20">
       Stage 2: Support as we scaled
     </Heading>
@@ -324,7 +326,13 @@ const triggerEmergency = (props) => {
       of 10 questions a day, and the team began to feel it.
     </Paragraph>
     <Paragraph>
-      To do so, we investigated why our support model was failing at scale:
+      This was a good problem to have: customers were buying in to the design
+      system at a pace that was greater than anticipated. However, this meant
+      that we were increasingly devoting more time to support rather than new
+      development. This was affecting our development speed and, more
+      importantly, team health: support is hard, and often a thankless job. To
+      mitigate these problems, we investigated why our support model was failing
+      at scale:
     </Paragraph>
     <UnorderedList>
       <ListItem>
@@ -597,7 +605,7 @@ const triggerEmergency = (props) => {
   </Column>
 </Grid>
 <Grid gutter="space40">
-  <Column span={4} offset={1}>
+  <Column span={5} offset={1}>
     <Heading as="h2" variant="heading20">
       Making the support change
     </Heading>
@@ -618,7 +626,7 @@ const triggerEmergency = (props) => {
   </Column>
 </Grid>
 <Grid gutter="space40">
-  <Column span={4} offset={1}>
+  <Column span={5} offset={1}>
     <Heading as="h3" variant="heading30">
       Enter the automations
     </Heading>
@@ -647,7 +655,12 @@ const triggerEmergency = (props) => {
       existed.
     </Paragraph>
     <Paragraph>
-      We launched this about two months ago. Here’s what we’ve observed so far:
+      We called this bot the <em>Paste Concierge</em>. It launched two months
+      ago and we paid keen attention to how customers might react to it. As
+      expected, the immediate response was less than optimal. While some
+      customers (particularly engineers) took to the GitHub model easily, it
+      took a while to convince others to sign up for GitHub just to engage with
+      the system. We held firm with this new support model, and here’s what we’ve observed so far:
     </Paragraph>
     <OrderedList>
       <ListItem>
@@ -661,8 +674,7 @@ const triggerEmergency = (props) => {
       </ListItem>
     </OrderedList>
     <Paragraph>
-      But as expected, it's not a rousing success. Customers miss the immediacy
-      of Slack, and the informal tone of support. There’s still unanswered
+      It's important to note that perfect support is not realisting. The Paste Concierge clearly helped, but still needs more work. There’s still unanswered
       questions about design system support at Twilio. In the year ahead, we
       hope to:
     </Paragraph>
@@ -717,7 +729,10 @@ const triggerEmergency = (props) => {
               <Link href="//paste.twilio.design/" passHref>
                 <Anchor>exploring our docs</Anchor>
               </Link>
-              <br />❓ Still need help? <Link href="//github.com/twilio-labs/paste/discussions">
+              <br />❓ Still need help? <Link
+                passHref
+                href="//github.com/twilio-labs/paste/discussions"
+              >
                 <Anchor>Start a discussion</Anchor>
               </Link>
               <br />
@@ -770,7 +785,7 @@ const triggerEmergency = (props) => {
   </Column>
 </Grid>
 <Grid gutter="space40">
-  <Column span={4} offset={1}>
+  <Column span={5} offset={1}>
     <Heading as="h2" variant="heading20">
       Closing thoughts
     </Heading>
@@ -803,25 +818,19 @@ const triggerEmergency = (props) => {
       your support to not be about the answer itself, but the process in which
       your customer gets there, and how your team feels about it.
     </Paragraph>
-    <Box
-    as="section"
-    >
+    <Box as="section">
       <Separator orientation="horizontal" verticalSpacing="space50" />
-      <Text as="p"
-      fontSize="fontSize20">
-        Many thanks to <Link href="//www.jennieyip.design/" passHref>
-          <Anchor showExternal>
-            Jennie Yip
-          </Anchor>
-        </Link>, <Link href="//heysarah.li/" passHref>
-          <Anchor showExternal>
-            Sarah Li
-          </Anchor>
+      <Text as="p" fontSize="fontSize20">
+        Many thanks to{" "}
+        <Link href="//www.jennieyip.design/" passHref>
+          <Anchor>Jennie Yip</Anchor>
+        </Link>
+        , <Link href="//heysarah.li/" passHref>
+          <Anchor>Sarah Li</Anchor>
         </Link>, and <Link href="//chexee.me/" passHref>
-          <Anchor showExternal>
-            Chelsea Otakan
-          </Anchor>
-        </Link> for guidance and edits on this article. If you see a typo or an error, please drop a line here.
+          <Anchor>Chelsea Otakan</Anchor>
+        </Link> for guidance and edits on this article. If you see a typo or an error,
+        please drop a line here.
       </Text>
     </Box>
   </Column>
