@@ -9,7 +9,7 @@
   "dependencies": {
     "@mdx-js/loader": "1.6.21",
     "@next/mdx": "10.0.1",
-    "@twilio-paste/core": "4.1.2",
+    "@twilio-paste/core": "4.1.9",
     "@twilio-paste/icons": "3.8.2",
     "next": "latest",
     "next-mdx-enhanced": "3.1.0",
