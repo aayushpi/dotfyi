@@ -26,8 +26,6 @@ import {
 } from "@twilio-paste/core";
 import { LinkExternalIcon } from "@twilio-paste/icons/cjs/LinkExternalIcon";
 
-import { SiteFooter } from "../components/footer";
-
 <Box>
   <Grid>
     <Column span={[12, 12, 4]} offset={[0, 0, 1]}>
@@ -47,15 +45,15 @@ import { SiteFooter } from "../components/footer";
           <Link href="/work" passHref>
             <Anchor>Work</Anchor>
           </Link>
-            <Flex display="inline-flex" vAlignContent="center">
-          <Link href="//twitter.com/aayush" passHref>
+          <Flex display="inline-flex" vAlignContent="center">
+            <Link href="//twitter.com/aayush" passHref>
               <Anchor>Twitter</Anchor>
-          </Link>
-              <LinkExternalIcon
-                decorative={false}
-                title="Opens an external resource"
-              />
-            </Flex>
+            </Link>
+            <LinkExternalIcon
+              decorative={false}
+              title="Opens an external resource"
+            />
+          </Flex>
         </Stack>
       </Box>
     </Column>
@@ -99,5 +97,4 @@ import { SiteFooter } from "../components/footer";
       </Column>
     </Grid>
   </Box>
-  <SiteFooter />
 </Box>
