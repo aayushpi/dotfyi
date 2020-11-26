@@ -28,80 +28,6 @@ import {
   Avatar,
 } from "@twilio-paste/core";
 import { SiteFooter } from "../../components/footer";
-const enterTheSystem = (props) => {
-  const [joinSystemProp, setJoinSystemProp] = React.useState("none");
-  return (
-    <Stack orientation="vertical" spacing="space60">
-      <Box display="flex" justifyContent="flex-start">
-        <MediaObject as="div">
-          <MediaBody>
-            <Button
-              variant="primary"
-              size="small"
-              onClick={() => {
-                setJoinSystemProp("flex");
-              }}
-            >
-              Join Design System Support
-            </Button>
-            <Box
-              display={joinSystemProp}
-              as="div"
-              color="colorTextInverse"
-              backgroundColor="colorBackgroundInverse"
-              borderRadius="borderRadius30"
-              fontSize="fontSize30"
-              lineHeight="lineHeight20"
-              padding="space30"
-              maxWidth="size30"
-            >
-              👩🏻‍🎤 joined design system help.
-            </Box>
-          </MediaBody>
-        </MediaObject>
-      </Box>
-      <Box display={joinSystemProp} justifyContent="flex-start">
-        <MediaObject as="div">
-          <MediaBody>
-            <Box
-              as="div"
-              color="colorText"
-              backgroundColor="colorBackgroundUser"
-              borderRadius="borderRadius20"
-              borderBottomRightRadius="borderRadius0"
-              fontSize="fontSize30"
-              lineHeight="lineHeight20"
-              padding="space30"
-            >
-              Hey 👩🏻‍🎤! Welcome to design system help!
-              <br />
-              📖 Start by{" "}
-              <Link href="//paste.twilio.design/" passHref>
-                <Anchor>exploring our docs</Anchor>
-              </Link>
-              <br />❓ Still need help? <Link href="//github.com/twilio-labs/paste/discussions">
-                <Anchor>Start a discussion</Anchor>
-              </Link>
-              <br />
-              🕐 Expect a 1 day response time
-              <br />
-              🚨 Extremely urgent request, post in Slack!
-            </Box>
-            <Text
-              as="div"
-              color="colorText"
-              fontSize="fontSize50"
-              marginTop="space10"
-              textAlign="right"
-            >
-              🤖
-            </Text>
-          </MediaBody>
-        </MediaObject>
-      </Box>
-    </Stack>
-  );
-};
 const triggerEmergency = (props) => {
   const [displayProp, setDisplayProp] = React.useState("none");
   return (
@@ -134,7 +60,7 @@ const triggerEmergency = (props) => {
                     setDisplayProp("flex");
                   }}
                 >
-                  Emergency
+                  🚨 Emergency
                 </Button>
               </Box>
               <Box display={displayProp} marginTop="space40">
@@ -197,9 +123,7 @@ const triggerEmergency = (props) => {
             </Anchor>
           </Link>
           <Text as="span">/</Text>
-          <Link href="/" passHref>
-            <Anchor>Writing</Anchor>
-          </Link>
+            Writing
           <Text as="span">/</Text>
         </Stack>
       </Box>
@@ -215,12 +139,17 @@ const triggerEmergency = (props) => {
 <Grid gutter="space40">
   <Column span={5} offset={1}>
     <Paragraph>
-      While building platforms for the first time, your team and their customers
-      go through a multitude of changes. Customers learn new ways to work and
-      give up their own ways of working. And while most of these can be
-      positive, inertia and muscle memory pose challenges that might be
-      technical or operational, but almost always <strong>also</strong>{" "}
-      cultural. We saw this as the{" "}
+      If you're building a new platform team, your customers are going to go
+      through many changes. In the case of a design system, tools, hacks, and
+      practices that made your team wildly successful are also the cause of long
+      term design and technical debt. Making corrective changes to mitigate
+      these problems with a platform can often mean taking away these legos.
+      Although this is positive, you're playing with feelings and agency. And
+      the way you communicate these changes and support people in the transition
+      can be the differentiator between success and rejection.{" "}
+    </Paragraph>
+    <Paragraph>
+      We saw this as the{" "}
       <Link href="//paste.twilio.design/" passHref>
         <Anchor>Twilio design system</Anchor>
       </Link>{" "}
@@ -246,6 +175,13 @@ const triggerEmergency = (props) => {
       this approach didn't allow for the best answer for each experience, it did
       allow us to take diving catches that built trust with designers, PMs, and
       engineers.
+    </Paragraph>
+    <Paragraph>
+      This support model worked as intended. Over the years, engagement in this
+      slack channel increased. Front-end engineers and product designers
+      organically found community and the best possible way to solve a problem.
+      This whet the appetite for a design systems team, and provided enough
+      evidence to make key hires could <em>actually</em> build a system.
     </Paragraph>
   </Column>
   <Column span={3} offset={1}>
@@ -318,27 +254,28 @@ const triggerEmergency = (props) => {
       Fast forward about a year, and Paste was at the foot of a steep adoption
       curve. Unlike our legacy libraries (which had larger, more complex
       monolithic components), we had moved to an approach of small, accessible,
-      and composable pieces that could be mixed and matched. Designers and
-      engineers were beginning to use the system as a baseline for their UIs. In
-      doing so, there was a lot of relearning and undoing of old habits. We
-      started getting increasingly complex questions around accessibility,
-      composition, UI reviews, and of course Typescript errors. We’d see upwards
-      of 10 questions a day, and the team began to feel it.
+      and composable pieces of kit that could be mixed and matched. Designers
+      and engineers were beginning to use the system in their UIs. As they went
+      about this, there was a lot of learning and undoing of old habits that was
+      necessary. We started getting a lot of questions around component usage,
+      accessibility, composition, UI reviews, etc. Answering these questions
+      took some time, and as we saw 20+ questions a day, the four person team
+      began to feel it.
     </Paragraph>
     <Paragraph>
       This was a good problem to have: customers were buying in to the design
       system at a pace that was greater than anticipated. However, this meant
       that we were increasingly devoting more time to support rather than new
-      development. This was affecting our development speed and, more
-      importantly, team health: support is hard, and often a thankless job. To
-      mitigate these problems, we investigated why our support model was failing
-      at scale:
+      development. This put a dent in our shipping velocity but1 more
+      importantly affected team health: support is hard and often a thankless
+      job. To mitigate these problems, we investigated why our support model was
+      failing at scale:
     </Paragraph>
     <UnorderedList>
       <ListItem>
-        The <strong>immediacy</strong> of Slack meant it was easier for people
-        to get answers to their questions through a Slack message than go to the
-        doc site to look for an answer.
+        The immediacy of Slack meant it was easier for people to get answers to
+        their questions through a Slack message than go to the doc site to look
+        for an answer.
       </ListItem>
       <ListItem>
         Slack messages are ephemeral and teams around the world would routinely
@@ -347,7 +284,7 @@ const triggerEmergency = (props) => {
       </ListItem>
       <ListItem>
         The quality of incoming requests was affected by the medium: “My build
-        broke can you help?” instead of “My build (screenshot attached) failed,
+        broke, can you help?” instead of “My build (screenshot attached) failed,
         I am currently doing <em>x</em>, and tried to do <em>y</em>”
       </ListItem>
     </UnorderedList>
@@ -358,24 +295,29 @@ const triggerEmergency = (props) => {
       some changes:
     </Paragraph>
     <UnorderedList>
-      <ListItem>We improved documentation structure based on feedback</ListItem>
       <ListItem>
-        We began a rotating helper model for the team to lead support
-        conversations through the week
+        We improved documentation structure based on feedback. This included a
+        greater focus on examples and do's and don'ts.
       </ListItem>
       <ListItem>
-        <strong>And a big change:</strong> We moved all support conversations
-        from Slack to GitHub discussions.
+        We began a rotating helper model for the team to lead support
+        conversations through the week. This allowed the majority of the team to
+        focus on work, while mentally preparing our weekly support helper to
+        embrace conversations with service mindset.
+      </ListItem>
+      <ListItem>
+        We also made a <strong>big change</strong> to how we support teams by
+        moving all conversations from Slack to GitHub discussions.
       </ListItem>
     </UnorderedList>
     <Paragraph>
-      This was a significant cultural change: moving the support model from
-      Slack to a new platform was at the very least, a significant
-      inconvenience. At worst, it was a breach of trust that the system was
-      founded on. Managing how our users felt about this change was an important
-      criteria for success. We’d need to inform people of the change, and then
-      remind them of it enough till the habit was broken and remade. And we had
-      to hope that in all of this, they still trusted us.
+      The last change was particularly significant: moving the support model
+      from Slack to a new platform was more than a minor inconvenience. To many,
+      it was a breach of trust that the system was founded on. Managing how our
+      users felt about this change was an important criteria for success. We’d
+      need to inform people of the change, and then remind them of it enough
+      till the habit was broken and remade. And we had to hope that in all of
+      this, they still trusted us.
     </Paragraph>
   </Column>
   <Column span={3} offset={1}>
@@ -609,36 +551,38 @@ const triggerEmergency = (props) => {
     <Heading as="h2" variant="heading20">
       Making the support change
     </Heading>
-    <Heading as="h3" variant="heading30">
+    <Heading as="h3" variant="heading40">
       How we announced it
     </Heading>
     <Paragraph>
-      We made the change official by announcing a new support model at an All
-      Hands meeting. It was made alongside many positive announcements. That
-      helped absorb the initial blow, but was also missed by quite a few folks.
-      Keeping this change from unraveling meant we’d need to be persistent. We
-      had to politely, but firmly say no to every request unless it came from
-      the right channel. This also made it a <strong>feelings</strong>{" "}
-      management problem: it was hard to have a team that had once routinely
-      said <em>yes, and</em> to every request, now point to an external URL for
-      any help.
+      We made the support official at an All Hands meeting. But, keeping this
+      change from unraveling meant a consistent change in team and customer
+      behavior: <em>we’d need to be persistent</em>. We had to politely, but
+      firmly say no to every request unless it came from the right channel. This
+      also made it a <strong>feelings</strong> management problem: it was hard
+      to have a team that had once routinely said <em>yes, and</em> to every
+      request, now point to an external URL for any help.
     </Paragraph>
   </Column>
 </Grid>
 <Grid gutter="space40">
   <Column span={5} offset={1}>
-    <Heading as="h3" variant="heading30">
+    <Heading as="h3" variant="heading40">
       Enter the automations
     </Heading>
     <Paragraph>
-      We addressed new users first: using Slack’s workflow builder, I built a
+      We addressed new users first: using Slack’s <Link href="//slack.com/features/workflow-automation" passHref>
+        <Anchor showExternal>
+          Workflow Builder
+        </Anchor>
+      </Link>, I built a
       bot that DM’d anyone who joined our Slack channel for the first time with
-      a greeting, important information, and a link to our support area. While
+      a greeting, important information, and link to our support and documentation. While
       this helped, we still had hundreds of people still active in the channel
       with a previous social contract.
     </Paragraph>
     <Paragraph>
-      To guide our existing customers, we built another bot: this one was a
+      To guide our existing customers, I built another bot: this one was a
       little less discrete. For every new question that showed up in Slack, it
       posted a response suggesting the user redirect this question to a support
       channel.
@@ -647,36 +591,33 @@ const triggerEmergency = (props) => {
       We sweated the details of this bot's message and tone. It had to be
       polite, sufficiently firm, and also provide reasons why we were making
       this change. For example, the bot responded to a slack reaction that's
-      used company wide to indicate better documentation. We also included an
+      used company wide to positively promote the value of better documentation. We also included an
       escalation path for the truly rare request that needed urgent
-      intervention: while the chances of hitting this button are extremely rare
-      (given that our design system does not directly deploy to customers), it
-      did give customers peace of mind in knowing that a short circuit still
+      intervention: while the chances of needing to hit this button were extremely rare, it
+      gave customers peace of mind in knowing that a short circuit still
       existed.
     </Paragraph>
     <Paragraph>
       We called this bot the <em>Paste Concierge</em>. It launched two months
-      ago and we paid keen attention to how customers might react to it. As
-      expected, the immediate response was less than optimal. While some
-      customers (particularly engineers) took to the GitHub model easily, it
-      took a while to convince others to sign up for GitHub just to engage with
-      the system. We held firm with this new support model, and here’s what we’ve observed so far:
+      ago and we paid keen attention to how customers might react to it. Our largest customer persona (front-end engineers) took to the GitHub model easily. However, it
+      took a while to convince designers and other users to sign up for GitHub just to engage with
+      the system. We held firm with this new support model, and here’s what
+      we’ve observed so far:
     </Paragraph>
     <OrderedList>
       <ListItem>
-        Slack support requests have dropped from 10+ a day to 3 a week. Some of
+        Slack support requests have dropped from 20+ a day to ~1 a week. Some of
         these are redirected to GitHub, but others are managed directly.
       </ListItem>
       <ListItem>
-        GitHub discussions did <em>not</em> proportionally increase to 10+ a
-        day. One hypothesis for this is that customers are more willing to try a
+        GitHub discussions did <em>not</em> proportionally increase to 20+ a
+        day, which was a net-win for ticket deflection 🎉. One hypothesis for this is customers are more willing to try a
         few things out if the immediacy of Slack is not available.
       </ListItem>
     </OrderedList>
     <Paragraph>
-      It's important to note that perfect support is not realisting. The Paste Concierge clearly helped, but still needs more work. There’s still unanswered
-      questions about design system support at Twilio. In the year ahead, we
-      hope to:
+      While the Paste Concierge clearly helped, there's still more work to be done with design system support at Twilio. In the year
+      ahead, we hope to:
     </Paragraph>
     <UnorderedList>
       <ListItem>
@@ -790,8 +731,8 @@ const triggerEmergency = (props) => {
       Closing thoughts
     </Heading>
     <Paragraph>
-      Unsurprisingly, support is hard and there's no single or linear way to
-      solve for it.{" "}
+      Perfect customer support doesn't exist. Also, there's no single or linear way to
+      scale for it.{" "}
       <Link href="//www.jennieyip.design/" passHref>
         <Anchor>Jennie Yip</Anchor>
       </Link>{" "}
@@ -812,7 +753,7 @@ const triggerEmergency = (props) => {
     <Paragraph>
       The UX and UI that we ship is dynamic and changes with time. So should our
       support models. Healthy design systems respond to the world around them—
-      whether it's making space to switch off when sheltered in place, time off
+      whether it's making space to switch off when we're sheltered in place, time off
       for direct or political action, or surging for important deadlines like
       launches. In each of these cultural situations, consider the success of
       your support to not be about the answer itself, but the process in which

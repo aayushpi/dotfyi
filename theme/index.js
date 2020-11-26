@@ -46,7 +46,7 @@ export const PortfolioTheme = {
   borderColors:{
     colorBorderLight: `#2c3e50`,
   },
-  boxShadowColors:{
+  shadows:{
     shadowBorderPrimary: `#2c3e50`
   },
   lineHeights: {
