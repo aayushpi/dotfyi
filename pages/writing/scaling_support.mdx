@@ -114,7 +114,7 @@ const triggerEmergency = (props) => {
 
 <Box marginBottom="space60">
   <Grid gutter="space40">
-    <Column span={4} offset={1}>
+    <Column span={[12, 12, 4]} offset={[0, 0, 1]}>
       <Box>
         <Stack orientation="horizontal" spacing="space30">
           <Link href="/" passHref>
@@ -123,7 +123,7 @@ const triggerEmergency = (props) => {
             </Anchor>
           </Link>
           <Text as="span">/</Text>
-            Writing
+          Writing
           <Text as="span">/</Text>
         </Stack>
       </Box>
@@ -137,7 +137,7 @@ const triggerEmergency = (props) => {
   </Grid>
 </Box>
 <Grid gutter="space40">
-  <Column span={5} offset={1}>
+  <Column span={[12, 12, 5]} offset={[0, 0, 1]}>
     <Paragraph>
       If you're building a new platform team, your customers are going to go
       through many changes. In the case of a design system, tools, hacks, and
@@ -184,7 +184,7 @@ const triggerEmergency = (props) => {
       evidence to make key hires could <em>actually</em> build a system.
     </Paragraph>
   </Column>
-  <Column span={3} offset={1}>
+  <Column span={[12, 12, 3]} offset={[0, 0, 1]}>
     <Stack orientation="vertical" spacing="space60">
       <Box display="flex" justifyContent="flex-start">
         <MediaObject as="div">
@@ -246,7 +246,7 @@ const triggerEmergency = (props) => {
   </Column>
 </Grid>
 <Grid gutter="space40">
-  <Column span={5} offset={1}>
+  <Column span={[12, 12, 5]} offset={[0, 0, 1]}>
     <Heading as="h2" variant="heading20">
       Stage 2: Support as we scaled
     </Heading>
@@ -320,7 +320,7 @@ const triggerEmergency = (props) => {
       this, they still trusted us.
     </Paragraph>
   </Column>
-  <Column span={3} offset={1}>
+  <Column span={[12, 12, 3]} offset={[0, 0, 1]}>
     <Stack orientation="vertical" spacing="space60">
       <Box display="flex" justifyContent="flex-start">
         <MediaObject as="div">
@@ -547,7 +547,7 @@ const triggerEmergency = (props) => {
   </Column>
 </Grid>
 <Grid gutter="space40">
-  <Column span={5} offset={1}>
+  <Column span={[12, 12, 5]} offset={[0, 0, 1]}>
     <Heading as="h2" variant="heading20">
       Making the support change
     </Heading>
@@ -566,19 +566,18 @@ const triggerEmergency = (props) => {
   </Column>
 </Grid>
 <Grid gutter="space40">
-  <Column span={5} offset={1}>
+  <Column span={[12, 12, 5]} offset={[0, 0, 1]}>
     <Heading as="h3" variant="heading40">
       Enter the automations
     </Heading>
     <Paragraph>
-      We addressed new users first: using Slack’s <Link href="//slack.com/features/workflow-automation" passHref>
-        <Anchor showExternal>
-          Workflow Builder
-        </Anchor>
-      </Link>, I built a
-      bot that DM’d anyone who joined our Slack channel for the first time with
-      a greeting, important information, and link to our support and documentation. While
-      this helped, we still had hundreds of people still active in the channel
+      We addressed new users first: using Slack’s{" "}
+      <Link href="//slack.com/features/workflow-automation" passHref>
+        <Anchor showExternal>Workflow Builder</Anchor>
+      </Link>
+      , I built a bot that DM’d anyone who joined our Slack channel for the first
+      time with a greeting, important information, and link to our support and documentation.
+      While this helped, we still had hundreds of people still active in the channel
       with a previous social contract.
     </Paragraph>
     <Paragraph>
@@ -591,18 +590,19 @@ const triggerEmergency = (props) => {
       We sweated the details of this bot's message and tone. It had to be
       polite, sufficiently firm, and also provide reasons why we were making
       this change. For example, the bot responded to a slack reaction that's
-      used company wide to positively promote the value of better documentation. We also included an
-      escalation path for the truly rare request that needed urgent
-      intervention: while the chances of needing to hit this button were extremely rare, it
-      gave customers peace of mind in knowing that a short circuit still
-      existed.
+      used company wide to positively promote the value of better documentation.
+      We also included an escalation path for the truly rare request that needed
+      urgent intervention: while the chances of needing to hit this button were
+      extremely rare, it gave customers peace of mind in knowing that a short
+      circuit still existed.
     </Paragraph>
     <Paragraph>
       We called this bot the <em>Paste Concierge</em>. It launched two months
-      ago and we paid keen attention to how customers might react to it. Our largest customer persona (front-end engineers) took to the GitHub model easily. However, it
-      took a while to convince designers and other users to sign up for GitHub just to engage with
-      the system. We held firm with this new support model, and here’s what
-      we’ve observed so far:
+      ago and we paid keen attention to how customers might react to it. Our
+      largest customer persona (front-end engineers) took to the GitHub model
+      easily. However, it took a while to convince designers and other users to
+      sign up for GitHub just to engage with the system. We held firm with this
+      new support model, and here’s what we’ve observed so far:
     </Paragraph>
     <OrderedList>
       <ListItem>
@@ -611,13 +611,14 @@ const triggerEmergency = (props) => {
       </ListItem>
       <ListItem>
         GitHub discussions did <em>not</em> proportionally increase to 20+ a
-        day, which was a net-win for ticket deflection 🎉. One hypothesis for this is customers are more willing to try a
-        few things out if the immediacy of Slack is not available.
+        day, which was a net-win for ticket deflection 🎉. One hypothesis for
+        this is customers are more willing to try a few things out if the
+        immediacy of Slack is not available.
       </ListItem>
     </OrderedList>
     <Paragraph>
-      While the Paste Concierge clearly helped, there's still more work to be done with design system support at Twilio. In the year
-      ahead, we hope to:
+      While the Paste Concierge clearly helped, there's still more work to be
+      done with design system support at Twilio. In the year ahead, we hope to:
     </Paragraph>
     <UnorderedList>
       <ListItem>
@@ -631,7 +632,7 @@ const triggerEmergency = (props) => {
       </ListItem>
     </UnorderedList>
   </Column>
-  <Column span={3} offset={1}>
+  <Column span={[12, 12, 3]} offset={[0, 0, 1]}>
     <Stack orientation="vertical" spacing="space60">
       <Box display="flex" justifyContent="flex-start">
         <MediaObject as="div">
@@ -726,19 +727,19 @@ const triggerEmergency = (props) => {
   </Column>
 </Grid>
 <Grid gutter="space40">
-  <Column span={5} offset={1}>
+  <Column span={[12, 12, 5]} offset={[0, 0, 1]}>
     <Heading as="h2" variant="heading20">
       Closing thoughts
     </Heading>
     <Paragraph>
-      Perfect customer support doesn't exist. Also, there's no single or linear way to
-      scale for it.{" "}
+      Perfect customer support doesn't exist. Also, there's no single or linear
+      way to scale for it.{" "}
       <Link href="//www.jennieyip.design/" passHref>
         <Anchor>Jennie Yip</Anchor>
       </Link>{" "}
       nailed it when she said:
     </Paragraph>
-    <Box as="blockquote" paddingLeft="space40">
+    <Box as="blockquote" paddingLeft={["space0", "space40", "space40"]}>
       <Text fontStyle="italic">
         "We don’t often talk about how much we get beat up being on a
         #designsystems team. The leads have to be strong + resilient to protect
@@ -753,11 +754,12 @@ const triggerEmergency = (props) => {
     <Paragraph>
       The UX and UI that we ship is dynamic and changes with time. So should our
       support models. Healthy design systems respond to the world around them—
-      whether it's making space to switch off when we're sheltered in place, time off
-      for direct or political action, or surging for important deadlines like
-      launches. In each of these cultural situations, consider the success of
-      your support to not be about the answer itself, but the process in which
-      your customer gets there, and how your team feels about it.
+      whether it's making space to switch off when we're sheltered in place,
+      time off for direct or political action, or surging for important
+      deadlines like launches. In each of these cultural situations, consider
+      the success of your support to not be about the answer itself, but the
+      process in which your customer gets there, and how your team feels about
+      it.
     </Paragraph>
     <Box as="section">
       <Separator orientation="horizontal" verticalSpacing="space50" />
@@ -771,7 +773,12 @@ const triggerEmergency = (props) => {
         </Link>, and <Link href="//chexee.me/" passHref>
           <Anchor>Chelsea Otakan</Anchor>
         </Link> for guidance and edits on this article. If you see a typo or an error,
-        please <Link href="//github.com/aayushpi/dotfyi/blob/master/pages/writing/scaling_support.mdx" passHref><Anchor showExternal>suggest an edit</Anchor></Link>.
+        please <Link
+          href="//github.com/aayushpi/dotfyi/blob/master/pages/writing/scaling_support.mdx"
+          passHref
+        >
+          <Anchor showExternal>suggest an edit</Anchor>
+        </Link>.
       </Text>
     </Box>
   </Column>
