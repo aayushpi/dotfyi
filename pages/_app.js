@@ -38,17 +38,19 @@ const App = ({ Component, pageProps }) => (
     </Head>
     <ComponentProvider>
       <ThemeProvider theme={PortfolioTheme}>
-        <StylingGlobals styles={globalStyles({ theme: PortfolioTheme })} />
-        <StyledBase as="main">
-          <Box
-            as="section"
-            marginRight={["space50", "space50", "auto"]}
-            marginLeft={["space50", "space50", "auto"]}
-            marginTop={["space50", "space30", "space200"]}
-            maxWidth={"size200"}
-          >
-            <Component {...pageProps} />
-          </Box>
+      <StylingGlobals styles={globalStyles({ theme: PortfolioTheme })} />
+        <StyledBase
+          as="main"
+        >
+        <Box
+        as="section"
+        marginRight={['space50', 'space50', 'auto']}
+        marginLeft={['space50', 'space50', 'auto']}
+        marginTop={['space50', 'space30', 'space200']}
+        maxWidth={"size200"}
+        >
+          <Component {...pageProps} />
+        </Box>  
           <SiteFooter />
         </StyledBase>
       </ThemeProvider>
