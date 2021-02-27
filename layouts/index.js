@@ -1,7 +1,3 @@
-import react from 'react';
-const Layout = (frontMatter) => ({ children: content }) => (
-  <div>
-    {content}
-  </div>
-);
+import react from "react";
+const Layout = ({ children: content, frontMatter }) => <div>{content}</div>;
 export default Layout;
