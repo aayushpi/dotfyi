@@ -16,7 +16,7 @@ const globalStyles = (props) =>
     html: {
       fontSize: "100%",
       height: `100%`,
-      backgroundColor: `colorBackgroundBrand`,
+      backgroundColor: `colorBackgroundBody`,
     },
     body: {
       margin: 0,
