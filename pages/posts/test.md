@@ -1,34 +1,32 @@
 ---
 title: first post
-date: '2020-05-29'
-layout: post
+date: "2020-05-29"
 ---
 
 import {
-  Grid,
-  Column,
-  Card,
-  Heading,
-  Paragraph,
-  Button,
-  Anchor,
-  OrderedList,
-  UnorderedList,
-  ListItem,
-  Stack,
-  Text,
-  Separator,
-  Box,
-  DisclosurePrimitive,
-  DisclosurePrimitiveContent,
-  useDisclosurePrimitiveState,
-  Flex,
+Grid,
+Column,
+Card,
+Heading,
+Paragraph,
+Button,
+Anchor,
+OrderedList,
+UnorderedList,
+ListItem,
+Stack,
+Text,
+Separator,
+Box,
+DisclosurePrimitive,
+DisclosurePrimitiveContent,
+useDisclosurePrimitiveState,
+Flex,
 } from "@twilio-paste/core";
 
 <Box>
   <Grid>
     <Column span={[12, 12, 4]} offset={[0, 0, 1]}>
-
 
 # FIRST POST
 
@@ -86,7 +84,6 @@ There’s still unanswered questions about design system support at Twilio. In t
 
 - Make support more conversational, and less transactional: each support question should influence the design and direction of the system.
 - Move discussions from 1:1 conversations to 1:many - like a good design problem, there’s a number of ways to tackle a specific problem. Diverse perspective usually lead to better outcomes.
-
 
 </Column>
 </Grid>
