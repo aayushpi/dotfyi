@@ -10,7 +10,7 @@
     "@mdx-js/loader": "1.6.22",
     "@next/mdx": "10.0.7",
     "@twilio-paste/core": "7.0.2",
-    "@twilio-paste/icons": "4.0.2",
+    "@twilio-paste/icons": "5.0.1",
     "next": "10.0.7",
     "next-mdx-enhanced": "5.0.0",
     "prop-types": "15.7.2",
