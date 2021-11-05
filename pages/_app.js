@@ -37,8 +37,8 @@ const App = ({ Component, pageProps }) => (
       />
     </Head>
     <ComponentProvider>
-      const themeSelection = ["PortfolioTheme","PortfolioInverseTheme"];
-      const choice = themeSelection[Math.floor ( Math.random() * themeSelection.length )];
+      let themeSelection = ["PortfolioTheme","PortfolioInverseTheme"];
+      let choice = themeSelection[Math.floor ( Math.random() * themeSelection.length )];
       <ThemeProvider theme={choice}>
         <StylingGlobals styles={globalStyles({ theme: choice })} />
         <StyledBase as="main">
