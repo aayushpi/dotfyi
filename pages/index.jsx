@@ -1,16 +1,14 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import {
-  Grid,
-  Column,
-  Heading,
-  Paragraph,
-  Anchor,
-  Stack,
-  Box,
-  Flex,
-} from '@twilio-paste/core';
 import { LinkExternalIcon } from '@twilio-paste/icons/cjs/LinkExternalIcon';
+
+import { Flex } from '@twilio-paste/core/flex';
+import { Box } from '@twilio-paste/core/box';
+import { Stack } from '@twilio-paste/core/stack';
+import { Anchor } from '@twilio-paste/core/anchor';
+import { Paragraph } from '@twilio-paste/core/paragraph';
+import { Heading } from '@twilio-paste/core/heading';
+import { Grid, Column } from '@twilio-paste/core/grid';
 
 export default function Index() {
   return (

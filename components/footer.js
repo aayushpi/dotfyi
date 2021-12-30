@@ -5,6 +5,7 @@ import { Box } from '@twilio-paste/core/box';
 import { Text } from '@twilio-paste/core/text';
 import { Stack } from '@twilio-paste/core/stack';
 import { Grid, Column } from '@twilio-paste/core/grid';
+
 export const SiteFooter = () => (
   <Box
     as="div"

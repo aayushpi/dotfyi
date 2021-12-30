@@ -1,18 +1,15 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-import {
-  Grid,
-  Column,
-  Card,
-  Heading,
-  Paragraph,
-  Anchor,
-  Stack,
-  ScreenReaderOnly,
-  Box,
-  Text,
-} from '@twilio-paste/core';
+import { Text } from '@twilio-paste/core/text';
+import { Box } from '@twilio-paste/core/box';
+import { ScreenReaderOnly } from '@twilio-paste/core/screen-reader-only';
+import { Stack } from '@twilio-paste/core/stack';
+import { Anchor } from '@twilio-paste/core/anchor';
+import { Paragraph } from '@twilio-paste/core/paragraph';
+import { Heading } from '@twilio-paste/core/heading';
+import { Card } from '@twilio-paste/core/card';
+import { Grid, Column } from '@twilio-paste/core/grid';
 
 export default () => {
   return (

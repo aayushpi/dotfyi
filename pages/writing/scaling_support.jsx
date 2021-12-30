@@ -2,24 +2,18 @@ import react from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-import {
-  Grid,
-  Button,
-  Column,
-  Heading,
-  Paragraph,
-  Anchor,
-  Separator,
-  Stack,
-  ScreenReaderOnly,
-  Box,
-  Text,
-  OrderedList,
-  UnorderedList,
-  ListItem,
-  MediaObject,
-  MediaBody,
-} from '@twilio-paste/core';
+import { MediaObject, MediaBody } from '@twilio-paste/core/media-object';
+import { OrderedList, UnorderedList, ListItem } from '@twilio-paste/core/list';
+import { Text } from '@twilio-paste/core/text';
+import { Box } from '@twilio-paste/core/box';
+import { ScreenReaderOnly } from '@twilio-paste/core/screen-reader-only';
+import { Stack } from '@twilio-paste/core/stack';
+import { Separator } from '@twilio-paste/core/separator';
+import { Anchor } from '@twilio-paste/core/anchor';
+import { Paragraph } from '@twilio-paste/core/paragraph';
+import { Heading } from '@twilio-paste/core/heading';
+import { Button } from '@twilio-paste/core/button';
+import { Grid, Column } from '@twilio-paste/core/grid';
 
 const triggerEmergency = (props) => {
   const [displayProp, setDisplayProp] = react.useState('none');

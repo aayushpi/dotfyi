@@ -2,19 +2,18 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 import {
-  Grid,
-  Column,
-  Heading,
-  Paragraph,
-  Anchor,
-  Stack,
-  ScreenReaderOnly,
-  Box,
-  Text,
   MediaObject,
   MediaFigure,
   MediaBody,
-} from '@twilio-paste/core';
+} from '@twilio-paste/core/media-object';
+import { Text } from '@twilio-paste/core/text';
+import { Box } from '@twilio-paste/core/box';
+import { ScreenReaderOnly } from '@twilio-paste/core/screen-reader-only';
+import { Stack } from '@twilio-paste/core/stack';
+import { Anchor } from '@twilio-paste/core/anchor';
+import { Paragraph } from '@twilio-paste/core/paragraph';
+import { Heading } from '@twilio-paste/core/heading';
+import { Grid, Column } from '@twilio-paste/core/grid';
 
 export default function Work() {
   return (
