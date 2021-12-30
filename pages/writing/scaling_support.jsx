@@ -15,7 +15,7 @@ import { Heading } from '@twilio-paste/core/heading';
 import { Button } from '@twilio-paste/core/button';
 import { Grid, Column } from '@twilio-paste/core/grid';
 
-const triggerEmergency = (props) => {
+const triggerEmergency = () => {
   const [displayProp, setDisplayProp] = react.useState('none');
   return (
     <>
