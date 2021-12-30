@@ -1,3 +1,13 @@
-import react from "react";
-const Layout = ({ children: content, frontMatter }) => <div>{content}</div>;
+import Head from 'next/head';
+
+const Layout = ({ children, meta }) => {
+  return (
+    <>
+      <Head>
+        <title>{meta.title}</title>
+      </Head>
+      <div>{children}</div>;
+    </>
+  );
+};
 export default Layout;
