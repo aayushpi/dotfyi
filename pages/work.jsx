@@ -15,7 +15,7 @@ import { Paragraph } from '@twilio-paste/core/paragraph';
 import { Heading } from '@twilio-paste/core/heading';
 import { Grid, Column } from '@twilio-paste/core/grid';
 
-export default function Work() {
+export default () => {
   return (
     <>
       <Head>
@@ -192,4 +192,4 @@ export default function Work() {
       </Box>
     </>
   );
-}
+};
