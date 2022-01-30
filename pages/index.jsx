@@ -9,6 +9,8 @@ import { Anchor } from '@twilio-paste/core/anchor';
 import { Paragraph } from '@twilio-paste/core/paragraph';
 import { Heading } from '@twilio-paste/core/heading';
 import { Grid, Column } from '@twilio-paste/core/grid';
+import {OrderedList, UnorderedList, ListItem} from '@twilio-paste/core/list';
+
 
 export default () => {
   return (
@@ -53,13 +55,23 @@ export default () => {
             <Column span={[12, 12, 4]} offset={[0, 0, 1]}>
               <Box as="div" marginBottom={['space50', 'space50', 0]}>
                 <Heading as="h2" variant="heading20">
-                  Recent Writing
+                  Writing and Speaking
                 </Heading>
-                <Link href="/writing/scaling_support" passHref>
-                  <Anchor>
-                    Growing Pains: How We Scaled Our Design System Support
-                  </Anchor>
-                </Link>
+                <UnorderedList>
+                  <ListItem>
+                    <Link href="/writing/scaling_support" passHref>
+                      <Anchor>
+                        Growing Pains: How We Scaled Our Design System Support
+                      </Anchor>
+                    </Link>
+                  </ListItem>
+                <ListItem>
+                    <Link href="https://www.youtube.com/watch?v=55gd38mph2g" passHref>
+                      <Anchor showExternal>
+                        How we built a unified, inclusive design system to nurture Twilio&rsquo;s UX
+                      </Anchor>
+                    </Link>       
+                </ListItem>       
               </Box>
             </Column>
             <Column span={[12, 12, 4]} offset={[0, 0, 1]}>
