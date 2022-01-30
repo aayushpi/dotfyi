@@ -67,14 +67,13 @@ export default () => {
                 Work
               </Heading>
               <Heading as="h3" variant="heading40">
-                Design at Twilio
+                UX at Twilio
               </Heading>
               <Paragraph>
-                I joined Twilio in 2017 as their third Product Designer. Today,
-                I manage the Design Systems team, and am part of UX Leadership.
-                My focus at Twilio has been on resilient UI design &amp;
-                engineering, and widening the spectrum of who gets to build and
-                communicate with technology.
+                I founded the design systems practice at Twilio and grew a team from an ad-hoc, unsystemized front-end environment to a fully funded, staffed, and roadmapped discipline. Over time, this scope evolved to the entire spectrum of UX Infrastructure including content writing, visual design, and design operations and focused on alignment of design, engineering, and product to create great customer experiences.
+              </Paragraph>
+              <Paragraph>
+                My outputs were both tactical and cultural: setting product teams up for quick wins by providing resilient, performant UI, uplevelling the scale at which product design is delivered to an organization, and focusing on customer inclusion and happiness through inclusive design, UX engineering, content writing, and more.
               </Paragraph>
               <Heading as="h3" variant="heading40">
                 Other work
