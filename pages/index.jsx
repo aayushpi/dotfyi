@@ -71,7 +71,8 @@ export default () => {
                         How we built a unified, inclusive design system to nurture Twilio&rsquo;s UX
                       </Anchor>
                     </Link>       
-                </ListItem>       
+                </ListItem>
+              </UnorderedList>
               </Box>
             </Column>
             <Column span={[12, 12, 4]} offset={[0, 0, 1]}>
