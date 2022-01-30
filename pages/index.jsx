@@ -10,14 +10,13 @@ import { Paragraph } from '@twilio-paste/core/paragraph';
 import { Heading } from '@twilio-paste/core/heading';
 import { Grid, Column } from '@twilio-paste/core/grid';
 import {OrderedList, UnorderedList, ListItem} from '@twilio-paste/core/list';
-import {DisplayPillGroup, DisplayPill} from '@twilio-paste/core/display-pill-group';
 
 
 export default () => {
   return (
     <>
       <Head>
-        <title>aayush.fyi</title>
+        <title>Aayush Iyer</title>
       </Head>
       <Box>
         <Grid>
@@ -60,11 +59,6 @@ export default () => {
                 </Heading>
                 <UnorderedList>
                   <ListItem>
-                    <DisplayPillGroup aria-label="Post Type">
-                      <DisplayPill>
-                        Blog Post
-                      </DisplayPill>
-                    </DisplayPillGroup>
                     <Link href="/writing/scaling_support" passHref>
                       <Anchor>
                         Growing Pains: How We Scaled Our Design System Support
