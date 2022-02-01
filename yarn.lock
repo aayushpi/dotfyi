@@ -1230,7 +1230,7 @@
   dependencies:
     use-clipboard-copy "0.2.0"
 
-"@twilio-paste/codemods@^0.2.4":
+"@twilio-paste/codemods@0.2.4":
   version "0.2.4"
   resolved "https://registry.yarnpkg.com/@twilio-paste/codemods/-/codemods-0.2.4.tgz#5e2c575b80fa79d5396e7012f881adba813a44ab"
   integrity sha512-3FJuM1lbzHTK54nCVwOCIXRshqFilPt2HLLhOzrqTzyRhqBC582FX0B3OKlReOqylV60NzLnbzcX5YVapdyS2Q==
