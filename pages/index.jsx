@@ -72,6 +72,13 @@ export default () => {
                       </Anchor>
                     </Link>       
                 </ListItem>
+                <ListItem>
+                    <Link href="https://www.youtube.com/watch?v=VBjVi4mV0Qk" passHref>
+                      <Anchor showExternal>
+                        Introducing Studio, Twilio&rsquo;s low-code visual programming language
+                      </Anchor>
+                    </Link>       
+                </ListItem>     
               </UnorderedList>
               </Box>
             </Column>
@@ -79,6 +86,12 @@ export default () => {
               <Heading as="h2" variant="heading20">
                 Work
               </Heading>
+              <Heading as="h3" variant="heading40">
+                Product &amp; Engineering at Algolia
+              </Heading>
+              <Paragraph>
+                🆕 I recently joined Algolia and lead the Frontend experiences team.
+              </Paragraph>
               <Heading as="h3" variant="heading40">
                 UX at Twilio
               </Heading>
