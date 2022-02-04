@@ -67,11 +67,18 @@ export const SiteFooter = () => (
       <Column span={[12, 12, 2]} offset={[0, 0, 1]}>
         <Box display={['none', 'none', 'inline-block']}>
           <Stack orientation="vertical" spacing="space30">
-            <Link href="/work" passHref>
-              <Text as="a" color="colorTextInverse">
-                Work
-              </Text>
-            </Link>
+          <Flex display="inline-flex" vAlignContent="center">
+              <Link href="https://www.polywork.com/aayushiyer" passHref>
+                <Text as="a" color="colorTextInverse">
+                  Polywork
+                </Text>
+              </Link>
+              <LinkExternalIcon
+                decorative={false}
+                title="Opens an external resource"
+                color="colorTextInverse"
+              />
+            </Flex>
             <Flex display="inline-flex" vAlignContent="center">
               <Link href="https://twitter.com/aayush" passHref>
                 <Text as="a" color="colorTextInverse">

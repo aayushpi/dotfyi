@@ -34,8 +34,8 @@ export default () => {
                 orientation={['vertical', 'vertical', 'horizontal']}
                 spacing="space60"
               >
-                <Link href="/work" passHref>
-                  <Anchor>Work</Anchor>
+                <Link href="https://www.polywork.com/aayushiyer" passHref>
+                  <Anchor showExternal>Polywork</Anchor>
                 </Link>
                 <Flex display="inline-flex" vAlignContent="center">
                   <Link href="https://twitter.com/aayush" passHref>
