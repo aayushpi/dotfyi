@@ -26,8 +26,7 @@ export default () => {
               <Box as="span" backgroundColor="colorBackgroundBrandHighlight">
                 Aayush Iyer
               </Box>
-              . I work on building better products through design, and better
-              design through systems.
+              . I work on building better products through design.
             </Heading>
             <Box backgroundColor="colorText">
               <Stack
