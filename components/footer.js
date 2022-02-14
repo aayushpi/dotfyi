@@ -101,7 +101,7 @@ export const SiteFooter = () => (
               Black Lives Matter.
             </Text>
             <Text as="p" color="colorTextInverse">
-              No man is illegal.
+              No human is illegal.
             </Text>
             <Text as="p" color="colorTextInverse">
               Sex worker rights are labor rights.
