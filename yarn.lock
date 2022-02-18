@@ -1177,18 +1177,18 @@
   resolved "https://registry.yarnpkg.com/@twilio-paste/combobox-primitive/-/combobox-primitive-0.3.1.tgz#56968ae706739b67880cd3d6b1ae116c5c7ab65b"
   integrity sha512-uG4ZQ921HydpPWtqZ9FFDMDu/CAi4RsKqKrJwvjZvE/VeopSIwnR2oHoyEfF6BQ0CLdFUd2pdA+/VhgqH+J4XA==
 
-"@twilio-paste/combobox@^9.0.0":
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/@twilio-paste/combobox/-/combobox-9.0.0.tgz#bf4365a8f69a3bf18020581e2eea58a70fb53826"
-  integrity sha512-GfsRgQ2dlN5FW2c+jTLjxOGfCc2fU51g3orpB6/y11pgAE33XDxuiAy4k9ErTq5cg5Hh3MUEbXA3gEFZ550tOg==
+"@twilio-paste/combobox@^9.0.1":
+  version "9.0.1"
+  resolved "https://registry.yarnpkg.com/@twilio-paste/combobox/-/combobox-9.0.1.tgz#a410bc4d7b5f261fb8fc148ad8daa85179741ad1"
+  integrity sha512-/lVsjXiTnob70/wCQwbyqNh0eL9vXjEYcbmblRDqzFZN4t7oZOdb52tnsoxecC1D+zMj/3qstiDGqiYkFDMSYw==
   dependencies:
     lodash.groupby "^4.6.0"
     react-virtual "^2.8.2"
 
-"@twilio-paste/core@11.0.0":
-  version "11.0.0"
-  resolved "https://registry.yarnpkg.com/@twilio-paste/core/-/core-11.0.0.tgz#9f5f02eb6c3cee1a48272d1a2d8cc4d05b0bfbc6"
-  integrity sha512-Ziq1vCwaQaxQs0EDIz/D1uFy5bBExANjIHKQXB2PdltPO5T1DDuQv6bKe/FAmJr2VjdOh71CROPR2T/G8TJUbg==
+"@twilio-paste/core@11.0.1":
+  version "11.0.1"
+  resolved "https://registry.yarnpkg.com/@twilio-paste/core/-/core-11.0.1.tgz#f63415ab542d09ec7cc2de98f7255b6d740adf03"
+  integrity sha512-wn/1Pz764ciSXB/sqprTlPf+k0eXi66pPU/FvkfrDyLRqX3GVhIFi2BqjSMUFOdDvcxS8kQF1vF1JOOCCGFG/g==
   dependencies:
     "@twilio-paste/alert" "^8.0.0"
     "@twilio-paste/alert-dialog" "^1.0.0"
@@ -1205,7 +1205,7 @@
     "@twilio-paste/checkbox" "^7.0.0"
     "@twilio-paste/clipboard-copy-library" "^1.0.1"
     "@twilio-paste/color-contrast-utils" "^2.0.0"
-    "@twilio-paste/combobox" "^9.0.0"
+    "@twilio-paste/combobox" "^9.0.1"
     "@twilio-paste/combobox-primitive" "^0.3.1"
     "@twilio-paste/customization" "^3.0.0"
     "@twilio-paste/data-grid" "^1.0.0"
