@@ -1233,10 +1233,10 @@
   dependencies:
     use-clipboard-copy "0.2.0"
 
-"@twilio-paste/codemods@0.2.8":
-  version "0.2.8"
-  resolved "https://registry.yarnpkg.com/@twilio-paste/codemods/-/codemods-0.2.8.tgz#6997f0680c6a63b11d75647ce3484fdd6c10df02"
-  integrity sha512-mJm0DXY+sDlekwFtpPJnzo9WS0oTbJU2mms6yd6mm9gfQ3PKyQKS40ogzJ+09PdkgRq9FLWxqmCitDmXHynIJg==
+"@twilio-paste/codemods@0.2.9":
+  version "0.2.9"
+  resolved "https://registry.yarnpkg.com/@twilio-paste/codemods/-/codemods-0.2.9.tgz#5e63e041f270556e075778272fac94000c749d56"
+  integrity sha512-iTauTdWDz3ZUIxTA92GRpYfIlD30Ysg1IxuZU3CqR8iyyQR/5ClV3ZHiv7ZDGqexVZISUvyM8T872HOnR8aRnQ==
   dependencies:
     chalk "^2.4.2"
     execa "^3.2.0"
