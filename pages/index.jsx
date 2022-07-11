@@ -130,7 +130,7 @@ export default () => {
                 Work
               </Heading>
               <Heading as="h3" variant="heading40">
-                Product &amp; Engineering at Algolia
+                Product &amp; People at Algolia
               </Heading>
               <Paragraph>
                 I lead product, design, research, and engineering teams at Algolia. <Link href="https://www.algolia.com/careers/" passHref><Anchor showExternal>Also, We&rsquo;re hiring</Anchor></Link>
