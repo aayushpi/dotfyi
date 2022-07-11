@@ -26,7 +26,7 @@ export default () => {
               <Box as="span" backgroundColor="colorBackgroundBrandHighlight">
                 Aayush Iyer
               </Box>
-              . I work on building better products through design.
+              . I work on building better products.
             </Heading>
             <Box backgroundColor="colorText">
               <Stack
@@ -133,8 +133,7 @@ export default () => {
                 Product &amp; Engineering at Algolia
               </Heading>
               <Paragraph>
-                🆕 I recently joined Algolia and lead the Frontend experiences
-                team.
+                I lead product, design, research, and engineering teams at Algolia. <Link href="https://www.algolia.com/careers/" passHref><Anchor showExternal>Also, We&rsquo;re hiring</Anchor></Link>
               </Paragraph>
               <Heading as="h3" variant="heading40">
                 UX at Twilio
