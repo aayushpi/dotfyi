@@ -21,7 +21,7 @@ export const SiteFooter = () => (
           paddingRight={['space50', 'auto', 'auto']}
         >
           <Text as="p" color="colorTextInverse">
-            This site is being built, in an act of extreme dogfooding, with{' '}
+            Built with{' '}
             <Flex display="inline-flex" vAlignContent="center">
               <Link href="https://paste.twilio.design/" passHref>
                 <Text as="a" color="colorTextInverse">
@@ -34,20 +34,7 @@ export const SiteFooter = () => (
                 color="colorTextInverse"
               />
             </Flex>
-            . It also uses{' '}
-            <Flex display="inline-flex" vAlignContent="center">
-              <Link href="https://nextjs.org/" passHref>
-                <Text as="a" color="colorTextInverse">
-                  Next.js
-                </Text>
-              </Link>
-              <LinkExternalIcon
-                decorative={false}
-                title="Opens an external resource"
-                color="colorTextInverse"
-              />
-            </Flex>
-            , which is nice. It was mostly possible due to{' '}
+            . Mostly possible due to{' '}
             <Flex display="inline-flex" vAlignContent="center">
               <Link href="https://simontaggart.com/" passHref>
                 <Text as="a" color="colorTextInverse">
@@ -60,7 +47,7 @@ export const SiteFooter = () => (
                 color="colorTextInverse"
               />
             </Flex>
-            , who patiently handled my 101 Qs.
+            , who patiently handles my 101 Qs.
           </Text>
         </Box>
       </Column>
