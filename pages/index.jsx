@@ -63,8 +63,8 @@ export default () => {
                       Twilio&rsquo;s UX
                     </Heading>
                     <Paragraph>
-                      I talked about the foundation and operation of Twilio Paste
-                      and its impact on Twilio at SIGNAL, 2021.
+                      I talked about the foundation and operation of Twilio
+                      Paste and its impact on Twilio at SIGNAL, 2021.
                     </Paragraph>
                     <Link
                       href="https://www.youtube.com/watch?v=55gd38mph2g"
@@ -130,10 +130,16 @@ export default () => {
                 Work
               </Heading>
               <Heading as="h3" variant="heading40">
-                Product &amp; People at Algolia
+                User Experience &amp; UI Platform at Algolia
               </Heading>
               <Paragraph>
-                I lead product, design, research, and engineering teams at Algolia. <Link href="https://www.algolia.com/careers/" passHref><Anchor showExternal>Also, we&rsquo;re hiring</Anchor></Link>
+                I lead product, product design, research, and engineering teams
+                at Algolia.{" "}
+                <Link href="https://www.algolia.com/careers/" passHref>
+                  <Anchor showExternal>We&rsquo;re still hiring</Anchor>
+                </Link>{" "}
+                thoughtfully. The common thread across these teams is a deep
+                commitment to understanding customer pain and defining what "good quality" looks like.
               </Paragraph>
               <Heading as="h3" variant="heading40">
                 UX at Twilio
