@@ -57,6 +57,34 @@ export default () => {
                   Writing and Speaking
                 </Heading>
                 <Stack orientation="vertical" spacing="space60">
+                <Card>
+                    <Heading as="h3" variant="heading50">
+                    Designing a great developer experience
+                    </Heading>
+                    <Paragraph>
+                      I joined an online roundtable hosted by Evil Martians on the topic of designing tools for developers. 
+                    </Paragraph>
+                    <Link
+                      href="https://www.youtube.com/watch?v=PIhJtTboXZ0"
+                      passHref
+                    >
+                      <Anchor showExternal>Watch podcast</Anchor>
+                    </Link>
+                  </Card>
+                  <Card>
+                    <Heading as="h3" variant="heading50">
+                    The death of traditional shopping: How AI-powered conversational commerce changes everything
+                    </Heading>
+                    <Paragraph>
+                      A blog post launching Algolia&rsquo;s new AI powered framework for conversational commerce
+                    </Paragraph>
+                    <Link
+                      href="https://www.algolia.com/blog/ai/ai-conversational-commerce-ux/"
+                      passHref
+                    >
+                      <Anchor showExternal>View article</Anchor>
+                    </Link>
+                  </Card>
                   <Card>
                     <Heading as="h3" variant="heading50">
                       How we built a unified, inclusive design system to nurture
