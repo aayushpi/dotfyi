@@ -40,8 +40,10 @@ const App = ({ Component, pageProps }) => (
       />
     </Head>
     <ComponentProvider>
-      <ThemeProvider theme={PortfolioTheme}>
-        <StylingGlobals styles={globalStyles({ theme: PortfolioTheme })} />
+      let themeSelection = ["PortfolioTheme","PortfolioInverseTheme"];
+      let choice = themeSelection[Math.floor ( Math.random() * themeSelection.length )];
+      <ThemeProvider theme={choice}>
+        <StylingGlobals styles={globalStyles({ theme: choice })} />
         <StyledBase as="main">
           <Box
             as="section"
