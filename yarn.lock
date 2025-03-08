@@ -1431,10 +1431,10 @@
   resolved "https://registry.yarnpkg.com/@twilio-paste/code-block/-/code-block-3.1.0.tgz#a91314b5e9a7bb8f9cd758acd76ef8c38d013173"
   integrity sha512-IqRTARbAawU9myOeHbsrAZeOf812AnyCEAjDb4pqP0Ha33SnZKp6pfOuc0EgaQcZ7Df/HEd/on0LPzrG3+4vtQ==
 
-"@twilio-paste/codemods@0.3.3":
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/@twilio-paste/codemods/-/codemods-0.3.3.tgz#daa7affeb3daf774cd24d6c36e3fdd437b704878"
-  integrity sha512-7H/I+CNebghknGQEescY10NTmXQimCPHMXj8dVMWUY6qaS1H5M1Mx+859/+qrKJECZRFlwKHj+8vxZEL0+fx3w==
+"@twilio-paste/codemods@0.16.0":
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/@twilio-paste/codemods/-/codemods-0.16.0.tgz#02521bec4decc1abca8b21db5efc9792a184114a"
+  integrity sha512-8Hokq5AS1IByiu57bavg2D/P320gGZcvJPljXBKAQytAsBoUvUq2B/JI96eKbzZiTfu1W4gt+dz2IYh07siGKg==
   dependencies:
     chalk "4.1.2"
     execa "3.2.0"
