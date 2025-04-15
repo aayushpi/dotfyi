@@ -55,9 +55,9 @@ export const SiteFooter = () => (
         <Box display={['none', 'none', 'inline-block']}>
           <Stack orientation="vertical" spacing="space30">
           <Flex display="inline-flex" vAlignContent="center">
-              <Link href="https://www.polywork.com/aayushiyer" passHref>
+              <Link href="https://www.linkedin.com/in/aayushpi/" passHref>
                 <Text as="a" color="colorTextInverse">
-                  Polywork
+                  LinkedIn
                 </Text>
               </Link>
               <LinkExternalIcon
