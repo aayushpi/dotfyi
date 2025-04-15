@@ -10,7 +10,7 @@
     "@mdx-js/loader": "^3.1.0",
     "@mdx-js/react": "^3.1.0",
     "@next/mdx": "^15.3.0",
-    "@twilio-paste/codemods": "0.3.3",
+    "@twilio-paste/codemods": "0.16.0",
     "@twilio-paste/core": "^21.2.0",
     "@twilio-paste/icons": "^13.0.1",
     "next": "^15.3.0",
@@ -19,5 +19,18 @@
     "react-dom": "^19.1.0"
   },
   "devDependencies": {},
-  "license": "ISC"
+  "license": "ISC",
+  "resolutions": {
+    "@babel/traverse": "^7.23.2",
+    "json5": "^2.2.2",
+    "braces": "^3.0.3",
+    "prismjs": "^1.30.0",
+    "@babel/runtime": "^7.26.10",
+    "decode-uri-component": "0.2.2",
+    "cross-spawn": "^7.0.5",
+    "semver": "^7.5.2",
+    "micromatch": "^4.0.8",
+    "@babel/helpers": "^7.26.10",
+    "debug": "^4.3.1"
+  }
 }
