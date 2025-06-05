@@ -33,18 +33,17 @@ export default () => {
                 orientation={["vertical", "vertical", "horizontal"]}
                 spacing="space60"
               >
+                <Link href="/likes" passHref>
+                    <Anchor>Likes</Anchor>
+                  </Link>
                 <Link href="https://www.linkedin.com/in/aayushpi/" passHref>
                   <Anchor showExternal>LinkedIn</Anchor>
                 </Link>
-                <Flex display="inline-flex" vAlignContent="center">
+               
                   <Link href="https://twitter.com/aayush" passHref>
-                    <Anchor>Twitter</Anchor>
+                    <Anchor showExternal>Twitter</Anchor>
                   </Link>
-                  <LinkExternalIcon
-                    decorative={false}
-                    title="Opens an external resource"
-                  />
-                </Flex>
+               
               </Stack>
             </Box>
           </Column>

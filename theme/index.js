@@ -29,6 +29,8 @@ export const PortfolioTheme = {
     colorBorderLight: `#2c3e50`,
     colorBackgroundUser: `#F98585`,
     colorBackgroundPrimary: `#2c3e50`,
+    colorBorder: `#2c3e50`,
+    colorBorderPrimary: `#2c3e50`,
   },
   textColors: {
     colorText: `#2c3e50`,
@@ -36,6 +38,8 @@ export const PortfolioTheme = {
     colorTextLink: `#2c3e50`,
   },
   borderColors: {
+    colorBorder: `#2c3e50`,
+    colorBorderPrimary: `#2c3e50`,
     colorBorderLight: `#2c3e50`,
   },
   shadows: {
