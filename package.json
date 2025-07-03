@@ -18,7 +18,7 @@
     "algoliasearch": "^5.26.0",
     "gray-matter": "^4.0.3",
     "instantsearch.js": "^4.78.3",
-    "next": "^15.3.0",
+    "next": "^15.3.3",
     "prop-types": "15.8.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
