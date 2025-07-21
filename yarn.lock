@@ -2927,9 +2927,9 @@
   integrity sha512-CEipWbbfppuxG/IsZDzlHp3bMNkWGyZbzrBIx/zrCdcNLtLQo6IzNBRZkD49ZEphPS+QNe1zVkjXj3/TMRqvUA==
 
 "@twilio-paste/icons@^13.0.1":
-  version "13.0.1"
-  resolved "https://registry.npmjs.org/@twilio-paste/icons/-/icons-13.0.1.tgz"
-  integrity sha512-ReP1Ocjk28JdOP9N7WYym/0LMIWtIAICylA6evisfj4MgPjTXTy6q1rVnA+qcQ6WG9pNdZdvpWQHDVePGzNxqg==
+  version "13.1.0"
+  resolved "https://registry.yarnpkg.com/@twilio-paste/icons/-/icons-13.1.0.tgz#0ae83766b040aaf4dacabc1caf850f46ff67b788"
+  integrity sha512-reDNgTzjWQh0zU17EmHlddlVAFf9r2EyhX6qvs5WYGo9Hbl+FUgBiCAbxk/mqxnD1gSl2JsKjBHjYom9tcqv2Q==
 
 "@twilio-paste/in-page-navigation@^5.0.1":
   version "5.0.1"
@@ -3987,7 +3987,6 @@ decode-uri-component@0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.4.1.tgz#2ac4859663c704be22bf7db760a1494a49ab2cc5"
   integrity sha512-+8VxcR21HhTy8nOt6jf20w0c9CADrw1O8d+VZ/YzzCt4bJ3uBjw+D1q2osAB8RnpwwaeYBxy0HyKQxD5JBMuuQ==
-
 
 deepmerge@4.2.2:
   version "4.2.2"
