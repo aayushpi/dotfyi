@@ -9,7 +9,7 @@
     "rad-reviews": {
       "routing": [
         {
-          "paths": [/* add paths here */]
+          "paths": ["/docs"]
         }
       ]
     }
