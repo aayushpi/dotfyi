@@ -2927,49 +2927,49 @@
   integrity sha512-CEipWbbfppuxG/IsZDzlHp3bMNkWGyZbzrBIx/zrCdcNLtLQo6IzNBRZkD49ZEphPS+QNe1zVkjXj3/TMRqvUA==
 
 "@twilio-paste/icons@^13.0.1":
-  version "13.0.1"
-  resolved "https://registry.npmjs.org/@twilio-paste/icons/-/icons-13.0.1.tgz"
-  integrity sha512-ReP1Ocjk28JdOP9N7WYym/0LMIWtIAICylA6evisfj4MgPjTXTy6q1rVnA+qcQ6WG9pNdZdvpWQHDVePGzNxqg==
+  version "13.1.0"
+  resolved "https://registry.yarnpkg.com/@twilio-paste/icons/-/icons-13.1.0.tgz#0ae83766b040aaf4dacabc1caf850f46ff67b788"
+  integrity sha512-reDNgTzjWQh0zU17EmHlddlVAFf9r2EyhX6qvs5WYGo9Hbl+FUgBiCAbxk/mqxnD1gSl2JsKjBHjYom9tcqv2Q==
 
 "@twilio-paste/in-page-navigation@^5.0.1":
   version "5.0.1"
-  resolved "https://registry.npmjs.org/@twilio-paste/in-page-navigation/-/in-page-navigation-5.0.1.tgz"
+  resolved "https://registry.yarnpkg.com/@twilio-paste/in-page-navigation/-/in-page-navigation-5.0.1.tgz#61fb13f72099e4aafbb11a131441e8110fcd3792"
   integrity sha512-+x4BKv4JNXHgoNyw/qi0+32Qtv0+sMghbnr6iQOeuBD0wpY6fjKs7R+Qe1PXBX/3mYHCS+J4LkWrCANMiRqRpQ==
 
 "@twilio-paste/inline-code@^5.0.1":
   version "5.0.1"
-  resolved "https://registry.npmjs.org/@twilio-paste/inline-code/-/inline-code-5.0.1.tgz"
+  resolved "https://registry.yarnpkg.com/@twilio-paste/inline-code/-/inline-code-5.0.1.tgz#6c5a51c8aea1e4e73184785c491616acb04137f9"
   integrity sha512-rIeWIMs09ObQK5ADIaTV8JZdgjD9Ba8jZ44p+twAjskV+CZTA5YAfYbTstVEyT3pZQ8IhCnN7gaJXJqrrU8OfQ==
 
 "@twilio-paste/inline-control-group@^14.0.1":
   version "14.0.1"
-  resolved "https://registry.npmjs.org/@twilio-paste/inline-control-group/-/inline-control-group-14.0.1.tgz"
+  resolved "https://registry.yarnpkg.com/@twilio-paste/inline-control-group/-/inline-control-group-14.0.1.tgz#efe95cf9a166e3dcc8b1d828e65968b99e1378de"
   integrity sha512-8t/0T+0Vsuqei43WNwlcTy5GXDd7dAPTUDzM6UxcWjfFsLu+TtuxuGifAYUErO4+rL0Jc07g54eO2NZBzCQapQ==
 
 "@twilio-paste/input-box@^11.0.1":
-  version "11.0.1"
-  resolved "https://registry.npmjs.org/@twilio-paste/input-box/-/input-box-11.0.1.tgz"
-  integrity sha512-P5mL4c8715oE0PMSpNIqw+HAnFtd65NYA7YUEs25c0oWuZV4UCZ3DXt/Lwjr7PlfCh7B0msP5wXlFq9OnDl2Cg==
+  version "11.0.2"
+  resolved "https://registry.yarnpkg.com/@twilio-paste/input-box/-/input-box-11.0.2.tgz#b313f9d6a24879bd390520748b34e631f2ecc178"
+  integrity sha512-o1hTuykzGTZg/JWMHnZEe7qeGoFacnJ6yY8+i6MpUvMOhZxIXb/59V/ZClY64V8awmmgX4H0gLWgD8xeCIZPFg==
 
 "@twilio-paste/input@^10.0.1":
-  version "10.0.1"
-  resolved "https://registry.npmjs.org/@twilio-paste/input/-/input-10.0.1.tgz"
-  integrity sha512-Gvte2Aryshhgy5AJuZl7W+VP1qoCwMXPylxOa/Nwcyi9qXivqRO5CU66XjXfMwnoSY95P32HCmL+If5QrA3S/Q==
+  version "10.0.2"
+  resolved "https://registry.yarnpkg.com/@twilio-paste/input/-/input-10.0.2.tgz#6229039716eaa2927dbf84ff0210c5570069224e"
+  integrity sha512-1WBj744yGYX4vSgBIR3Im/Ge9xozRexva68xavELb76YWZ+6Zyy8w4lDvHmcUi5njJbpd4vT320ALMZfmyCb9A==
 
 "@twilio-paste/keyboard-key@^2.0.1":
   version "2.0.1"
-  resolved "https://registry.npmjs.org/@twilio-paste/keyboard-key/-/keyboard-key-2.0.1.tgz"
+  resolved "https://registry.yarnpkg.com/@twilio-paste/keyboard-key/-/keyboard-key-2.0.1.tgz#aed945cc337b4ff1219a3c8379219d691294bbdb"
   integrity sha512-fMPSDR5r5BC4MP5pp9O6F+24VvmGzHP9wYuL64xNW7lww5LNC8QcRSntOTMEBvZJslg5fwjDIm/FyPxZbFvxhA==
 
 "@twilio-paste/label@^14.0.1":
-  version "14.0.1"
-  resolved "https://registry.npmjs.org/@twilio-paste/label/-/label-14.0.1.tgz"
-  integrity sha512-d4084kTczjavgRUivryTGdkLneUjMTKOnQwV38/WgAGweFTTdOKug6VN7pXayzGRcfNgWk6pIuYaYOt3Vz4imQ==
+  version "14.1.0"
+  resolved "https://registry.yarnpkg.com/@twilio-paste/label/-/label-14.1.0.tgz#d142c7324da8432da54067612703e256875aa976"
+  integrity sha512-GVlGq+UD3iCI+DETk2Yub9iuFHDZDmlEs+uSk2yDudmK1Sg2rUl7IRPxbRyg6CWYU7eNlZrZOMSr2cK6/y5sWA==
 
 "@twilio-paste/lexical-library@^5.0.1":
-  version "5.0.1"
-  resolved "https://registry.npmjs.org/@twilio-paste/lexical-library/-/lexical-library-5.0.1.tgz"
-  integrity sha512-BZSeXjnH1m7jXD1Oaz//9ThW4nO+J4B/4F7vmvN9r/gcHtpLdfIRwmNa/+KUeG9NCo6P4Zy4Z3pmsVJ/tLJR1w==
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@twilio-paste/lexical-library/-/lexical-library-5.1.0.tgz#bbd7e1ca10e1fd848dac00015413cdfe4786a4ac"
+  integrity sha512-DnGbb57jWYwIAQCz/RPTaS7JH1rOknRKVjY6eAD2NI4RHVjK08mS/KaJjsa+AX0U1+qMrRzJcbdsyl1GuUUQ6w==
   dependencies:
     "@lexical/link" "0.12.0"
     "@lexical/react" "0.12.0"
@@ -3987,7 +3987,6 @@ decode-uri-component@0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.4.1.tgz#2ac4859663c704be22bf7db760a1494a49ab2cc5"
   integrity sha512-+8VxcR21HhTy8nOt6jf20w0c9CADrw1O8d+VZ/YzzCt4bJ3uBjw+D1q2osAB8RnpwwaeYBxy0HyKQxD5JBMuuQ==
-
 
 deepmerge@4.2.2:
   version "4.2.2"
