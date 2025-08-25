@@ -12,7 +12,7 @@
     "@mdx-js/loader": "^3.1.0",
     "@mdx-js/react": "^3.1.0",
     "@next/mdx": "^15.3.0",
-    "@twilio-paste/codemods": "0.16.0",
+    "@twilio-paste/codemods": "0.17.1",
     "@twilio-paste/core": "^21.2.0",
     "@twilio-paste/icons": "^13.0.1",
     "algoliasearch": "^5.26.0",
