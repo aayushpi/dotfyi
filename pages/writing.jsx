@@ -19,7 +19,7 @@ export default () => {
         <Column span={[12, 12, 6]} offset={[0, 0, 1]}>
           <Box>
             <Stack orientation="horizontal" spacing="space30">
-              <Link href="/" passHref>
+              <Link href="/" legacyBehavior passHref>
                 <Anchor>
                   <ScreenReaderOnly>Back to</ScreenReaderOnly> Home
                 </Anchor>
@@ -33,7 +33,7 @@ export default () => {
         </Column>
       </Grid>
 
-      <Link href="/writing/scaling_support" passHref>
+      <Link href="/writing/scaling_support" legacyBehavior passHref>
         <Anchor>Scaling Support</Anchor>
       </Link>
     </>

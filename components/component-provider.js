@@ -40,11 +40,17 @@ export const ComponentProvider = ({ children }) => (
           {...props}
         />
       ),
-      a: (props) => (
-        <Link {...props} passHref>
-          <Anchor {...props} />
-        </Link>
-      ), // eslint-disable-line jsx-a11y/anchor-has-content
+      a: ({ href, children }) => {
+        const isExternal = href?.startsWith('http');
+        if (isExternal) {
+          return <Anchor href={href}>{children}</Anchor>;
+        }
+        return (
+          <Link href={href || '/'} legacyBehavior passHref>
+            <Anchor>{children}</Anchor>
+          </Link>
+        );
+      },
       img: (props) => <img {...props} />, // eslint-disable-line jsx-a11y/alt-text
       sup: (props) => <sup {...props} />,
       content: (props) => <div {...props} />,

@@ -22,8 +22,8 @@ export const SiteFooter = () => (
         >
           <Text as="p" color="colorTextInverse">
             Built with{' '}
-            <Flex display="inline-flex" vAlignContent="center">
-              <Link href="https://paste.twilio.design/" passHref>
+            <Box as="span" display="inline-flex" alignItems="center">
+              <Link href="https://paste.twilio.design/" legacyBehavior passHref>
                 <Text as="a" color="colorTextInverse">
                   Paste
                 </Text>
@@ -33,10 +33,10 @@ export const SiteFooter = () => (
                 title="Opens an external resource"
                 color="colorTextInverse"
               />
-            </Flex>
+            </Box>
             . Mostly possible due to{' '}
-            <Flex display="inline-flex" vAlignContent="center">
-              <Link href="https://simontaggart.com/" passHref>
+            <Box as="span" display="inline-flex" alignItems="center">
+              <Link href="https://simontaggart.com/" legacyBehavior passHref>
                 <Text as="a" color="colorTextInverse">
                   Simon Taggart
                 </Text>
@@ -46,7 +46,7 @@ export const SiteFooter = () => (
                 title="Opens an external resource"
                 color="colorTextInverse"
               />
-            </Flex>
+            </Box>
             , who patiently handles my 101 Qs.
           </Text>
         </Box>
@@ -54,8 +54,8 @@ export const SiteFooter = () => (
       <Column span={[12, 12, 2]} offset={[0, 0, 1]}>
         <Box display={['none', 'none', 'inline-block']}>
           <Stack orientation="vertical" spacing="space30">
-          <Flex display="inline-flex" vAlignContent="center">
-              <Link href="https://www.linkedin.com/in/aayushpi/" passHref>
+            <Flex display="inline-flex" vAlignContent="center">
+              <Link href="https://www.linkedin.com/in/aayushpi/" legacyBehavior passHref>
                 <Text as="a" color="colorTextInverse">
                   LinkedIn
                 </Text>
@@ -67,7 +67,7 @@ export const SiteFooter = () => (
               />
             </Flex>
             <Flex display="inline-flex" vAlignContent="center">
-              <Link href="https://twitter.com/aayush" passHref>
+              <Link href="https://twitter.com/aayush" legacyBehavior passHref>
                 <Text as="a" color="colorTextInverse">
                   Twitter
                 </Text>

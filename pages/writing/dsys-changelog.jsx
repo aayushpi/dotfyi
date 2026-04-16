@@ -21,13 +21,13 @@ export default () => {
         <Column span={12} offset={1}>
           <Box>
             <Stack orientation="horizontal" spacing="space30">
-              <Link href="/" passHref>
+              <Link href="/" legacyBehavior passHref>
                 <Anchor>
                   <ScreenReaderOnly>Back to</ScreenReaderOnly> Home
                 </Anchor>
               </Link>
               <Text as="span">/</Text>
-              <Link href="/" passHref>
+              <Link href="/" legacyBehavior passHref>
                 <Anchor>Writing</Anchor>
               </Link>
               <Text as="span">/</Text>
