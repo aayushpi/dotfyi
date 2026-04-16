@@ -37,12 +37,7 @@ const triggerEmergency = () => {
               maxWidth="size30"
             >
               Hi! Post your question on{' '}
-              <Link
-                href="https://github.com/twilio-labs/paste/discussions"
-                passHref
-              >
-                <Anchor>GitHub</Anchor>
-              </Link>
+              <Anchor href="https://github.com/twilio-labs/paste/discussions">GitHub</Anchor>
               ! If this is an extremely urgent request press the emergency
               button, and a DSYS team member will get back to you!
               <Box marginTop="space20">
@@ -113,7 +108,7 @@ export default () => {
           <Column span={[12, 12, 4]} offset={[0, 0, 1]}>
             <Box>
               <Stack orientation="horizontal" spacing="space30">
-                <Link href="/" passHref>
+                <Link href="/" legacyBehavior passHref>
                   <Anchor>
                     <ScreenReaderOnly>Back to</ScreenReaderOnly> Home
                   </Anchor>
@@ -147,9 +142,7 @@ export default () => {
           </Paragraph>
           <Paragraph>
             We saw this as the{' '}
-            <Link href="https://paste.twilio.design/" passHref>
-              <Anchor>Twilio design system</Anchor>
-            </Link>{' '}
+            <Anchor href="https://paste.twilio.design/">Twilio design system</Anchor>{' '}
             was incubated and eventually scaled organization wide. Here are some
             of the ways we scaled our support, helping our customers and
             ourselves through these stages.
@@ -575,12 +568,7 @@ export default () => {
           </Heading>
           <Paragraph>
             We addressed new users first: using Slack’s{' '}
-            <Link
-              href="https://slack.com/features/workflow-automation"
-              passHref
-            >
-              <Anchor showExternal>Workflow Builder</Anchor>
-            </Link>
+            <Anchor href="https://slack.com/features/workflow-automation">Workflow Builder</Anchor>
             , I built a bot that DM’d anyone who joined our Slack channel for
             the first time with a greeting, important information, and link to
             our support and documentation. While this helped, we still had
@@ -680,16 +668,9 @@ export default () => {
                     Hey 👩🏻‍🎤! Welcome to design system help!
                     <br />
                     📖 Start by{' '}
-                    <Link href="https://paste.twilio.design/" passHref>
-                      <Anchor>exploring our docs</Anchor>
-                    </Link>
+                    <Anchor href="https://paste.twilio.design/">exploring our docs</Anchor>
                     <br />❓ Still need help?{' '}
-                    <Link
-                      passHref
-                      href="https://github.com/twilio-labs/paste/discussions"
-                    >
-                      <Anchor>Start a discussion</Anchor>
-                    </Link>
+                    <Anchor href="https://github.com/twilio-labs/paste/discussions">Start a discussion</Anchor>
                     <br />
                     🕐 Expect a 1 day response time
                     <br />
@@ -747,9 +728,7 @@ export default () => {
           <Paragraph>
             Perfect customer support doesn't exist. Also, there's no single or
             linear way to scale for it.{' '}
-            <Link href="https://www.jennieyip.design/" passHref>
-              <Anchor>Jennie Yip</Anchor>
-            </Link>{' '}
+            <Anchor href="https://www.jennieyip.design/">Jennie Yip</Anchor>{' '}
             nailed it when she said:
           </Paragraph>
           <Box as="blockquote" paddingLeft={['space0', 'space40', 'space40']}>
@@ -760,12 +739,7 @@ export default () => {
               I am deeply grateful to my passionate and empathetic team. But
               damn, some days are hard."
             </Text>{' '}
-            <Link
-              href="https://twitter.com/jenniesyip/status/1278380817090150405"
-              passHref
-            >
-              <Anchor>(Source)</Anchor>
-            </Link>
+            <Anchor href="https://twitter.com/jenniesyip/status/1278380817090150405">(Source)</Anchor>
           </Box>
           <Paragraph>
             The UX and UI that we ship is dynamic and changes with time. So
@@ -781,32 +755,16 @@ export default () => {
             <Separator orientation="horizontal" verticalSpacing="space50" />
             <Text as="p" fontSize="fontSize20">
               Many thanks to{' '}
-              <Link href="https://www.jennieyip.design/" passHref>
-                <Anchor showExternal>Jennie Yip</Anchor>
-              </Link>
+              <Anchor href="https://www.jennieyip.design/">Jennie Yip</Anchor>
               ,{' '}
-              <Link href="https://heysarah.li/" passHref>
-                <Anchor showExternal>Sarah Li</Anchor>
-              </Link>
+              <Anchor href="https://heysarah.li/">Sarah Li</Anchor>
               , and{' '}
-              <Link href="https://chexee.me/" passHref>
-                <Anchor showExternal>Chelsea Otakan</Anchor>
-              </Link>{' '}
+              <Anchor href="https://chexee.me/">Chelsea Otakan</Anchor>{' '}
               for guidance and edits on this article. If you see a typo or an
               error, please{' '}
-              <Link
-                href="https://github.com/aayushpi/dotfyi/blob/master/pages/writing/scaling_support.mdx"
-                passHref
-              >
-                <Anchor showExternal>suggest an edit</Anchor>
-              </Link>
+              <Anchor href="https://github.com/aayushpi/dotfyi/blob/master/pages/writing/scaling_support.mdx">suggest an edit</Anchor>
               . I'd love to hear your thoughts and comments on this{' '}
-              <Link
-                href="https://twitter.com/aayush/status/1356690446135619585"
-                passHref
-              >
-                <Anchor showExternal>Twitter thread</Anchor>
-              </Link>
+              <Anchor href="https://twitter.com/aayush/status/1356690446135619585">Twitter thread</Anchor>
             </Text>
           </Box>
         </Column>

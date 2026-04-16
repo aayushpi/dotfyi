@@ -25,7 +25,7 @@ export default () => {
         <Column span={[12, 12, 6]} offset={[0, 0, 1]}>
           <Box>
             <Stack orientation="horizontal" spacing="space30">
-              <Link href="/" passHref>
+              <Link href="/" legacyBehavior passHref>
                 <Anchor>
                   <ScreenReaderOnly>Back to</ScreenReaderOnly> Home
                 </Anchor>
@@ -75,9 +75,7 @@ export default () => {
               Links, talks, and related writing
             </Heading>
             <Stack orientation={'vertical'} spacing="space30">
-              <Link href="https://paste.twilio.design" passHref>
-                <Anchor showExternal>Explore Paste Design System</Anchor>
-              </Link>
+              <Anchor href="https://paste.twilio.design" showExternal>Explore Paste Design System</Anchor>
             </Stack>
           </Column>
         </Grid>
@@ -110,12 +108,8 @@ export default () => {
               Links, talks, and related writing
             </Heading>
             <Stack orientation="vertical" spacing="space30">
-              <Link href="https://www.twilio.com/studio" passHref>
-                <Anchor showExternal>Explore Twilio Studio</Anchor>
-              </Link>
-              <Link href="https://youtu.be/VBjVi4mV0Qk" passHref>
-                <Anchor showExternal>Introducing Studio at Signal 2017</Anchor>
-              </Link>
+              <Anchor href="https://www.twilio.com/studio" showExternal>Explore Twilio Studio</Anchor>
+              <Anchor href="https://youtu.be/VBjVi4mV0Qk" showExternal>Introducing Studio at Signal 2017</Anchor>
             </Stack>
           </Column>
         </Grid>
@@ -147,9 +141,7 @@ export default () => {
               Links, talks, and related writing
             </Heading>
             <Stack orientation="vertical" spacing="space30">
-              <Link href="https://aayushisin.netlify.app/#vouch" passHref>
-                <Anchor showExternal>Read about Vouch</Anchor>
-              </Link>
+              <Anchor href="https://aayushisin.netlify.app/#vouch" showExternal>Read about Vouch</Anchor>
             </Stack>
           </Column>
         </Grid>
@@ -172,20 +164,9 @@ export default () => {
               Links, talks, and related writing
             </Heading>
             <Stack orientation="vertical" spacing="space30">
-              <Link href="https://aayushisin.netlify.app/#piq" passHref>
-                <Anchor showExternal>Read about piq</Anchor>
-              </Link>
-              <Link href="https://youtu.be/eIMHxpT_cjc" passHref>
-                <Anchor showExternal>
-                  Introducing piq at a fundraising event
-                </Anchor>
-              </Link>
-              <Link
-                href="https://medium.com/design-startups/a12142e9ab28"
-                passHref
-              >
-                <Anchor showExternal>Notes from building piq</Anchor>
-              </Link>
+              <Anchor href="https://aayushisin.netlify.app/#piq" showExternal>Read about piq</Anchor>
+              <Anchor href="https://youtu.be/eIMHxpT_cjc" showExternal>Introducing piq at a fundraising event</Anchor>
+              <Anchor href="https://medium.com/design-startups/a12142e9ab28" showExternal>Notes from building piq</Anchor>
             </Stack>
           </Column>
         </Grid>

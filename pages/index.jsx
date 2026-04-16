@@ -62,12 +62,7 @@ export default () => {
                     <Paragraph>
                       I joined an online roundtable hosted by Evil Martians on the topic of designing tools for developers. 
                     </Paragraph>
-                    <Link
-                      href="https://www.youtube.com/watch?v=PIhJtTboXZ0"
-                      passHref
-                    >
-                      <Anchor showExternal>Watch podcast</Anchor>
-                    </Link>
+                    <Anchor href="https://www.youtube.com/watch?v=PIhJtTboXZ0" showExternal>Watch podcast</Anchor>
                   </Card>
                   <Card>
                     <Heading as="h3" variant="heading50">
@@ -76,12 +71,7 @@ export default () => {
                     <Paragraph>
                       A blog post launching Algolia&rsquo;s new AI powered framework for conversational commerce
                     </Paragraph>
-                    <Link
-                      href="https://www.algolia.com/blog/ai/ai-conversational-commerce-ux/"
-                      passHref
-                    >
-                      <Anchor showExternal>View article</Anchor>
-                    </Link>
+                    <Anchor href="https://www.algolia.com/blog/ai/ai-conversational-commerce-ux/" showExternal>View article</Anchor>
                   </Card>
                   <Card>
                     <Heading as="h3" variant="heading50">
@@ -92,12 +82,7 @@ export default () => {
                       I talked about the foundation and operation of Twilio
                       Paste and its impact on Twilio at SIGNAL, 2021.
                     </Paragraph>
-                    <Link
-                      href="https://www.youtube.com/watch?v=55gd38mph2g"
-                      passHref
-                    >
-                      <Anchor showExternal>View talk</Anchor>
-                    </Link>
+                    <Anchor href="https://www.youtube.com/watch?v=55gd38mph2g" showExternal>View talk</Anchor>
                   </Card>
                   <Card>
                     <Heading as="h3" variant="heading50">
@@ -107,7 +92,7 @@ export default () => {
                       I talk about the challenges of a growing platform (in this
                       case, Twilio Paste) and ways to grow support around it.
                     </Paragraph>
-                    <Link href="/writing/scaling_support" passHref>
+                    <Link href="/writing/scaling_support" legacyBehavior passHref>
                       <Anchor>Read article</Anchor>
                     </Link>
                   </Card>
@@ -120,12 +105,7 @@ export default () => {
                       I introduced Twilio&rsquo;s low-code programming language
                       and why we built it at SIGNAL 2017, London.
                     </Paragraph>
-                    <Link
-                      href="https://www.youtube.com/watch?v=VBjVi4mV0Qk"
-                      passHref
-                    >
-                      <Anchor showExternal>View talk</Anchor>
-                    </Link>
+                    <Anchor href="https://www.youtube.com/watch?v=VBjVi4mV0Qk" showExternal>View talk</Anchor>
                   </Card>
                 </Stack>
               </Box>
@@ -135,16 +115,12 @@ export default () => {
                 </Heading>
                 <UnorderedList>
                   <ListItem>
-                    <Link href="https://paste.twilio.design" passHref>
-                      <Anchor showExternal>Paste</Anchor>
-                    </Link>{" "}
+                    <Anchor href="https://paste.twilio.design" showExternal>Paste</Anchor>{" "}
                     A comprehensive UX platform to build great customer
                     experiences
                   </ListItem>
                   <ListItem>
-                    <Link href="https://www.twilio.com/studio" passHref>
-                      <Anchor showExternal>Studio</Anchor>
-                    </Link>
+                    <Anchor href="https://www.twilio.com/studio" showExternal>Studio</Anchor>
                     A low-code visual programming language to build powerful
                     workflows.
                   </ListItem>
@@ -161,9 +137,7 @@ export default () => {
               <Paragraph>
                 I lead product, product design, research, and engineering teams
                 at Algolia.{" "}
-                <Link href="https://www.algolia.com/careers/" passHref>
-                  <Anchor showExternal>We&rsquo;re still hiring</Anchor>
-                </Link>{" "}
+                <Anchor href="https://www.algolia.com/careers/">We&rsquo;re still hiring</Anchor>{" "}
                 thoughtfully. The common thread across these teams is a deep
                 commitment to understanding customer pain and defining what "good quality" looks like.
               </Paragraph>

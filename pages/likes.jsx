@@ -38,7 +38,7 @@ const LikeCard = ({ title, date, review, type, creator }) => {
         const urlMatch = part.match(/url="(.*?)"/);
         const content = part.replace(/<link url=".*?">(.*?)<\/link>/, '$1');
         return (
-          <Link key={index} href={urlMatch[1]} passHref>
+          <Link key={index} href={urlMatch[1]} legacyBehavior passHref>
             <Anchor>{renderFormattedText(content)}</Anchor>
           </Link>
         );
@@ -223,7 +223,7 @@ export default function Likes({ likes }) {
         <Column span={[12, 12, 4]} offset={[0, 0, 1]}>
           <Box>
             <Stack orientation="horizontal" spacing="space30">
-              <Link href="/" passHref>
+              <Link href="/" legacyBehavior passHref>
                 <Anchor>
                   <ScreenReaderOnly>Back to</ScreenReaderOnly> Home
                 </Anchor>
