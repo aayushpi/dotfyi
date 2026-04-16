@@ -19,6 +19,10 @@
 # misc
 .DS_Store
 
+# claude
+.claude/
+ARCHITECTURE.md
+
 # debug
 npm-debug.log*
 yarn-debug.log*

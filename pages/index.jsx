@@ -33,15 +33,14 @@ export default () => {
                 orientation={["vertical", "vertical", "horizontal"]}
                 spacing="space60"
               >
-                <Link href="/likes" passHref>
-                    <Anchor>Likes</Anchor>
-                  </Link>
                 <Link href="https://www.linkedin.com/in/aayushpi/" passHref>
                   <Anchor showExternal>LinkedIn</Anchor>
                 </Link>
-               
-                  <Link href="https://twitter.com/aayush" passHref>
-                    <Anchor showExternal>Twitter</Anchor>
+                  <Link
+                    href={`mailto:${"xoxo"}@${"aayush"}.fy i`.replace(" ","")}
+                    passHref
+                  >
+                    <Anchor showExternal>Email</Anchor>
                   </Link>
                
               </Stack>
