@@ -97,7 +97,7 @@ export default function NotePage({ note }) {
 
                 {note.creator && (
                   <Text as="p" color="colorTextWeak" fontSize="fontSize30">
-                    {note.creator}{note.year ? `, ${note.year}` : ''}
+                    {note.creator}
                   </Text>
                 )}
 

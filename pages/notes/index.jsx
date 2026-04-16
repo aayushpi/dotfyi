@@ -71,6 +71,7 @@ function NoteCard({ note }) {
                 {new Date(note.date).toLocaleDateString('en-US', {
                   year: 'numeric',
                   month: 'long',
+                  day: 'numeric',
                 })}
               </Text>
             )}
@@ -82,10 +83,9 @@ function NoteCard({ note }) {
             </Link>
           </Heading>
 
-          {(note.creator || note.year) && (
+          {note.creator && (
             <Text as="p" color="colorTextWeak" fontSize="fontSize20" marginBottom="space0">
               {note.creator}
-              {note.creator && note.year ? `, ${note.year}` : note.year}
             </Text>
           )}
 
