@@ -36,15 +36,17 @@ function NoteCard({ note }) {
       {isLog && (
         <Box
           flexShrink={0}
+          width="sizeSquare200"
+          overflow="hidden"
           backgroundColor="colorBackgroundStrong"
-          style={{ width: '72px', height: '108px', overflow: 'hidden' }}
+          style={{ height: '7.125rem' }}
         >
           {note.cover ? (
             <Box
               as="img"
               src={note.cover}
               alt={note.title}
-              style={{ width: '72px', height: '108px', objectFit: 'cover', display: 'block' }}
+              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
             />
           ) : null}
         </Box>

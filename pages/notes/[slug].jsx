@@ -51,14 +51,16 @@ export default function NotePage({ note }) {
             {isLog && note.cover && (
               <Box
                 flexShrink={0}
+                width="size10"
+                overflow="hidden"
                 backgroundColor="colorBackgroundStrong"
-                style={{ width: '120px', height: '180px', overflow: 'hidden' }}
+                style={{ height: '8.25rem' }}
               >
                 <Box
                   as="img"
                   src={note.cover}
                   alt={note.title}
-                  style={{ width: '120px', height: '180px', objectFit: 'cover', display: 'block' }}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                 />
               </Box>
             )}
