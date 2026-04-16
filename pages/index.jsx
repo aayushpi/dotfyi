@@ -33,15 +33,11 @@ export default () => {
                 orientation={["vertical", "vertical", "horizontal"]}
                 spacing="space60"
               >
-                <Link href="https://www.linkedin.com/in/aayushpi/" passHref>
-                  <Anchor showExternal>LinkedIn</Anchor>
+                <Link href="/notes" legacyBehavior passHref>
+                  <Anchor>Notes</Anchor>
                 </Link>
-                  <Link
-                    href={`mailto:${"xoxo"}@${"aayush"}.fy i`.replace(" ","")}
-                    passHref
-                  >
-                    <Anchor showExternal>Email</Anchor>
-                  </Link>
+                <Anchor href="https://www.linkedin.com/in/aayushpi/" showExternal>LinkedIn</Anchor>
+                <Anchor href={`mailto:${"xoxo"}@${"aayush"}.fy i`.replace(" ", "")}>Email</Anchor>
                
               </Stack>
             </Box>
