@@ -177,5 +177,5 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const note = await getNoteBySlug(params.slug);
   if (!note) return { notFound: true };
-  return { props: { note } };
+  return { props: { note: { resolvedRefs: [], referencedBy: [], ...note } } };
 }
