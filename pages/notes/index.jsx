@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Box } from '@twilio-paste/core/box';
@@ -8,7 +7,7 @@ import { Text } from '@twilio-paste/core/text';
 import { Anchor } from '@twilio-paste/core/anchor';
 import { Stack } from '@twilio-paste/core/stack';
 import { ScreenReaderOnly } from '@twilio-paste/core/screen-reader-only';
-import { Separator } from '@twilio-paste/core/separator';
+import { LinkExternalIcon } from '@twilio-paste/icons/cjs/LinkExternalIcon';
 import { getAllNotes, LOG_TYPES } from '../../lib/content';
 
 const TYPE_LABELS = {
@@ -20,87 +19,81 @@ const TYPE_LABELS = {
   thought: 'Thought',
 };
 
-const FILTER_TYPES = ['book', 'film', 'article', 'game', 'essay', 'thought'];
-
 function NoteCard({ note }) {
   const isLog = LOG_TYPES.includes(note.type);
+  const isArticle = note.type === 'article';
 
   return (
     <Box
       as="article"
       display="flex"
+      alignItems="flex-start"
       columnGap="space60"
-      paddingTop="space70"
-      paddingBottom="space70"
+      paddingTop="space60"
+      paddingBottom="space60"
     >
-      {isLog && (
+      {isLog && note.cover && (
         <Box
           flexShrink={0}
-          width="size1000"
           overflow="hidden"
           backgroundColor="colorBackgroundStrong"
-          style={{ aspectRatio: '2/3' }}
+          borderStyle="solid"
+          borderColor="colorBorderBrandHighlight"
+          style={{ width: '7.9rem', height: '11.85rem', borderWidth: '7.5px' }}
         >
-          {note.cover ? (
-            <Box
-              as="img"
-              src={note.cover}
-              alt={note.title}
-              width="100%"
-              height="100%"
-              style={{ objectFit: 'cover', display: 'block' }}
-            />
-          ) : null}
+          <Box
+            as="img"
+            src={note.cover}
+            alt={note.title}
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          />
         </Box>
       )}
 
       <Box flexGrow={1} minWidth="size0">
+        <ScreenReaderOnly>
+          <span>{TYPE_LABELS[note.type] || note.type}</span>
+          {note.date && (
+            <time dateTime={note.date}>
+              {new Date(note.date).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+              })}
+            </time>
+          )}
+        </ScreenReaderOnly>
+
         <Stack orientation="vertical" spacing="space20">
           <Box display="flex" alignItems="baseline" columnGap="space30" flexWrap="wrap">
-            <Text
-              as="span"
-              color="colorTextWeak"
-              fontSize="fontSize10"
-              fontWeight="fontWeightSemibold"
-              style={{ textTransform: 'uppercase', letterSpacing: '0.08em' }}
-            >
-              {TYPE_LABELS[note.type] || note.type}
-            </Text>
-            {note.date && (
-              <Text as="time" dateTime={note.date} color="colorTextWeak" fontSize="fontSize10">
-                {new Date(note.date).toLocaleDateString('en-US', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric',
-                })}
+            <Heading as="h2" variant="heading20" marginBottom="space0">
+              {isArticle && note.source ? (
+                <Box as="span" display="inline-flex" alignItems="center">
+                  <Anchor href={note.source}>{note.title}</Anchor>
+                  <LinkExternalIcon
+                    decorative={false}
+                    title="Opens external article"
+                    color="colorTextLink"
+                  />
+                </Box>
+              ) : (
+                note.title
+              )}
+            </Heading>
+            {note.creator && (
+              <Text as="span" color="colorTextWeak" fontSize="fontSize20">
+                {note.creator}
               </Text>
             )}
           </Box>
 
-          <Heading as="h2" variant="heading40" marginBottom="space0">
-            <Link href={`/notes/${note.slug}`} legacyBehavior passHref>
-              <Anchor>{note.title}</Anchor>
-            </Link>
-          </Heading>
-
-          {note.creator && (
-            <Text as="p" color="colorTextWeak" fontSize="fontSize20" marginBottom="space0">
-              {note.creator}
-            </Text>
-          )}
-
-          {note.excerpt && (
-            <Text as="p" fontSize="fontSize20" color="colorText" marginBottom="space0">
-              {note.excerpt}
-              {!note.isShort && (
-                <>
-                  {'… '}
-                  <Link href={`/notes/${note.slug}`} legacyBehavior passHref>
-                    <Anchor>More</Anchor>
-                  </Link>
-                </>
-              )}
-            </Text>
+          {note.contentHtml && (
+            <Box
+              dangerouslySetInnerHTML={{ __html: note.contentHtml }}
+              fontSize="fontSize20"
+              color="colorText"
+              lineHeight="lineHeight30"
+            />
           )}
         </Stack>
       </Box>
@@ -109,10 +102,6 @@ function NoteCard({ note }) {
 }
 
 export default function NotesIndex({ notes }) {
-  const [activeType, setActiveType] = useState(null);
-
-  const filtered = activeType ? notes.filter((n) => n.type === activeType) : notes;
-
   return (
     <>
       <Head>
@@ -120,7 +109,7 @@ export default function NotesIndex({ notes }) {
       </Head>
       <Grid>
         <Column span={[12, 12, 8]} offset={[0, 0, 1]}>
-          <Box marginBottom="space60">
+          <Box marginBottom="space50">
             <Stack orientation="horizontal" spacing="space30">
               <Link href="/" legacyBehavior passHref>
                 <Anchor>
@@ -131,65 +120,22 @@ export default function NotesIndex({ notes }) {
             </Stack>
           </Box>
 
-          <Heading as="h1" variant="heading10">
+          <Heading as="h1" variant="heading10" marginBottom="space20">
             Notes
           </Heading>
 
-          <Box marginTop="space70" marginBottom="space20">
-            <Stack orientation="horizontal" spacing="space50">
-              <Box
-                as="button"
-                onClick={() => setActiveType(null)}
-                background="none"
-                border="none"
-                padding="space0"
-                cursor="pointer"
-              >
-                <Text
-                  as="span"
-                  fontSize="fontSize20"
-                  fontWeight={!activeType ? 'fontWeightSemibold' : 'fontWeightNormal'}
-                  color={!activeType ? 'colorText' : 'colorTextWeak'}
-                >
-                  All
-                </Text>
-              </Box>
-              {FILTER_TYPES.map((type) => (
-                <Box
-                  key={type}
-                  as="button"
-                  onClick={() => setActiveType(type)}
-                  background="none"
-                  border="none"
-                  padding="space0"
-                  cursor="pointer"
-                >
-                  <Text
-                    as="span"
-                    fontSize="fontSize20"
-                    fontWeight={activeType === type ? 'fontWeightSemibold' : 'fontWeightNormal'}
-                    color={activeType === type ? 'colorText' : 'colorTextWeak'}
-                  >
-                    {TYPE_LABELS[type]}
-                  </Text>
-                </Box>
-              ))}
-            </Stack>
-          </Box>
 
-          <Separator orientation="horizontal" verticalSpacing="space0" />
-
-          {filtered.length === 0 ? (
+          {notes.length === 0 ? (
             <Box paddingTop="space100">
               <Text as="p" color="colorTextWeak">Nothing here yet.</Text>
             </Box>
           ) : (
             <Box>
-              {filtered.map((note, i) => (
+              {notes.map((note, i) => (
                 <Box key={note.slug}>
                   <NoteCard note={note} />
-                  {i < filtered.length - 1 && (
-                    <Separator orientation="horizontal" verticalSpacing="space0" />
+                  {i < notes.length - 1 && (
+                    <Box borderBottomWidth="borderWidth10" borderBottomStyle="solid" borderBottomColor="colorBorderSubtle" />
                   )}
                 </Box>
               ))}
@@ -202,6 +148,6 @@ export default function NotesIndex({ notes }) {
 }
 
 export async function getStaticProps() {
-  const notes = getAllNotes();
+  const notes = await getAllNotes();
   return { props: { notes } };
 }

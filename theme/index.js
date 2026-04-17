@@ -38,9 +38,15 @@ export const PortfolioTheme = {
     colorTextLink: `#2c3e50`,
   },
   borderColors: {
+    ...DefaultTheme.borderColors,
     colorBorder: `#2c3e50`,
     colorBorderPrimary: `#2c3e50`,
     colorBorderLight: `#2c3e50`,
+    colorBorderWeak: `#2c3e50`,
+    colorBorderWeaker: `#2c3e50`,
+    colorBorderWeakest: `#2c3e50`,
+    colorBorderBrandHighlight: `#F98585`,
+    colorBorderSubtle: `rgba(44, 62, 80, 0.2)`,
   },
   shadows: {
     shadowBorderPrimary: `#2c3e50`,
