@@ -51,10 +51,11 @@ export default function NotePage({ note }) {
             {isLog && note.cover && (
               <Box
                 flexShrink={0}
-                width="size10"
                 overflow="hidden"
                 backgroundColor="colorBackgroundStrong"
-                style={{ height: '8.25rem' }}
+                borderStyle="solid"
+                borderColor="colorBorderBrandHighlight"
+                style={{ width: '6.325rem', height: '10.925rem', borderWidth: '10px' }}
               >
                 <Box
                   as="img"
@@ -68,36 +69,29 @@ export default function NotePage({ note }) {
             {/* Meta */}
             <Box flexGrow={1}>
               <Stack orientation="vertical" spacing="space30">
-                <Box display="flex" alignItems="baseline" columnGap="space30" flexWrap="wrap">
-                  <Text
-                    as="span"
-                    color="colorTextWeak"
-                    fontSize="fontSize10"
-                    fontWeight="fontWeightSemibold"
-                    style={{ textTransform: 'uppercase', letterSpacing: '0.08em' }}
-                  >
-                    {TYPE_LABELS[note.type] || note.type}
-                  </Text>
+                <ScreenReaderOnly>
+                  <span>{TYPE_LABELS[note.type] || note.type}</span>
                   {note.date && (
-                    <Text as="time" dateTime={note.date} color="colorTextWeak" fontSize="fontSize10">
+                    <time dateTime={note.date}>
                       {new Date(note.date).toLocaleDateString('en-US', {
                         year: 'numeric',
                         month: 'long',
                         day: 'numeric',
                       })}
+                    </time>
+                  )}
+                </ScreenReaderOnly>
+
+                <Box display="flex" alignItems="baseline" columnGap="space40" flexWrap="wrap">
+                  <Heading as="h1" variant="heading10" marginBottom="space0">
+                    {note.title}
+                  </Heading>
+                  {note.creator && (
+                    <Text as="span" color="colorTextWeak" fontSize="fontSize30">
+                      {note.creator}
                     </Text>
                   )}
                 </Box>
-
-                <Heading as="h1" variant="heading10" marginBottom="space0">
-                  {note.title}
-                </Heading>
-
-                {note.creator && (
-                  <Text as="p" color="colorTextWeak" fontSize="fontSize30">
-                    {note.creator}
-                  </Text>
-                )}
 
                 {note.source && (
                   <Anchor href={note.source} showExternal>
