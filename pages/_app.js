@@ -24,6 +24,10 @@ const globalStyles = (props) =>
       margin: 0,
       fontSize: 'fontSize30',
     },
+    'h1, h2, h3, h4, h5, h6': {
+      fontFamily: "'Playfair Display', serif",
+      fontWeight: 900,
+    },
   })(props);
 
 const App = ({ Component, pageProps }) => (

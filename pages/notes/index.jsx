@@ -9,6 +9,7 @@ import { Stack } from '@twilio-paste/core/stack';
 import { ScreenReaderOnly } from '@twilio-paste/core/screen-reader-only';
 import { LinkExternalIcon } from '@twilio-paste/icons/cjs/LinkExternalIcon';
 import { getAllNotes, LOG_TYPES } from '../../lib/content';
+import LinkPreviewCard from '../../components/LinkPreviewCard';
 
 const TYPE_LABELS = {
   book: 'Book',
@@ -64,28 +65,23 @@ function NoteCard({ note }) {
           )}
         </ScreenReaderOnly>
 
-        <Stack orientation="vertical" spacing="space20">
-          <Box display="flex" alignItems="baseline" columnGap="space30" flexWrap="wrap">
-            <Heading as="h2" variant="heading20" marginBottom="space0">
-              {isArticle && note.source ? (
-                <Box as="span" display="inline-flex" alignItems="center">
-                  <Anchor href={note.source}>{note.title}</Anchor>
-                  <LinkExternalIcon
-                    decorative={false}
-                    title="Opens external article"
-                    color="colorTextLink"
-                  />
-                </Box>
-              ) : (
-                note.title
+        <Stack orientation="vertical" spacing="space40">
+          {isArticle && note.source && (
+            <LinkPreviewCard preview={note.linkPreview} url={note.source} title={note.title} />
+          )}
+
+          {!isArticle && (
+            <Box>
+              <Heading as="h2" variant="heading20" marginBottom="space20">
+                {note.title}
+              </Heading>
+              {note.creator && (
+                <Text as="span" color="colorTextWeak" fontSize="fontSize20">
+                  {note.creator}
+                </Text>
               )}
-            </Heading>
-            {note.creator && (
-              <Text as="span" color="colorTextWeak" fontSize="fontSize20">
-                {note.creator}
-              </Text>
-            )}
-          </Box>
+            </Box>
+          )}
 
           {note.contentHtml && (
             <Box

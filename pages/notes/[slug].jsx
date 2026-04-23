@@ -9,7 +9,8 @@ import { Anchor } from '@twilio-paste/core/anchor';
 import { Stack } from '@twilio-paste/core/stack';
 import { Separator } from '@twilio-paste/core/separator';
 import { ScreenReaderOnly } from '@twilio-paste/core/screen-reader-only';
-import { getAllNoteSlugs, getNoteBySlug, LOG_TYPES } from '../../lib/content';
+import { getAllNoteSlugs, getNoteBySlugMdx, LOG_TYPES } from '../../lib/content';
+import LinkPreviewCard from '../../components/LinkPreviewCard';
 
 const TYPE_LABELS = {
   book: 'Book',
@@ -94,9 +95,7 @@ export default function NotePage({ note }) {
                 </Box>
 
                 {note.source && (
-                  <Anchor href={note.source} showExternal>
-                    View source
-                  </Anchor>
+                  <LinkPreviewCard preview={note.linkPreview} url={note.source} title={note.title} />
                 )}
               </Stack>
             </Box>
@@ -106,12 +105,15 @@ export default function NotePage({ note }) {
 
           {/* Body */}
           <Box
-            dangerouslySetInnerHTML={{ __html: note.contentHtml }}
             style={{
               lineHeight: '1.75',
               fontSize: '1.0625rem',
             }}
-          />
+          >
+            {note.contentHtml && (
+              <Box dangerouslySetInnerHTML={{ __html: note.contentHtml }} />
+            )}
+          </Box>
 
           {/* Referenced items (essays only) */}
           {isEssay && note.resolvedRefs.length > 0 && (
@@ -175,7 +177,12 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const note = await getNoteBySlug(params.slug);
+  const note = await getNoteBySlugMdx(params.slug);
   if (!note) return { notFound: true };
-  return { props: { note: { resolvedRefs: [], referencedBy: [], ...note } } };
+
+  return {
+    props: {
+      note: { resolvedRefs: [], referencedBy: [], ...note },
+    },
+  };
 }
