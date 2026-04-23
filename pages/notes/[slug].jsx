@@ -95,7 +95,7 @@ export default function NotePage({ note }) {
                 </Box>
 
                 {note.source && (
-                  <LinkPreviewCard preview={note.linkPreview} url={note.source} />
+                  <LinkPreviewCard preview={note.linkPreview} url={note.source} title={note.title} />
                 )}
               </Stack>
             </Box>

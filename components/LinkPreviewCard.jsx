@@ -1,10 +1,8 @@
 import { Box } from '@twilio-paste/core/box';
 import { Text } from '@twilio-paste/core/text';
-import { Stack } from '@twilio-paste/core/stack';
 import { Anchor } from '@twilio-paste/core/anchor';
 
-export default function LinkPreviewCard({ preview, url }) {
-  // Fallback to a basic link if preview data isn't available
+export default function LinkPreviewCard({ preview, url, title }) {
   if (!preview) {
     return (
       <Anchor href={url} showExternal>
@@ -22,7 +20,7 @@ export default function LinkPreviewCard({ preview, url }) {
       display="inline-block"
       paddingX="space30"
       paddingY="space20"
-      borderRadius="borderRadius20"
+      borderRadius="borderRadiusPill"
       borderStyle="solid"
       borderColor="colorBorderWeak"
       borderWidth="borderWidth10"
@@ -32,58 +30,33 @@ export default function LinkPreviewCard({ preview, url }) {
         transition: 'all 200ms ease',
       }}
       _hover={{
+        backgroundColor: 'colorBackground',
         borderColor: 'colorBorderBrandHighlight',
       }}
     >
-      <Stack orientation="vertical" spacing="space10">
-        {preview.image && (
-          <Box
-            as="img"
-            src={preview.image}
-            alt=""
-            style={{
-              width: '100%',
-              maxWidth: '280px',
-              height: 'auto',
-              borderRadius: '8px',
-              display: 'block',
-            }}
-          />
+      <Text
+        as="span"
+        fontSize="fontSize20"
+        fontWeight="fontWeightSemibold"
+        color="colorTextLink"
+        marginBottom="space0"
+      >
+        {title || preview.title}
+        {preview.author && (
+          <>
+            <Text as="span" marginX="space20">—</Text>
+            {preview.author}
+          </>
         )}
-        <Text
-          as="div"
-          fontSize="fontSize20"
-          fontWeight="fontWeightSemibold"
-          color="colorTextLink"
-          marginBottom="space0"
-          style={{
-            overflow: 'hidden',
-            textOverflow: 'ellipsis',
-            display: '-webkit-box',
-            WebkitLineClamp: 2,
-            WebkitBoxOrient: 'vertical',
-          }}
-        >
-          {preview.title}
-        </Text>
-        {preview.description && (
-          <Text
-            as="p"
-            fontSize="fontSize20"
-            color="colorText"
-            marginBottom="space0"
-            style={{
-              overflow: 'hidden',
-              textOverflow: 'ellipsis',
-              display: '-webkit-box',
-              WebkitLineClamp: 2,
-              WebkitBoxOrient: 'vertical',
-            }}
-          >
-            {preview.description}
-          </Text>
-        )}
-      </Stack>
+      </Text>
+      <Text
+        as="span"
+        marginLeft="space20"
+        color="colorTextLink"
+        fontSize="fontSize20"
+      >
+        ↗
+      </Text>
     </Box>
   );
 }

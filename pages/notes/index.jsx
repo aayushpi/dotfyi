@@ -67,7 +67,7 @@ function NoteCard({ note }) {
 
         <Stack orientation="vertical" spacing="space40">
           {isArticle && note.source && (
-            <LinkPreviewCard preview={note.linkPreview} url={note.source} />
+            <LinkPreviewCard preview={note.linkPreview} url={note.source} title={note.title} />
           )}
 
           {!isArticle && (
