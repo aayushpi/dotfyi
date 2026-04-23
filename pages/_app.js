@@ -26,6 +26,7 @@ const globalStyles = (props) =>
     },
     'h1, h2, h3, h4, h5, h6': {
       fontFamily: "'Playfair Display', serif",
+      fontWeight: 900,
     },
   })(props);
 
