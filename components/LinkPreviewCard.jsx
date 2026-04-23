@@ -30,7 +30,7 @@ export default function LinkPreviewCard({ preview, url, title }) {
         transition: 'all 200ms ease',
       }}
       _hover={{
-        backgroundColor: 'colorBackground',
+        backgroundColor: 'colorBorderBrandHighlight',
         borderColor: 'colorBorderBrandHighlight',
       }}
     >
