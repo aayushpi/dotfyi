@@ -65,29 +65,33 @@ function NoteCard({ note }) {
           )}
         </ScreenReaderOnly>
 
-        {isArticle && note.source ? (
-          <LinkPreviewCard preview={note.linkPreview} url={note.source} />
-        ) : (
-          <Stack orientation="vertical" spacing="space20">
-            <Heading as="h2" variant="heading20" marginBottom="space0">
-              {note.title}
-            </Heading>
-            {note.creator && (
-              <Text as="span" color="colorTextWeak" fontSize="fontSize20">
-                {note.creator}
-              </Text>
-            )}
+        <Stack orientation="vertical" spacing="space40">
+          {isArticle && note.source && (
+            <LinkPreviewCard preview={note.linkPreview} url={note.source} />
+          )}
 
-            {note.contentHtml && (
-              <Box
-                dangerouslySetInnerHTML={{ __html: note.contentHtml }}
-                fontSize="fontSize20"
-                color="colorText"
-                lineHeight="lineHeight30"
-              />
-            )}
-          </Stack>
-        )}
+          {!isArticle && (
+            <Box>
+              <Heading as="h2" variant="heading20" marginBottom="space20">
+                {note.title}
+              </Heading>
+              {note.creator && (
+                <Text as="span" color="colorTextWeak" fontSize="fontSize20">
+                  {note.creator}
+                </Text>
+              )}
+            </Box>
+          )}
+
+          {note.contentHtml && (
+            <Box
+              dangerouslySetInnerHTML={{ __html: note.contentHtml }}
+              fontSize="fontSize20"
+              color="colorText"
+              lineHeight="lineHeight30"
+            />
+          )}
+        </Stack>
       </Box>
     </Box>
   );
