@@ -10,6 +10,7 @@ import { Stack } from '@twilio-paste/core/stack';
 import { Separator } from '@twilio-paste/core/separator';
 import { ScreenReaderOnly } from '@twilio-paste/core/screen-reader-only';
 import { getAllNoteSlugs, getNoteBySlug, LOG_TYPES } from '../../lib/content';
+import LinkPreviewCard from '../../components/LinkPreviewCard';
 
 const TYPE_LABELS = {
   book: 'Book',
@@ -94,9 +95,7 @@ export default function NotePage({ note }) {
                 </Box>
 
                 {note.source && (
-                  <Anchor href={note.source} showExternal>
-                    View source
-                  </Anchor>
+                  <LinkPreviewCard preview={note.linkPreview} url={note.source} />
                 )}
               </Stack>
             </Box>
