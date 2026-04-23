@@ -20,7 +20,7 @@ export default function LinkPreviewCard({ preview, url, title }) {
       display="inline-block"
       paddingX="space30"
       paddingY="space20"
-      borderRadius="borderRadiusPill"
+      borderRadius="borderRadius20"
       borderStyle="solid"
       borderColor="colorBorderWeak"
       borderWidth="borderWidth10"
