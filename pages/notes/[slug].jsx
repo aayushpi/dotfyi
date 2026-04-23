@@ -9,9 +9,7 @@ import { Anchor } from '@twilio-paste/core/anchor';
 import { Stack } from '@twilio-paste/core/stack';
 import { Separator } from '@twilio-paste/core/separator';
 import { ScreenReaderOnly } from '@twilio-paste/core/screen-reader-only';
-import { MDXProvider } from '@mdx-js/react';
 import { getAllNoteSlugs, getNoteBySlugMdx, LOG_TYPES } from '../../lib/content';
-import mdxComponents from '../../components/MDXContent';
 import LinkPreviewCard from '../../components/LinkPreviewCard';
 
 const TYPE_LABELS = {
@@ -23,7 +21,7 @@ const TYPE_LABELS = {
   thought: 'Thought',
 };
 
-export default function NotePage({ note, MDXComponent }) {
+export default function NotePage({ note }) {
   const isLog = LOG_TYPES.includes(note.type);
   const isEssay = note.type === 'essay';
 
@@ -112,13 +110,9 @@ export default function NotePage({ note, MDXComponent }) {
               fontSize: '1.0625rem',
             }}
           >
-            {note.isMdx && MDXComponent ? (
-              <MDXProvider components={mdxComponents}>
-                <MDXComponent />
-              </MDXProvider>
-            ) : note.contentHtml ? (
+            {note.contentHtml && (
               <Box dangerouslySetInnerHTML={{ __html: note.contentHtml }} />
-            ) : null}
+            )}
           </Box>
 
           {/* Referenced items (essays only) */}
@@ -186,23 +180,9 @@ export async function getStaticProps({ params }) {
   const note = await getNoteBySlugMdx(params.slug);
   if (!note) return { notFound: true };
 
-  let MDXComponent = null;
-  try {
-    const mdxModule = await import(`../../content/notes/${params.slug}.mdx`);
-    MDXComponent = mdxModule.default;
-  } catch (error) {
-    try {
-      const mdModule = await import(`../../content/notes/${params.slug}.md`);
-      MDXComponent = mdModule.default;
-    } catch (mdError) {
-      console.error(`Error loading MDX/MD for ${params.slug}:`, error, mdError);
-    }
-  }
-
   return {
     props: {
       note: { resolvedRefs: [], referencedBy: [], ...note },
-      MDXComponent,
     },
   };
 }
