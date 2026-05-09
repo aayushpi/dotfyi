@@ -1,6 +1,6 @@
 ---
 title: "Arcane"
-type: tv
+type: film
 date: 2026-05-09
 cover: "/covers/arcane.webp"
 ---

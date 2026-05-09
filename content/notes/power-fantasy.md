@@ -2,7 +2,8 @@
 title: "The Power Fantasy"
 type: book
 creator: "Kieron Gillen // Caspar Wijngaard"
-year: 2026
+year: 2024
+date: 2026-05-01
 cover: "https://cdn.imagecomics.com/assets/i/releases/1101597/the-power-fantasy-1_9c9c08fb0a.jpg"
 ---
 

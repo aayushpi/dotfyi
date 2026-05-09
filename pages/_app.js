@@ -28,6 +28,14 @@ const globalStyles = (props) =>
       fontFamily: "'Playfair Display', serif",
       fontWeight: 900,
     },
+    blockquote: {
+      borderLeftWidth: 'borderWidth30',
+      borderLeftStyle: 'solid',
+      borderLeftColor: 'colorBorderBrandHighlight',
+      paddingLeft: 'space50',
+      marginLeft: 'space0',
+      marginRight: 'space0',
+    },
   })(props);
 
 const App = ({ Component, pageProps }) => (
