@@ -12,6 +12,7 @@ import { getAllNotes, LOG_TYPES } from '../../lib/content';
 const TYPE_LABELS = {
   book: 'Book',
   film: 'Film',
+  tv: 'TV',
   article: 'Article',
   game: 'Game',
   essay: 'Essay',
@@ -27,93 +28,122 @@ function formatDate(d) {
   });
 }
 
+function CoverImage({ note }) {
+  return (
+    <Box
+      overflow="hidden"
+      borderStyle={note.cover ? 'solid' : 'none'}
+      borderColor="colorBorderBrandHighlight"
+      style={{
+        width: '8.594rem',
+        height: '12.891rem',
+        borderWidth: note.cover ? '6px' : '0',
+        flexShrink: 0,
+      }}
+    >
+      {note.cover && (
+        <Box
+          as="img"
+          src={note.cover}
+          alt={note.title}
+          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+        />
+      )}
+    </Box>
+  );
+}
+
+function NoteBody({ note, isThought }) {
+  return (
+    <>
+      {note.contentHtml && (
+        <Box
+          fontSize="fontSize30"
+          lineHeight="lineHeight30"
+          color="colorText"
+          fontStyle={isThought ? 'italic' : 'normal'}
+          dangerouslySetInnerHTML={{ __html: note.contentHtml }}
+        />
+      )}
+      {note.source && (
+        <Box marginTop="space40">
+          <Anchor href={note.source} showExternal>
+            View source
+          </Anchor>
+        </Box>
+      )}
+    </>
+  );
+}
+
 function NoteRow({ note }) {
   const isLog = LOG_TYPES.includes(note.type);
   const isThought = note.type === 'thought';
 
+  const dateText = (
+    <Text
+      as="span"
+      fontSize="fontSize10"
+      color="colorTextWeak"
+      style={{ fontFamily: 'ui-monospace, SFMono-Regular, monospace' }}
+    >
+      <ScreenReaderOnly>{TYPE_LABELS[note.type] || note.type} logged on </ScreenReaderOnly>
+      {formatDate(note.date)}
+    </Text>
+  );
+
+  const titleMeta = (
+    <>
+      <Heading as="h2" variant="heading30" marginBottom="space20" style={{ fontFamily: "'Inter', sans-serif" }}>
+        <Box as="span" fontStyle={isThought ? 'italic' : 'normal'}>
+          {note.title}
+        </Box>
+      </Heading>
+      {note.creator && (
+        <Box marginBottom="space40">
+          <Text as="span" color="colorTextWeak" fontSize="fontSize20">
+            {note.creator}{note.year ? `, ${note.year}` : ''}
+          </Text>
+        </Box>
+      )}
+    </>
+  );
+
   return (
     <Box
       as="article"
-      display="grid"
-      columnGap="space70"
       paddingTop="space80"
       paddingBottom="space80"
       borderTopWidth="borderWidth10"
       borderTopStyle="solid"
       borderTopColor="colorBorderSubtle"
-      style={{ gridTemplateColumns: '150px 152px 1fr', alignItems: 'start' }}
     >
-      {/* Left rail: date */}
-      <Box paddingTop="space20">
-        <Text
-          as="span"
-          fontSize="fontSize10"
-          color="colorTextWeak"
-          style={{ fontFamily: 'ui-monospace, SFMono-Regular, monospace' }}
-        >
-          <ScreenReaderOnly>{TYPE_LABELS[note.type] || note.type} logged on </ScreenReaderOnly>
-          {formatDate(note.date)}
-        </Text>
+      {/* Mobile layout */}
+      <Box display={['block', 'block', 'none']}>
+        <Box marginBottom="space40">{dateText}</Box>
+        {isLog && note.cover ? (
+          <Box display="flex" columnGap="space60" marginBottom="space50" alignItems="flex-start">
+            <CoverImage note={note} />
+            <Box minWidth="size0">{titleMeta}</Box>
+          </Box>
+        ) : (
+          <Box marginBottom="space50">{titleMeta}</Box>
+        )}
+        <NoteBody note={note} isThought={isThought} />
       </Box>
 
-      {/* Cover slot — reserved width even when empty so columns stay aligned */}
-      <Box>
-        {isLog && (
-          <Box
-            overflow="hidden"
-            borderStyle={note.cover ? 'solid' : 'none'}
-            borderColor="colorBorderBrandHighlight"
-            style={{
-              width: '8.594rem',
-              height: '12.891rem',
-              borderWidth: note.cover ? '6px' : '0',
-              flexShrink: 0,
-            }}
-          >
-            {note.cover && (
-              <Box
-                as="img"
-                src={note.cover}
-                alt={note.title}
-                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-              />
-            )}
-          </Box>
-        )}
-      </Box>
-
-      {/* Body */}
-      <Box minWidth="size0">
-        <Heading as="h2" variant="heading30" marginBottom="space20" style={{ fontFamily: "'Inter', sans-serif" }}>
-          <Box as="span" fontStyle={isThought ? 'italic' : 'normal'}>
-            {note.title}
-          </Box>
-        </Heading>
-        {note.creator && (
-          <Box marginBottom="space40">
-            <Text as="span" color="colorTextWeak" fontSize="fontSize20">
-              {note.creator}{note.year ? `, ${note.year}` : ''}
-            </Text>
-          </Box>
-        )}
-
-        {note.contentHtml && (
-          <Box
-            fontSize="fontSize30"
-            lineHeight="lineHeight30"
-            color="colorText"
-            fontStyle={isThought ? 'italic' : 'normal'}
-            dangerouslySetInnerHTML={{ __html: note.contentHtml }}
-          />
-        )}
-
-        {note.source && (
-          <Box marginTop="space40">
-            <Anchor href={note.source} showExternal>
-              View source
-            </Anchor>
-          </Box>
-        )}
+      {/* Desktop layout */}
+      <Box
+        display={['none', 'none', 'grid']}
+        columnGap="space70"
+        style={{ gridTemplateColumns: '150px 152px 1fr', alignItems: 'start' }}
+      >
+        <Box paddingTop="space20">{dateText}</Box>
+        <Box>{isLog && <CoverImage note={note} />}</Box>
+        <Box minWidth="size0">
+          {titleMeta}
+          <NoteBody note={note} isThought={isThought} />
+        </Box>
       </Box>
     </Box>
   );
