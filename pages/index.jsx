@@ -1,18 +1,50 @@
+import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { LinkExternalIcon } from "@twilio-paste/icons/cjs/LinkExternalIcon";
 
-import { Flex } from "@twilio-paste/core/flex";
 import { Box } from "@twilio-paste/core/box";
 import { Stack } from "@twilio-paste/core/stack";
 import { Anchor } from "@twilio-paste/core/anchor";
 import { Paragraph } from "@twilio-paste/core/paragraph";
 import { Heading } from "@twilio-paste/core/heading";
 import { Grid, Column } from "@twilio-paste/core/grid";
-import { OrderedList, UnorderedList, ListItem } from "@twilio-paste/core/list";
+import { UnorderedList, ListItem } from "@twilio-paste/core/list";
 import { Card } from "@twilio-paste/core/card";
+import { Text } from "@twilio-paste/core/text";
 
-export default () => {
+function SectionRow({ children }) {
+  return (
+    <Box paddingTop="space60" paddingBottom="space20">
+      {children}
+    </Box>
+  );
+}
+
+function ExpandableSection({ title, children }) {
+  const [expanded, setExpanded] = useState(false);
+  return (
+    <SectionRow>
+      <Box
+        display="flex"
+        alignItems="baseline"
+        columnGap="space30"
+        onClick={() => setExpanded((e) => !e)}
+        style={{ cursor: "pointer" }}
+        marginBottom={expanded ? "space60" : "space0"}
+      >
+        <Heading as="h2" variant="heading20" marginBottom="space0">
+          {title}
+        </Heading>
+        <Text as="span" color="colorTextWeak" fontSize="fontSize30">
+          {expanded ? "−" : "+"}
+        </Text>
+      </Box>
+      {expanded && <Box>{children}</Box>}
+    </SectionRow>
+  );
+}
+
+export default function HomePage() {
   return (
     <>
       <Head>
@@ -28,41 +60,83 @@ export default () => {
               </Box>
               . I work on building better products.
             </Heading>
-            <Box backgroundColor="colorText">
-              <Stack
-                orientation={["vertical", "vertical", "horizontal"]}
-                spacing="space60"
-              >
+
+            <Box marginTop="space70">
+              {/* Notes — navigates away */}
+              <SectionRow>
                 <Link href="/notes" legacyBehavior passHref>
-                  <Anchor>Notes</Anchor>
+                  <Box as="a" style={{ textDecoration: "none", color: "inherit" }}>
+                    <Box display="flex" alignItems="baseline" columnGap="space30">
+                      <Heading as="h2" variant="heading20" marginBottom="space0">
+                        Notes &amp; Thoughts
+                      </Heading>
+                      <Text as="span" color="colorBorderBrandHighlight" fontSize="fontSize30">
+                        →
+                      </Text>
+                    </Box>
+                  </Box>
                 </Link>
-                <Anchor href="https://www.linkedin.com/in/aayushpi/" showExternal>LinkedIn</Anchor>
-                <Anchor href={`mailto:${"xoxo"}@${"aayush"}.fy i`.replace(" ", "")}>Email</Anchor>
-               
-              </Stack>
-            </Box>
-          </Column>
-        </Grid>
-        <Box marginTop="space100">
-          <Grid>
-            <Column span={[12, 12, 4]} offset={[0, 0, 1]}>
-              <Box as="div" marginBottom={["space50", "space50", "space50"]}>
-                <Heading as="h2" variant="heading20">
-                  Writing and Speaking
+              </SectionRow>
+
+              {/* Work */}
+              <ExpandableSection title="Work">
+                <Heading as="h3" variant="heading40">
+                  User Experience &amp; UI Platform at Algolia
                 </Heading>
+                <Paragraph>
+                  I lead product, product design, research, and engineering teams
+                  at Algolia.{" "}
+                  <Anchor href="https://www.algolia.com/careers/">We&rsquo;re still hiring</Anchor>{" "}
+                  thoughtfully. The common thread across these teams is a deep
+                  commitment to understanding customer pain and defining what "good quality" looks like.
+                </Paragraph>
+                <Heading as="h3" variant="heading40">
+                  UX at Twilio
+                </Heading>
+                <Paragraph>
+                  I founded the design systems practice at Twilio and grew a team
+                  from an ad-hoc, unsystemized front-end environment to a fully
+                  funded, staffed, and roadmapped discipline. Over time, this
+                  scope evolved to the entire spectrum of UX Infrastructure
+                  including content writing, visual design, and design operations
+                  and focused on alignment of design, engineering, and product to
+                  create great customer experiences.
+                </Paragraph>
+                <Paragraph>
+                  My outputs were both tactical and cultural: setting product
+                  teams up for quick wins by providing resilient, performant UI,
+                  uplevelling the scale at which product design is delivered to an
+                  organization, and focusing on customer inclusion and happiness
+                  through inclusive design, UX engineering, content writing, and
+                  more.
+                </Paragraph>
+                <Heading as="h3" variant="heading40">
+                  Other work
+                </Heading>
+                <Paragraph>
+                  The 17 years since my first job as a journalist have shaped my
+                  approach towards building things. Along the way I&rsquo;ve built
+                  hardware jukeboxes, award-winning digital campaigns, and a whole
+                  host of really terrible software - somehow, they all informed
+                  where I got to and where I&rsquo;m going.
+                </Paragraph>
+              </ExpandableSection>
+
+              {/* Writing and Speaking */}
+              <ExpandableSection title="Writing and Speaking">
                 <Stack orientation="vertical" spacing="space60">
-                <Card>
+                  <Card>
                     <Heading as="h3" variant="heading50">
-                    Designing a great developer experience
+                      Designing a great developer experience
                     </Heading>
                     <Paragraph>
-                      I joined an online roundtable hosted by Evil Martians on the topic of designing tools for developers. 
+                      I joined an online roundtable hosted by Evil Martians on the topic of designing tools for developers.
                     </Paragraph>
                     <Anchor href="https://www.youtube.com/watch?v=PIhJtTboXZ0" showExternal>Watch podcast</Anchor>
                   </Card>
                   <Card>
                     <Heading as="h3" variant="heading50">
-                    The death of traditional shopping: How AI-powered conversational commerce changes everything
+                      The death of traditional shopping: How AI-powered conversational commerce changes everything
                     </Heading>
                     <Paragraph>
                       A blog post launching Algolia&rsquo;s new AI powered framework for conversational commerce
@@ -104,73 +178,28 @@ export default () => {
                     <Anchor href="https://www.youtube.com/watch?v=VBjVi4mV0Qk" showExternal>View talk</Anchor>
                   </Card>
                 </Stack>
-              </Box>
-              <Box as="div" marginBottom={["space50", "space50", 0]}>
+              </ExpandableSection>
+
+              {/* Stuff I've built */}
+              <SectionRow>
                 <Heading as="h2" variant="heading20">
                   Stuff I&rsquo;ve built
                 </Heading>
                 <UnorderedList>
                   <ListItem>
                     <Anchor href="https://paste.twilio.design" showExternal>Paste</Anchor>{" "}
-                    A comprehensive UX platform to build great customer
-                    experiences
+                    A comprehensive UX platform to build great customer experiences
                   </ListItem>
                   <ListItem>
-                    <Anchor href="https://www.twilio.com/studio" showExternal>Studio</Anchor>
-                    A low-code visual programming language to build powerful
-                    workflows.
+                    <Anchor href="https://www.twilio.com/studio" showExternal>Studio</Anchor>{" "}
+                    A low-code visual programming language to build powerful workflows.
                   </ListItem>
                 </UnorderedList>
-              </Box>
-            </Column>
-            <Column span={[12, 12, 4]} offset={[0, 0, 1]}>
-              <Heading as="h2" variant="heading20">
-                Work
-              </Heading>
-              <Heading as="h3" variant="heading40">
-                User Experience &amp; UI Platform at Algolia
-              </Heading>
-              <Paragraph>
-                I lead product, product design, research, and engineering teams
-                at Algolia.{" "}
-                <Anchor href="https://www.algolia.com/careers/">We&rsquo;re still hiring</Anchor>{" "}
-                thoughtfully. The common thread across these teams is a deep
-                commitment to understanding customer pain and defining what "good quality" looks like.
-              </Paragraph>
-              <Heading as="h3" variant="heading40">
-                UX at Twilio
-              </Heading>
-              <Paragraph>
-                I founded the design systems practice at Twilio and grew a team
-                from an ad-hoc, unsystemized front-end environment to a fully
-                funded, staffed, and roadmapped discipline. Over time, this
-                scope evolved to the entire spectrum of UX Infrastructure
-                including content writing, visual design, and design operations
-                and focused on alignment of design, engineering, and product to
-                create great customer experiences.
-              </Paragraph>
-              <Paragraph>
-                My outputs were both tactical and cultural: setting product
-                teams up for quick wins by providing resilient, performant UI,
-                uplevelling the scale at which product design is delivered to an
-                organization, and focusing on customer inclusion and happiness
-                through inclusive design, UX engineering, content writing, and
-                more.
-              </Paragraph>
-              <Heading as="h3" variant="heading40">
-                Other work
-              </Heading>
-              <Paragraph>
-                The 17 years since my first job as a journalist have shaped my
-                approach towards building things. Along the way I&rsquo;ve built
-                hardware jukeboxes, award-winning digital campaigns, and a whole
-                host of really terrible software - somehow, they all informed
-                where I got to and where I&rsquo;m going.
-              </Paragraph>
-            </Column>
-          </Grid>
-        </Box>
+              </SectionRow>
+            </Box>
+          </Column>
+        </Grid>
       </Box>
     </>
   );
-};
+}

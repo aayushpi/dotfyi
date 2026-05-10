@@ -153,7 +153,7 @@ export default function NotesIndex({ notes }) {
   return (
     <>
       <Head>
-        <title>Notes — Aayush Iyer</title>
+        <title>Notes &amp; Thoughts — Aayush Iyer</title>
       </Head>
       <Grid>
         <Column span={[12, 12, 8]} offset={[0, 0, 1]}>
@@ -170,7 +170,7 @@ export default function NotesIndex({ notes }) {
 
           <Box marginBottom="space80">
             <Heading as="h1" variant="heading10" marginBottom="space0">
-              Notes
+              Notes &amp; Thoughts
             </Heading>
           </Box>
 

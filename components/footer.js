@@ -34,20 +34,6 @@ export const SiteFooter = () => (
                 color="colorTextInverse"
               />
             </Box>
-            . Mostly possible due to{' '}
-            <Box as="span" display="inline-flex" alignItems="center">
-              <Link href="https://simontaggart.com/" legacyBehavior passHref>
-                <Text as="a" color="colorTextInverse">
-                  Simon Taggart
-                </Text>
-              </Link>
-              <LinkExternalIcon
-                decorative={false}
-                title="Opens an external resource"
-                color="colorTextInverse"
-              />
-            </Box>
-            , who patiently handles my 101 Qs.
           </Text>
         </Box>
       </Column>
@@ -66,33 +52,15 @@ export const SiteFooter = () => (
                 color="colorTextInverse"
               />
             </Flex>
-            <Flex display="inline-flex" vAlignContent="center">
-              <Link href="https://twitter.com/aayush" legacyBehavior passHref>
-                <Text as="a" color="colorTextInverse">
-                  Twitter
-                </Text>
-              </Link>
-              <LinkExternalIcon
-                decorative={false}
-                title="Opens an external resource"
-                color="colorTextInverse"
-              />
-            </Flex>
+            <Text as="a" href="mailto:xoxo@aayush.fyi" color="colorTextInverse">
+              Email
+            </Text>
           </Stack>
         </Box>
       </Column>
       <Column span={[12, 12, 2]} offset={[0, 0, 1]}>
         <Box display={['none', 'none', 'inline-block']}>
           <Stack orientation="vertical" spacing="space30">
-            <Text as="p" color="colorTextInverse">
-              Black Lives Matter.
-            </Text>
-            <Text as="p" color="colorTextInverse">
-              No human is illegal.
-            </Text>
-            <Text as="p" color="colorTextInverse">
-              Sex worker rights are labor rights.
-            </Text>
             <Text as="p" color="colorTextInverse">
               Our liberation is bound together.
             </Text>
