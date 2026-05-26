@@ -7,14 +7,14 @@ import { Text } from '@twilio-paste/core/text';
 import { Anchor } from '@twilio-paste/core/anchor';
 import { Stack } from '@twilio-paste/core/stack';
 import { ScreenReaderOnly } from '@twilio-paste/core/screen-reader-only';
-import { getAllNotes } from '../../lib/content';
-import { NoteRow } from '../../components/NoteRow';
+import { getAllNotes } from '../../../lib/content';
+import { NoteRow } from '../../../components/NoteRow';
 
-export default function NotesIndex({ notes }) {
+export default function NotesYear({ notes, year }) {
   return (
     <>
       <Head>
-        <title>Notes &amp; Thoughts — Aayush Iyer</title>
+        <title>Notes from {year} — Aayush Iyer</title>
       </Head>
       <Grid>
         <Column span={[12, 12, 8]} offset={[0, 0, 1]}>
@@ -26,12 +26,16 @@ export default function NotesIndex({ notes }) {
                 </Anchor>
               </Link>
               <Text as="span">/</Text>
+              <Link href="/notes" legacyBehavior passHref>
+                <Anchor>Notes</Anchor>
+              </Link>
+              <Text as="span">/</Text>
             </Stack>
           </Box>
 
           <Box marginBottom="space80">
             <Heading as="h1" variant="heading10" marginBottom="space0">
-              Notes &amp; Thoughts
+              Notes from {year}
             </Heading>
           </Box>
 
@@ -58,7 +62,21 @@ export default function NotesIndex({ notes }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getStaticPaths() {
   const notes = await getAllNotes();
-  return { props: { notes } };
+  const years = [...new Set(
+    notes.filter((n) => n.date).map((n) => String(new Date(n.date).getUTCFullYear()))
+  )];
+  return {
+    paths: years.map((year) => ({ params: { year } })),
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const allNotes = await getAllNotes();
+  const notes = allNotes.filter(
+    (n) => n.date && String(new Date(n.date).getUTCFullYear()) === params.year
+  );
+  return { props: { notes, year: params.year } };
 }

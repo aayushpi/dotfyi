@@ -40,6 +40,9 @@ const globalStyles = (props) =>
       marginLeft: 'space0',
       marginRight: 'space0',
     },
+    a: {
+      color: 'colorTextLink',
+    },
   })(props);
 
 const App = ({ Component, pageProps }) => (
