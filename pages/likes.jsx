@@ -48,7 +48,7 @@ const LikeCard = ({ title, date, review, type, creator }) => {
             {renderFormattedText(title)}
           </h3>
           {creator && (
-            <p className="text-ink/50 text-sm mt-1">{renderFormattedText(creator)}</p>
+            <p className="text-ink-muted text-sm mt-1">{renderFormattedText(creator)}</p>
           )}
         </div>
       </div>
@@ -58,7 +58,7 @@ const LikeCard = ({ title, date, review, type, creator }) => {
         ))}
       </div>
       <div className="flex justify-between items-center mt-4">
-        {date && <p className="text-ink/40 text-sm">{date}</p>}
+        {date && <p className="text-ink-muted text-sm">{date}</p>}
         <span className="text-2xl">{getTypeEmoji(type)}</span>
       </div>
     </div>
@@ -142,13 +142,13 @@ export default function Likes({ likes }) {
       </Head>
 
       <div className="max-w-sm">
-        <div className="mb-6 flex items-center gap-2 text-sm">
+        <div className="mb-6 flex items-center gap-2 text-[18px]">
           <Link href="/" className="no-underline hover:underline">Home</Link>
-          <span className="text-ink/40">/</span>
+          <span className="text-ink-muted">/</span>
         </div>
 
         <h1 className="font-sans font-black text-4xl text-ink mb-4">Likes</h1>
-        <p className="text-xl text-ink/70 mt-4">
+        <p className="text-xl text-ink-muted mt-4">
           There was a wonderful charm to the old web. We&rsquo;d talk about the things we loved and
           were excited to share it with the world. Not for likes or clout, but just because.
           Let&rsquo;s do that again.

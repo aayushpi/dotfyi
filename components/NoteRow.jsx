@@ -55,7 +55,7 @@ function NoteBody({ note, isThought }) {
     <>
       {note.contentHtml && (
         <div
-          className={`note-body text-base leading-relaxed text-ink${isThought ? ' italic' : ''}`}
+          className={`note-body text-[18px] leading-relaxed text-ink${isThought ? ' italic' : ''}`}
           dangerouslySetInnerHTML={{ __html: note.contentHtml }}
         />
       )}
@@ -84,7 +84,7 @@ function CopyLinkButton({ note }) {
         }}
         onMouseEnter={() => setVisible(true)}
         onMouseLeave={() => { setVisible(false); setLabel('Copy link'); }}
-        className="inline-flex items-center text-ink/40 hover:text-ink transition-colors p-0 bg-transparent border-none cursor-pointer"
+        className="inline-flex items-center text-ink hover:text-ink transition-colors p-0 bg-transparent border-none cursor-pointer"
         aria-label="Copy link"
       >
         <svg
@@ -123,7 +123,7 @@ export function NoteRow({ note }) {
   const isThought = note.type === 'thought';
 
   const dateText = (
-    <span className="font-mono text-xs text-ink/50">
+    <span className="font-mono text-xs text-ink-muted">
       <span className="sr-only">{TYPE_LABELS[note.type] || note.type} logged on </span>
       {formatDate(note.date)}
     </span>
@@ -132,8 +132,11 @@ export function NoteRow({ note }) {
   const titleMeta = (
     <>
       <div className="flex items-center gap-2 mb-2">
-        <h2 className={`font-sans font-bold text-xl text-ink m-0${isThought ? ' italic' : ''}`}>
-          <Link href={noteUrl(note)} className="no-underline hover:underline">
+        <h2
+          className={`font-black text-[1.75rem] leading-9 tracking-[-0.02em] text-ink m-0${isThought ? ' italic' : ''}`}
+          style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+        >
+          <Link href={noteUrl(note)}>
             {note.title}
           </Link>
         </h2>
@@ -141,7 +144,7 @@ export function NoteRow({ note }) {
       </div>
       {note.creator && (
         <div className="mb-4">
-          <span className="text-ink/50 text-sm">
+          <span className="text-ink-muted text-sm">
             {note.creator}{note.year ? `, ${note.year}` : ''}
           </span>
         </div>

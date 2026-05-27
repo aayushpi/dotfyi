@@ -35,7 +35,7 @@ export default function NotePage({ note, year, month }) {
   });
 
   const dateText = (
-    <span className="font-mono text-xs text-ink/50">
+    <span className="font-mono text-xs text-ink-muted">
       <span className="sr-only">{TYPE_LABELS[note.type] || note.type} logged on </span>
       {formatDate(note.date)}
     </span>
@@ -43,12 +43,12 @@ export default function NotePage({ note, year, month }) {
 
   const titleMeta = (
     <>
-      <h1 className={`font-serif font-black text-2xl text-ink mb-2${isThought ? ' italic' : ''}`} style={{ fontFamily: "'Playfair Display', serif" }}>
+      <h1 className={`font-black text-[1.75rem] leading-9 tracking-[-0.02em] text-ink mb-2${isThought ? ' italic' : ''}`} style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
         {note.title}
       </h1>
       {note.creator && (
         <div className="mb-4">
-          <span className="text-ink/50 text-sm">
+          <span className="text-ink-muted text-sm">
             {note.creator}{note.year ? `, ${note.year}` : ''}
           </span>
         </div>
@@ -65,7 +65,7 @@ export default function NotePage({ note, year, month }) {
     <>
       {note.contentHtml && (
         <div
-          className={`note-body text-base leading-relaxed text-ink${isThought ? ' italic' : ''}`}
+          className={`note-body text-[18px] leading-relaxed text-ink${isThought ? ' italic' : ''}`}
           dangerouslySetInnerHTML={{ __html: note.contentHtml }}
         />
       )}
@@ -85,17 +85,18 @@ export default function NotePage({ note, year, month }) {
         <title>{note.title} — Aayush Iyer</title>
       </Head>
 
-      <div className="max-w-3xl">
+      <div className="grid grid-cols-12">
+        <div className="col-span-12 lg:col-start-2 lg:col-span-8">
         {/* Breadcrumb */}
-        <div className="mb-6 flex items-center gap-2 text-sm flex-wrap">
-          <Link href="/" className="no-underline hover:underline">Home</Link>
-          <span className="text-ink/40">/</span>
-          <Link href="/notes" className="no-underline hover:underline">Notes</Link>
-          <span className="text-ink/40">/</span>
-          <Link href={`/notes/${year}`} className="no-underline hover:underline">{year}</Link>
-          <span className="text-ink/40">/</span>
-          <Link href={`/notes/${year}/${month}`} className="no-underline hover:underline">{monthName}</Link>
-          <span className="text-ink/40">/</span>
+        <div className="mb-6 flex items-center gap-2 text-[18px] flex-wrap">
+          <Link href="/" className="">Home</Link>
+          <span className="text-ink-muted">/</span>
+          <Link href="/notes" className="">Notes</Link>
+          <span className="text-ink-muted">/</span>
+          <Link href={`/notes/${year}`} className="">{year}</Link>
+          <span className="text-ink-muted">/</span>
+          <Link href={`/notes/${year}/${month}`} className="">{monthName}</Link>
+          <span className="text-ink-muted">/</span>
         </div>
 
         {/* Article */}
@@ -138,7 +139,7 @@ export default function NotePage({ note, year, month }) {
                 <div key={ref.slug} className="py-4">
                   <Link href={noteUrl(ref)} className="underline">{ref.title}</Link>
                   {ref.creator && (
-                    <span className="text-ink/50 text-sm">
+                    <span className="text-ink-muted text-sm">
                       {' '}— {ref.creator}{ref.year ? `, ${ref.year}` : ''}
                     </span>
                   )}
@@ -158,7 +159,7 @@ export default function NotePage({ note, year, month }) {
                 <div key={essay.slug} className="py-4">
                   <Link href={noteUrl(essay)} className="underline">{essay.title}</Link>
                   {essay.date && (
-                    <span className="text-ink/50 text-sm">
+                    <span className="text-ink-muted text-sm">
                       {' '}— {new Date(essay.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}
                     </span>
                   )}
@@ -167,6 +168,7 @@ export default function NotePage({ note, year, month }) {
             </div>
           </div>
         )}
+        </div>
       </div>
     </>
   );

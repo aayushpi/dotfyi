@@ -64,11 +64,11 @@ export default function ScalingSupport() {
       </Head>
 
       <div className="mb-10">
-        <div className="mb-6 flex items-center gap-2 text-sm">
+        <div className="mb-6 flex items-center gap-2 text-[18px]">
           <Link href="/" className="no-underline hover:underline">Home</Link>
-          <span className="text-ink/40">/</span>
+          <span className="text-ink-muted">/</span>
           <Link href="/writing" className="no-underline hover:underline">Writing</Link>
-          <span className="text-ink/40">/</span>
+          <span className="text-ink-muted">/</span>
         </div>
         <h1 className="font-sans font-black text-4xl text-ink">
           Growing Pains: How We{' '}
@@ -275,7 +275,7 @@ export default function ScalingSupport() {
           </p>
 
           <hr className="border-border-subtle my-8" />
-          <p className="text-sm text-ink/60">
+          <p className="text-sm text-ink-muted">
             Many thanks to{' '}
             <a href="https://www.jennieyip.design/" className="underline">Jennie Yip</a>
             ,{' '}

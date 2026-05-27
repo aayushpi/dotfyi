@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 function SectionRow({ children }) {
-  return <div className="pt-8 pb-4">{children}</div>;
+  return <div className="pt-[1.75rem] pb-3">{children}</div>;
 }
 
 function ExpandableSection({ title, children }) {
@@ -15,8 +15,8 @@ function ExpandableSection({ title, children }) {
         className="flex items-baseline gap-3 cursor-pointer w-full text-left bg-transparent border-none p-0"
         onClick={() => setExpanded((e) => !e)}
       >
-        <h2 className="font-serif font-black text-3xl text-ink m-0">{title}</h2>
-        <span className="text-ink/50 text-lg">{expanded ? '−' : '+'}</span>
+        <h2 className="font-serif font-black text-[2rem] leading-[2.5rem] tracking-[-0.02em] text-ink m-0">{title}</h2>
+        <span className="text-ink text-lg">{expanded ? '−' : '+'}</span>
       </button>
       {expanded && <div className="mt-6">{children}</div>}
     </SectionRow>
@@ -29,25 +29,25 @@ export default function HomePage() {
       <Head>
         <title>Aayush Iyer</title>
       </Head>
-      <div className="max-w-sm">
-        <h1 className="font-sans font-black text-4xl leading-tight text-ink">
+      <div className="grid grid-cols-12"><div className="col-span-12 lg:col-start-2 lg:col-span-4">
+        <h1 className="font-sans font-black text-[2.75rem] leading-[3.5rem] tracking-[-0.02em] text-ink">
           I&rsquo;m{' '}
           <span className="bg-highlight px-0.5">Aayush Iyer</span>
           . I work on building better products.
         </h1>
 
-        <div className="mt-10">
+        <div className="mt-8">
           <SectionRow>
             <Link href="/notes" className="no-underline">
               <div className="flex items-baseline gap-3">
-                <h2 className="font-serif font-black text-3xl text-ink m-0">Notes &amp; Thoughts</h2>
-                <span className="text-highlight text-lg">→</span>
+                <h2 className="font-serif font-black text-[2rem] leading-[2.5rem] tracking-[-0.02em] text-ink m-0">Notes &amp; Thoughts</h2>
+                <span className="text-ink text-lg">→</span>
               </div>
             </Link>
           </SectionRow>
 
           <ExpandableSection title="Work">
-            <h3 className="font-serif font-black text-xl text-ink mb-2">
+            <h3 className="font-serif font-black text-[1.25rem] leading-7 tracking-[-0.02em] text-ink mb-2">
               User Experience &amp; UI Platform at Algolia
             </h3>
             <p className="mb-4">
@@ -59,7 +59,7 @@ export default function HomePage() {
               customer pain and defining what &ldquo;good quality&rdquo; looks like.
             </p>
 
-            <h3 className="font-serif font-black text-xl text-ink mb-2">UX at Twilio</h3>
+            <h3 className="font-serif font-black text-[1.25rem] leading-7 tracking-[-0.02em] text-ink mb-2">UX at Twilio</h3>
             <p className="mb-4">
               I founded the design systems practice at Twilio and grew a team from an ad-hoc,
               unsystemized front-end environment to a fully funded, staffed, and roadmapped
@@ -88,7 +88,7 @@ export default function HomePage() {
               </li>
             </ul>
 
-            <h3 className="font-serif font-black text-xl text-ink mb-2">Other work</h3>
+            <h3 className="font-serif font-black text-[1.25rem] leading-7 tracking-[-0.02em] text-ink mb-2">Other work</h3>
             <p className="mb-4">
               The 17 years since my first job as a journalist have shaped my approach towards
               building things. Along the way I&rsquo;ve built hardware jukeboxes, award-winning
@@ -141,7 +141,7 @@ export default function HomePage() {
                   className="border border-border-subtle rounded p-5"
                 >
                   <h3 className="font-serif font-black text-lg text-ink mb-2">{item.title}</h3>
-                  <p className="mb-3 text-ink/70 text-[0.9rem]">{item.desc}</p>
+                  <p className="mb-3 text-ink-muted text-[0.9rem]">{item.desc}</p>
                   {item.external ? (
                     <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-sm">
                       {item.label}
@@ -156,7 +156,7 @@ export default function HomePage() {
             </div>
           </ExpandableSection>
         </div>
-      </div>
+      </div></div>
     </>
   );
 }

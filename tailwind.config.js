@@ -12,14 +12,12 @@ module.exports = {
         highlight: '#F98585',
         ink: '#2c3e50',
         'border-subtle': 'rgba(44, 62, 80, 0.2)',
+        'ink-muted': '#5a6a7a',
       },
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
         serif: ['"Playfair Display"', 'Georgia', 'serif'],
         mono: ['ui-monospace', 'SFMono-Regular', 'monospace'],
-      },
-      fontSize: {
-        base: ['18px', { lineHeight: '1.6' }],
       },
       typography: {
         DEFAULT: {

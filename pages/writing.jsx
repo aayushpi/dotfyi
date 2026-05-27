@@ -9,9 +9,9 @@ export default function Writing() {
       </Head>
 
       <div>
-        <div className="mb-6 flex items-center gap-2 text-sm">
+        <div className="mb-6 flex items-center gap-2 text-[18px]">
           <Link href="/" className="no-underline hover:underline">Home</Link>
-          <span className="text-ink/40">/</span>
+          <span className="text-ink-muted">/</span>
         </div>
 
         <h1 className="font-sans font-black text-4xl text-ink mb-8">Writing</h1>

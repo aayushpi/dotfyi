@@ -11,7 +11,7 @@ const App = ({ Component, pageProps }) => (
     </Head>
     <MDXProvider components={mdxComponents}>
       <main>
-        <div className="mx-auto px-6 py-10 max-w-5xl">
+        <div className="px-6 lg:px-0 pt-6 md:pt-4 lg:pt-[5.25rem] pb-16">
           <Component {...pageProps} />
         </div>
       </main>

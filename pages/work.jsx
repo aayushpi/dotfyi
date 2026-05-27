@@ -6,10 +6,10 @@ function WorkSection({ title, description, links }) {
     <div className="grid md:grid-cols-2 gap-8 py-12 border-t border-border-subtle">
       <div>
         <h2 className="font-serif font-black text-2xl text-ink mb-3">{title}</h2>
-        <p className="text-base text-ink/80">{description}</p>
+        <p className="text-base text-ink">{description}</p>
       </div>
       <div>
-        <h3 className="font-serif font-black text-sm text-ink/50 uppercase tracking-wide mb-3">
+        <h3 className="font-serif font-black text-sm text-ink-muted uppercase tracking-wide mb-3">
           Links, talks, and related writing
         </h3>
         <div className="flex flex-col gap-2">
@@ -32,9 +32,9 @@ export default function Work() {
       </Head>
 
       <div>
-        <div className="mb-6 flex items-center gap-2 text-sm">
+        <div className="mb-6 flex items-center gap-2 text-[18px]">
           <Link href="/" className="no-underline hover:underline">Home</Link>
-          <span className="text-ink/40">/</span>
+          <span className="text-ink-muted">/</span>
         </div>
 
         <h1 className="font-sans font-black text-4xl text-ink mb-16">Aayush&rsquo;s Work</h1>

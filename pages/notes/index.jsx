@@ -10,19 +10,19 @@ export default function NotesIndex({ notes }) {
         <title>Notes &amp; Thoughts — Aayush Iyer</title>
       </Head>
 
-      <div className="max-w-3xl">
-        <div className="mb-6 flex items-center gap-2 text-sm">
-          <Link href="/" className="no-underline hover:underline">Home</Link>
-          <span className="text-ink/40">/</span>
+      <div className="grid grid-cols-12"><div className="col-span-12 lg:col-start-2 lg:col-span-8">
+        <div className="mb-6 flex items-center gap-2 text-[18px]">
+          <Link href="/" className="">Home</Link>
+          <span className="text-ink-muted">/</span>
         </div>
 
         <div className="mb-12">
-          <h1 className="font-sans font-black text-4xl text-ink mb-2">Notes &amp; Thoughts</h1>
-          <p className="text-ink/50">A blog about film, books, and ideas.</p>
+          <h1 className="font-sans font-black text-[2.75rem] leading-[3.5rem] tracking-[-0.02em] text-ink mb-2">Notes &amp; Thoughts</h1>
+          <p className="text-ink-muted">A blog about film, books, and ideas.</p>
         </div>
 
         {notes.length === 0 ? (
-          <p className="text-ink/50 pt-16">Nothing here yet.</p>
+          <p className="text-ink-muted pt-16">Nothing here yet.</p>
         ) : (
           <div className="border-b border-border-subtle">
             {notes.map((note) => (
@@ -30,7 +30,7 @@ export default function NotesIndex({ notes }) {
             ))}
           </div>
         )}
-      </div>
+      </div></div>
     </>
   );
 }
