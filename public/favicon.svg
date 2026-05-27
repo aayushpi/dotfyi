@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .bg { fill: #fce2e0; }
+    .hi { fill: #F98585; }
+    .fg { fill: #2c3e50; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #2c3e50; }
+      .hi { fill: #F98585; }
+      .fg { fill: #fce2e0; }
+    }
+  </style>
+  <rect class="bg" width="64" height="64"/>
+  <rect class="hi" x="6" y="32" width="52" height="22"/>
+  <text class="fg" x="32" y="49" text-anchor="middle" font-family="&quot;Inter&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, system-ui, sans-serif" font-weight="800" font-size="42">a.</text>
+</svg>

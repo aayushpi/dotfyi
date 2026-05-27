@@ -9,7 +9,6 @@ import { pasteBaseStyles } from '@twilio-paste/core/theme';
 import { Box } from '@twilio-paste/core/box';
 import { PortfolioTheme } from '../theme';
 import { ComponentProvider } from '../components/component-provider';
-import { SiteFooter } from '../components/footer';
 
 const StyledBase = styled(Box)(pasteBaseStyles);
 
@@ -49,10 +48,7 @@ const App = ({ Component, pageProps }) => (
   <>
     <Head>
       <title>Aayush Iyer</title>
-      <link
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>:nerd_face:</text></svg>"
-        rel="icon"
-      />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     </Head>
     <ComponentProvider>
       <ThemeProvider theme={PortfolioTheme}>
@@ -66,7 +62,6 @@ const App = ({ Component, pageProps }) => (
           >
             <Component {...pageProps} />
           </Box>
-          <SiteFooter />
         </StyledBase>
       </ThemeProvider>
     </ComponentProvider>
