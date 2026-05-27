@@ -110,6 +110,16 @@ export default function HomePage() {
                   through inclusive design, UX engineering, content writing, and
                   more.
                 </Paragraph>
+                <UnorderedList>
+                  <ListItem>
+                    <Anchor href="https://paste.twilio.design" showExternal>Paste</Anchor>{" "}
+                    A comprehensive UX platform to build great customer experiences
+                  </ListItem>
+                  <ListItem>
+                    <Anchor href="https://www.twilio.com/studio" showExternal>Studio</Anchor>{" "}
+                    A low-code visual programming language to build powerful workflows.
+                  </ListItem>
+                </UnorderedList>
                 <Heading as="h3" variant="heading40">
                   Other work
                 </Heading>
@@ -180,22 +190,6 @@ export default function HomePage() {
                 </Stack>
               </ExpandableSection>
 
-              {/* Stuff I've built */}
-              <SectionRow>
-                <Heading as="h2" variant="heading20">
-                  Stuff I&rsquo;ve built
-                </Heading>
-                <UnorderedList>
-                  <ListItem>
-                    <Anchor href="https://paste.twilio.design" showExternal>Paste</Anchor>{" "}
-                    A comprehensive UX platform to build great customer experiences
-                  </ListItem>
-                  <ListItem>
-                    <Anchor href="https://www.twilio.com/studio" showExternal>Studio</Anchor>{" "}
-                    A low-code visual programming language to build powerful workflows.
-                  </ListItem>
-                </UnorderedList>
-              </SectionRow>
             </Box>
           </Column>
         </Grid>

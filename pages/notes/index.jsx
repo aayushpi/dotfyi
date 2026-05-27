@@ -30,9 +30,12 @@ export default function NotesIndex({ notes }) {
           </Box>
 
           <Box marginBottom="space80">
-            <Heading as="h1" variant="heading10" marginBottom="space0">
+            <Heading as="h1" variant="heading10" marginBottom="space30">
               Notes &amp; Thoughts
             </Heading>
+            <Text as="p" color="colorTextWeak" fontSize="fontSize30">
+              A blog about film, books, and ideas.
+            </Text>
           </Box>
 
           {notes.length === 0 ? (
