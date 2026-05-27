@@ -1,62 +1,29 @@
-import { Box } from '@twilio-paste/core/box';
-import { Text } from '@twilio-paste/core/text';
-import { Anchor } from '@twilio-paste/core/anchor';
-
 export default function LinkPreviewCard({ preview, url, title }) {
   if (!preview) {
     return (
-      <Anchor href={url} showExternal>
-        View source
-      </Anchor>
+      <a href={url} target="_blank" rel="noopener noreferrer" className="text-sm">
+        View source ↗
+      </a>
     );
   }
 
   return (
-    <Box
-      as="a"
+    <a
       href={preview.url || url}
       target="_blank"
       rel="noopener noreferrer"
-      display="inline-block"
-      paddingX="space30"
-      paddingY="space20"
-      borderRadius="borderRadius20"
-      borderStyle="solid"
-      borderColor="colorBorderWeak"
-      borderWidth="borderWidth10"
-      backgroundColor="colorBackgroundStrong"
-      textDecoration="none"
-      style={{
-        transition: 'all 200ms ease',
-      }}
-      _hover={{
-        backgroundColor: 'colorBackgroundBrandHighlight',
-        borderColor: 'colorBorderBrandHighlight',
-      }}
+      className="inline-block px-3 py-2 rounded border border-ink/20 bg-ink/5 no-underline hover:bg-highlight hover:border-highlight transition-all duration-200"
     >
-      <Text
-        as="span"
-        fontSize="fontSize20"
-        fontWeight="fontWeightSemibold"
-        color="colorTextLink"
-        marginBottom="space0"
-      >
+      <span className="text-sm font-semibold text-ink">
         {title || preview.title}
         {preview.author && (
           <>
-            <Text as="span" marginX="space20">—</Text>
+            <span className="mx-1">—</span>
             {preview.author}
           </>
         )}
-      </Text>
-      <Text
-        as="span"
-        marginLeft="space20"
-        color="colorTextLink"
-        fontSize="fontSize20"
-      >
-        ↗
-      </Text>
-    </Box>
+      </span>
+      <span className="ml-1 text-ink text-sm">↗</span>
+    </a>
   );
 }

@@ -1,176 +1,87 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-import {
-  MediaObject,
-  MediaFigure,
-  MediaBody,
-} from '@twilio-paste/core/media-object';
-import { Text } from '@twilio-paste/core/text';
-import { Box } from '@twilio-paste/core/box';
-import { ScreenReaderOnly } from '@twilio-paste/core/screen-reader-only';
-import { Stack } from '@twilio-paste/core/stack';
-import { Anchor } from '@twilio-paste/core/anchor';
-import { Paragraph } from '@twilio-paste/core/paragraph';
-import { Heading } from '@twilio-paste/core/heading';
-import { Grid, Column } from '@twilio-paste/core/grid';
+function WorkSection({ title, description, links }) {
+  return (
+    <div className="grid md:grid-cols-2 gap-8 py-12 border-t border-border-subtle">
+      <div>
+        <h2 className="font-serif font-black text-2xl text-ink mb-3">{title}</h2>
+        <p className="text-base text-ink/80">{description}</p>
+      </div>
+      <div>
+        <h3 className="font-serif font-black text-sm text-ink/50 uppercase tracking-wide mb-3">
+          Links, talks, and related writing
+        </h3>
+        <div className="flex flex-col gap-2">
+          {links.map((link) => (
+            <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer" className="underline">
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
 
-export default () => {
+export default function Work() {
   return (
     <>
       <Head>
-        <title>Work Portfolio</title>
+        <title>Work Portfolio — Aayush Iyer</title>
       </Head>
-      <Grid>
-        <Column span={[12, 12, 6]} offset={[0, 0, 1]}>
-          <Box>
-            <Stack orientation="horizontal" spacing="space30">
-              <Link href="/" legacyBehavior passHref>
-                <Anchor>
-                  <ScreenReaderOnly>Back to</ScreenReaderOnly> Home
-                </Anchor>
-              </Link>
-              <Text as="span">/</Text>
-            </Stack>
-          </Box>
-          <Heading as="h1" variant="heading10">
-            Aayush&rsquo;s Work
-          </Heading>
-        </Column>
-      </Grid>
 
-      <Box marginTop="space160">
-        <Grid>
-          <Column span={[12, 12, 5]} offset={[0, 0, 1]}>
-            <MediaObject as="div">
-              <MediaFigure as="div" spacing={['space0', 'space0', 'space60']}>
-                <Box
-                  backgroundColor="colorBackgroundDark"
-                  height={['sizeIcon0', 'sizeIcon0', 'sizeIcon100']}
-                  width={['sizeIcon0', 'sizeIcon0', 'sizeIcon100']}
-                >
-                  <img src="/paste/paste.svg" alt="Paste" />
-                </Box>
-              </MediaFigure>
-              <MediaBody as="div">
-                <Heading
-                  as="h2"
-                  variant={['heading50', 'heading30', 'heading10']}
-                >
-                  Paste is{' '}
-                  <Box
-                    as="span"
-                    backgroundColor="colorBackgroundBrandHighlight"
-                  >
-                    Twilio&rsquo;s design system
-                  </Box>{' '}
-                  and supports the work of building accessible, consistent, and
-                  high quality customer experiences.
-                </Heading>
-              </MediaBody>
-            </MediaObject>
-          </Column>
-          <Column span={[12, 12, 5]} offset={[0, 0, 1]}>
-            <Heading as="h3" variant="heading60">
-              Links, talks, and related writing
-            </Heading>
-            <Stack orientation={'vertical'} spacing="space30">
-              <Anchor href="https://paste.twilio.design" showExternal>Explore Paste Design System</Anchor>
-            </Stack>
-          </Column>
-        </Grid>
-      </Box>
+      <div>
+        <div className="mb-6 flex items-center gap-2 text-sm">
+          <Link href="/" className="no-underline hover:underline">Home</Link>
+          <span className="text-ink/40">/</span>
+        </div>
 
-      <Box marginTop="space80">
-        <Grid>
-          <Column span={[12, 12, 12]} offset={[0, 0, 1]}>
-            <Heading as="h3" variant="heading30">
-              Past work
-            </Heading>
-          </Column>
-        </Grid>
-      </Box>
+        <h1 className="font-sans font-black text-4xl text-ink mb-16">Aayush&rsquo;s Work</h1>
 
-      <Box marginTop="space120">
-        <Grid>
-          <Column span={[12, 12, 3]} offset={[0, 0, 1]}>
-            <Heading as="h2" variant="heading50">
-              Twilio Studio
-            </Heading>
-            <Paragraph>
-              Studio is a visual, drag &amp; drop, interface to Twilio&rsquo;s
-              APIs. With it, you can quickly prototype and even productionize
-              communications in a low-code way.
-            </Paragraph>
-          </Column>
-          <Column span={[12, 12, 5]} offset={[0, 0, 1]}>
-            <Heading as="h3" variant="heading60">
-              Links, talks, and related writing
-            </Heading>
-            <Stack orientation="vertical" spacing="space30">
-              <Anchor href="https://www.twilio.com/studio" showExternal>Explore Twilio Studio</Anchor>
-              <Anchor href="https://youtu.be/VBjVi4mV0Qk" showExternal>Introducing Studio at Signal 2017</Anchor>
-            </Stack>
-          </Column>
-        </Grid>
-      </Box>
+        <div className="mb-8">
+          <h2 className="font-serif font-black text-3xl text-ink mb-2">
+            Paste is{' '}
+            <span className="bg-highlight px-0.5">Twilio&rsquo;s design system</span>
+            {' '}and supports the work of building accessible, consistent, and high quality customer experiences.
+          </h2>
+          <div className="mt-4">
+            <a href="https://paste.twilio.design" target="_blank" rel="noopener noreferrer" className="underline">
+              Explore Paste Design System ↗
+            </a>
+          </div>
+        </div>
 
-      <Box marginTop="space160">
-        <Grid>
-          <Column span={[12, 12, 12]} offset={[0, 0, 1]}>
-            <Heading as="h3" variant="heading30">
-              Archive content
-            </Heading>
-          </Column>
-        </Grid>
-      </Box>
+        <div className="mt-12">
+          <h3 className="font-serif font-black text-xl text-ink mb-8">Past work</h3>
+          <WorkSection
+            title="Twilio Studio"
+            description="Studio is a visual, drag & drop, interface to Twilio's APIs. With it, you can quickly prototype and even productionize communications in a low-code way."
+            links={[
+              { href: 'https://www.twilio.com/studio', label: 'Explore Twilio Studio' },
+              { href: 'https://youtu.be/VBjVi4mV0Qk', label: 'Introducing Studio at Signal 2017' },
+            ]}
+          />
+        </div>
 
-      <Box marginTop="space120">
-        <Grid>
-          <Column span={[12, 12, 3]} offset={[0, 0, 1]}>
-            <Heading as="h2" variant="heading50">
-              Vouch
-            </Heading>
-            <Paragraph>
-              Vouch was a lending startup that hypothesized an alternate
-              solution for credit-worthiness.
-            </Paragraph>
-          </Column>
-          <Column span={[12, 12, 5]} offset={[0, 0, 1]}>
-            <Heading as="h3" variant="heading60">
-              Links, talks, and related writing
-            </Heading>
-            <Stack orientation="vertical" spacing="space30">
-              <Anchor href="https://aayushisin.netlify.app/#vouch" showExternal>Read about Vouch</Anchor>
-            </Stack>
-          </Column>
-        </Grid>
-      </Box>
-
-      <Box marginTop="space120">
-        <Grid>
-          <Column span={[12, 12, 3]} offset={[0, 0, 1]}>
-            <Heading as="h2" variant="heading50">
-              piq
-            </Heading>
-            <Paragraph>
-              piq is a hardware headless jukebox for social spaces. It was a
-              Kickstarter project in 2013 that failed to hit its funding goal,
-              but was a valuable design exercise.
-            </Paragraph>
-          </Column>
-          <Column span={[12, 12, 5]} offset={[0, 0, 1]}>
-            <Heading as="h3" variant="heading60">
-              Links, talks, and related writing
-            </Heading>
-            <Stack orientation="vertical" spacing="space30">
-              <Anchor href="https://aayushisin.netlify.app/#piq" showExternal>Read about piq</Anchor>
-              <Anchor href="https://youtu.be/eIMHxpT_cjc" showExternal>Introducing piq at a fundraising event</Anchor>
-              <Anchor href="https://medium.com/design-startups/a12142e9ab28" showExternal>Notes from building piq</Anchor>
-            </Stack>
-          </Column>
-        </Grid>
-      </Box>
+        <div className="mt-8">
+          <h3 className="font-serif font-black text-xl text-ink mb-8">Archive content</h3>
+          <WorkSection
+            title="Vouch"
+            description="Vouch was a lending startup that hypothesized an alternate solution for credit-worthiness."
+            links={[{ href: 'https://aayushisin.netlify.app/#vouch', label: 'Read about Vouch' }]}
+          />
+          <WorkSection
+            title="piq"
+            description="piq is a hardware headless jukebox for social spaces. It was a Kickstarter project in 2013 that failed to hit its funding goal, but was a valuable design exercise."
+            links={[
+              { href: 'https://aayushisin.netlify.app/#piq', label: 'Read about piq' },
+              { href: 'https://youtu.be/eIMHxpT_cjc', label: 'Introducing piq at a fundraising event' },
+              { href: 'https://medium.com/design-startups/a12142e9ab28', label: 'Notes from building piq' },
+            ]}
+          />
+        </div>
+      </div>
     </>
   );
-};
+}

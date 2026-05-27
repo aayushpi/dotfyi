@@ -1,62 +1,43 @@
-import { MDXProvider } from '@mdx-js/react';
 import Link from 'next/link';
-import { Separator } from '@twilio-paste/core/separator';
-import { OrderedList, UnorderedList, ListItem } from '@twilio-paste/core/list';
-import { Paragraph } from '@twilio-paste/core/paragraph';
-import { Heading } from '@twilio-paste/core/heading';
-import { Anchor } from '@twilio-paste/core/anchor';
 
-export const ComponentProvider = ({ children }) => (
-  <MDXProvider
-    components={{
-      h1: (props) => <Heading {...props} as="h1" variant="heading10" />,
-      h2: (props) => <Heading {...props} as="h2" variant="heading20" />,
-      h3: (props) => <Heading {...props} as="h3" variant="heading30" />,
-      h4: (props) => <Heading {...props} as="h4" variant="heading40" />,
-      h5: (props) => <Heading {...props} as="h5" variant="heading50" />,
-      h6: (props) => <Heading {...props} as="h6" variant="heading60" />,
-      p: (props) => <Paragraph {...props} />,
-      ul: (props) => <UnorderedList {...props} />,
-      ol: (props) => <OrderedList {...props} />,
-      li: (props) => <ListItem {...props} />,
-      blockquote: (props) => <blockquote {...props} />,
-      table: (props) => <table {...props} />,
-      thead: (props) => <thead {...props} />,
-      tbody: (props) => <tbody {...props} />,
-      tfoot: (props) => <tfoot {...props} />,
-      tr: (props) => <tr {...props} />,
-      th: (props) => <th {...props} />,
-      td: (props) => <td {...props} />,
-      pre: (props) => <pre {...props} />,
-      code: (props) => <code {...props} />,
-      inlineCode: (props) => <code {...props} />,
-      em: (props) => <em {...props} />,
-      strong: (props) => <strong {...props} />,
-      del: (props) => <del {...props} />,
-      hr: (props) => (
-        <Separator
-          orientation="horizontal"
-          verticalSpacing="space70"
-          {...props}
-        />
-      ),
-      a: ({ href, children }) => {
-        const isExternal = href?.startsWith('http');
-        if (isExternal) {
-          return <Anchor href={href}>{children}</Anchor>;
-        }
-        return (
-          <Link href={href || '/'} legacyBehavior passHref>
-            <Anchor>{children}</Anchor>
-          </Link>
-        );
-      },
-      img: (props) => <img {...props} />, // eslint-disable-line jsx-a11y/alt-text
-      sup: (props) => <sup {...props} />,
-      content: (props) => <div {...props} />,
-      contentwrapper: (props) => <div {...props} />,
-    }}
-  >
-    {children}
-  </MDXProvider>
-);
+export const mdxComponents = {
+  h1: (props) => <h1 className="font-sans font-black text-4xl text-ink mb-4" {...props} />,
+  h2: (props) => <h2 className="font-serif font-black text-3xl text-ink mb-3" {...props} />,
+  h3: (props) => <h3 className="font-serif font-black text-2xl text-ink mb-2" {...props} />,
+  h4: (props) => <h4 className="font-serif font-black text-xl text-ink mb-2" {...props} />,
+  h5: (props) => <h5 className="font-serif font-black text-lg text-ink mb-1" {...props} />,
+  h6: (props) => <h6 className="font-serif font-black text-base text-ink mb-1" {...props} />,
+  p: (props) => <p className="mb-4" {...props} />,
+  ul: (props) => <ul className="list-disc pl-6 mb-4" {...props} />,
+  ol: (props) => <ol className="list-decimal pl-6 mb-4" {...props} />,
+  li: (props) => <li className="mb-1" {...props} />,
+  blockquote: (props) => (
+    <blockquote
+      className="border-l-4 border-highlight pl-5 mx-0 my-4 italic"
+      {...props}
+    />
+  ),
+  hr: () => <hr className="border-border-subtle my-8" />,
+  a: ({ href, children }) => {
+    const isExternal = href?.startsWith('http');
+    if (isExternal) {
+      return <a href={href} target="_blank" rel="noopener noreferrer" className="underline">{children}</a>;
+    }
+    return <Link href={href || '/'} className="underline">{children}</Link>;
+  },
+  table: (props) => <table className="w-full mb-4" {...props} />,
+  thead: (props) => <thead {...props} />,
+  tbody: (props) => <tbody {...props} />,
+  tr: (props) => <tr className="border-b border-border-subtle" {...props} />,
+  th: (props) => <th className="text-left py-2 font-semibold" {...props} />,
+  td: (props) => <td className="py-2" {...props} />,
+  pre: (props) => <pre className="bg-ink text-bg p-4 rounded overflow-auto mb-4" {...props} />,
+  code: (props) => <code className="font-mono text-sm" {...props} />,
+  em: (props) => <em {...props} />,
+  strong: (props) => <strong className="font-bold" {...props} />,
+  del: (props) => <del {...props} />,
+  img: (props) => <img className="max-w-full" {...props} />, // eslint-disable-line jsx-a11y/alt-text
+  sup: (props) => <sup {...props} />,
+  content: (props) => <div {...props} />,
+  contentwrapper: (props) => <div {...props} />,
+};

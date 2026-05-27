@@ -1,48 +1,7 @@
 import Head from 'next/head';
-import {
-  StylingGlobals,
-  styled,
-  ThemeProvider,
-  css,
-} from '@twilio-paste/core/styling-library';
-import { pasteBaseStyles } from '@twilio-paste/core/theme';
-import { Box } from '@twilio-paste/core/box';
-import { PortfolioTheme } from '../theme';
-import { ComponentProvider } from '../components/component-provider';
-
-const StyledBase = styled(Box)(pasteBaseStyles);
-
-const globalStyles = (props) =>
-  css({
-    html: {
-      fontSize: '100%',
-      height: `100%`,
-      backgroundColor: `colorBackgroundBody`,
-    },
-    body: {
-      margin: 0,
-      fontSize: 'fontSize30',
-    },
-    h1: {
-      fontFamily: "'Inter', sans-serif",
-      fontWeight: 900,
-    },
-    'h2, h3, h4, h5, h6': {
-      fontFamily: "'Playfair Display', serif",
-      fontWeight: 900,
-    },
-    blockquote: {
-      borderLeftWidth: 'borderWidth30',
-      borderLeftStyle: 'solid',
-      borderLeftColor: 'colorBorderBrandHighlight',
-      paddingLeft: 'space50',
-      marginLeft: 'space0',
-      marginRight: 'space0',
-    },
-    a: {
-      color: 'colorTextLink',
-    },
-  })(props);
+import '../styles/globals.css';
+import { MDXProvider } from '@mdx-js/react';
+import { mdxComponents } from '../components/component-provider';
 
 const App = ({ Component, pageProps }) => (
   <>
@@ -50,21 +9,13 @@ const App = ({ Component, pageProps }) => (
       <title>Aayush Iyer</title>
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     </Head>
-    <ComponentProvider>
-      <ThemeProvider theme={PortfolioTheme}>
-        <StylingGlobals styles={globalStyles({ theme: PortfolioTheme })} />
-        <StyledBase as="main">
-          <Box
-            as="section"
-            marginRight={['space50', 'space50', 'auto']}
-            marginLeft={['space50', 'space50', 'auto']}
-            marginTop={['space50', 'space30', 'space200']}
-          >
-            <Component {...pageProps} />
-          </Box>
-        </StyledBase>
-      </ThemeProvider>
-    </ComponentProvider>
+    <MDXProvider components={mdxComponents}>
+      <main>
+        <div className="mx-auto px-6 py-10 max-w-5xl">
+          <Component {...pageProps} />
+        </div>
+      </main>
+    </MDXProvider>
   </>
 );
 export default App;

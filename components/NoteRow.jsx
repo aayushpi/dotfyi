@@ -1,11 +1,5 @@
 import { useState } from 'react';
 import Link from 'next/link';
-import { Box } from '@twilio-paste/core/box';
-import { Heading } from '@twilio-paste/core/heading';
-import { Text } from '@twilio-paste/core/text';
-import { Anchor } from '@twilio-paste/core/anchor';
-import { ScreenReaderOnly } from '@twilio-paste/core/screen-reader-only';
-import { LinkIcon } from '@twilio-paste/icons/cjs/LinkIcon';
 import { LOG_TYPES } from '../lib/content';
 
 export const TYPE_LABELS = {
@@ -37,27 +31,22 @@ export function formatDate(d) {
 }
 
 function CoverImage({ note }) {
+  if (!note.cover) return null;
   return (
-    <Box
-      overflow="hidden"
-      borderStyle={note.cover ? 'solid' : 'none'}
-      borderColor="colorBorderBrandHighlight"
+    <div
+      className="overflow-hidden flex-shrink-0"
       style={{
         width: '8.594rem',
         height: '12.891rem',
-        borderWidth: note.cover ? '6px' : '0',
-        flexShrink: 0,
+        border: '6px solid #F98585',
       }}
     >
-      {note.cover && (
-        <Box
-          as="img"
-          src={note.cover}
-          alt={note.title}
-          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-        />
-      )}
-    </Box>
+      <img
+        src={note.cover}
+        alt={note.title}
+        className="w-full h-full object-cover block"
+      />
+    </div>
   );
 }
 
@@ -65,20 +54,17 @@ function NoteBody({ note, isThought }) {
   return (
     <>
       {note.contentHtml && (
-        <Box
-          fontSize="fontSize30"
-          lineHeight="lineHeight30"
-          color="colorText"
-          fontStyle={isThought ? 'italic' : 'normal'}
+        <div
+          className={`note-body text-base leading-relaxed text-ink${isThought ? ' italic' : ''}`}
           dangerouslySetInnerHTML={{ __html: note.contentHtml }}
         />
       )}
       {note.source && (
-        <Box marginTop="space40">
-          <Anchor href={note.source} showExternal>
-            View source
-          </Anchor>
-        </Box>
+        <div className="mt-4">
+          <a href={note.source} target="_blank" rel="noopener noreferrer" className="text-sm">
+            View source ↗
+          </a>
+        </div>
       )}
     </>
   );
@@ -89,9 +75,8 @@ function CopyLinkButton({ note }) {
   const [visible, setVisible] = useState(false);
 
   return (
-    <Box position="relative" display="inline-flex" alignItems="center">
-      <Box
-        as="button"
+    <div className="relative inline-flex items-center">
+      <button
         type="button"
         onClick={() => {
           navigator.clipboard.writeText(`${window.location.origin}${noteUrl(note)}`);
@@ -99,35 +84,37 @@ function CopyLinkButton({ note }) {
         }}
         onMouseEnter={() => setVisible(true)}
         onMouseLeave={() => { setVisible(false); setLabel('Copy link'); }}
-        display="inline-flex"
-        alignItems="center"
-        color="colorTextWeak"
-        style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer', lineHeight: 0 }}
+        className="inline-flex items-center text-ink/40 hover:text-ink transition-colors p-0 bg-transparent border-none cursor-pointer"
+        aria-label="Copy link"
       >
-        <LinkIcon decorative={false} title="Copy link" />
-      </Box>
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+          <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+        </svg>
+      </button>
       {visible && (
-        <Box
-          position="absolute"
-          backgroundColor="colorBackgroundInverse"
-          color="colorTextInverse"
-          fontSize="fontSize10"
-          paddingX="space30"
-          paddingY="space20"
-          borderRadius="borderRadius20"
+        <div
+          className="absolute bg-ink text-bg text-xs px-2 py-1 rounded whitespace-nowrap pointer-events-none"
           style={{
             bottom: '100%',
             left: '50%',
             transform: 'translateX(-50%)',
             marginBottom: '6px',
-            whiteSpace: 'nowrap',
-            pointerEvents: 'none',
           }}
         >
           {label}
-        </Box>
+        </div>
       )}
-    </Box>
+    </div>
   );
 }
 
@@ -136,77 +123,60 @@ export function NoteRow({ note }) {
   const isThought = note.type === 'thought';
 
   const dateText = (
-    <Text
-      as="span"
-      fontSize="fontSize10"
-      color="colorTextWeak"
-      style={{ fontFamily: 'ui-monospace, SFMono-Regular, monospace' }}
-    >
-      <ScreenReaderOnly>{TYPE_LABELS[note.type] || note.type} logged on </ScreenReaderOnly>
+    <span className="font-mono text-xs text-ink/50">
+      <span className="sr-only">{TYPE_LABELS[note.type] || note.type} logged on </span>
       {formatDate(note.date)}
-    </Text>
+    </span>
   );
 
   const titleMeta = (
     <>
-      <Box display="flex" alignItems="center" columnGap="space20" marginBottom="space20">
-        <Heading as="h2" variant="heading30" marginBottom="space0" style={{ fontFamily: "'Inter', sans-serif" }}>
-          <Link href={noteUrl(note)} legacyBehavior passHref>
-            <Anchor style={{ textDecoration: 'none' }}>
-              <Box as="span" fontStyle={isThought ? 'italic' : 'normal'}>
-                {note.title}
-              </Box>
-            </Anchor>
+      <div className="flex items-center gap-2 mb-2">
+        <h2 className={`font-sans font-bold text-xl text-ink m-0${isThought ? ' italic' : ''}`}>
+          <Link href={noteUrl(note)} className="no-underline hover:underline">
+            {note.title}
           </Link>
-        </Heading>
+        </h2>
         <CopyLinkButton note={note} />
-      </Box>
+      </div>
       {note.creator && (
-        <Box marginBottom="space40">
-          <Text as="span" color="colorTextWeak" fontSize="fontSize20">
+        <div className="mb-4">
+          <span className="text-ink/50 text-sm">
             {note.creator}{note.year ? `, ${note.year}` : ''}
-          </Text>
-        </Box>
+          </span>
+        </div>
       )}
     </>
   );
 
   return (
-    <Box
-      as="article"
-      paddingTop="space80"
-      paddingBottom="space80"
-      borderTopWidth="borderWidth10"
-      borderTopStyle="solid"
-      borderTopColor="colorBorderSubtle"
-    >
-      {/* Mobile layout */}
-      <Box display={['block', 'block', 'none']}>
-        <Box marginBottom="space40">{dateText}</Box>
+    <article className="py-10 border-t border-border-subtle">
+      {/* Mobile */}
+      <div className="md:hidden">
+        <div className="mb-4">{dateText}</div>
         {isLog && note.cover ? (
-          <Box display="flex" columnGap="space60" marginBottom="space50" alignItems="flex-start">
+          <div className="flex gap-6 mb-6 items-start">
             <CoverImage note={note} />
-            <Box minWidth="size0">{titleMeta}</Box>
-          </Box>
+            <div className="min-w-0">{titleMeta}</div>
+          </div>
         ) : (
-          <Box marginBottom="space50">{titleMeta}</Box>
+          <div className="mb-6">{titleMeta}</div>
         )}
         <NoteBody note={note} isThought={isThought} />
-      </Box>
+      </div>
 
-      {/* Desktop layout */}
-      <Box
-        display={['none', 'none', 'grid']}
-        columnGap="space70"
+      {/* Desktop */}
+      <div
+        className="hidden md:grid gap-x-8"
         style={{ gridTemplateColumns: '150px 152px 1fr', alignItems: 'start' }}
       >
-        <Box paddingTop="space20">{dateText}</Box>
-        <Box>{isLog && <CoverImage note={note} />}</Box>
-        <Box minWidth="size0">
+        <div className="pt-1">{dateText}</div>
+        <div>{isLog && <CoverImage note={note} />}</div>
+        <div className="min-w-0">
           {titleMeta}
           <NoteBody note={note} isThought={isThought} />
-        </Box>
-      </Box>
-    </Box>
+        </div>
+      </div>
+    </article>
   );
 }

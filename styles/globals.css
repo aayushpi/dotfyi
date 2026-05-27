@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background-color: #fce2e0;
+    color: #2c3e50;
+    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  body {
+    background-color: #fce2e0;
+    color: #2c3e50;
+    padding: 2rem 1.5rem;
+  }
+
+  a {
+    color: #2c3e50;
+    text-decoration: underline;
+  }
+
+  a:hover {
+    opacity: 0.7;
+  }
+
+  h1 {
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    font-weight: 900;
+    color: #2c3e50;
+  }
+
+  h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 900;
+    color: #2c3e50;
+  }
+
+  /* Prose content from dangerouslySetInnerHTML */
+  .note-body a {
+    color: #2c3e50;
+    text-decoration: underline;
+  }
+
+  .note-body p {
+    margin-bottom: 1rem;
+  }
+
+  .note-body ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .note-body ol {
+    list-style: decimal;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}
