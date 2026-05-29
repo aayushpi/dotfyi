@@ -1,45 +1,24 @@
-import { useState } from "react";
-import Head from "next/head";
-import Link from "next/link";
-
-import { Box } from "@twilio-paste/core/box";
-import { Stack } from "@twilio-paste/core/stack";
-import { Anchor } from "@twilio-paste/core/anchor";
-import { Paragraph } from "@twilio-paste/core/paragraph";
-import { Heading } from "@twilio-paste/core/heading";
-import { Grid, Column } from "@twilio-paste/core/grid";
-import { UnorderedList, ListItem } from "@twilio-paste/core/list";
-import { Card } from "@twilio-paste/core/card";
-import { Text } from "@twilio-paste/core/text";
+import { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 
 function SectionRow({ children }) {
-  return (
-    <Box paddingTop="space60" paddingBottom="space20">
-      {children}
-    </Box>
-  );
+  return <div className="pt-[1.75rem] pb-3">{children}</div>;
 }
 
 function ExpandableSection({ title, children }) {
   const [expanded, setExpanded] = useState(false);
   return (
     <SectionRow>
-      <Box
-        display="flex"
-        alignItems="baseline"
-        columnGap="space30"
+      <button
+        type="button"
+        className="flex items-baseline gap-3 cursor-pointer w-full text-left bg-transparent border-none p-0"
         onClick={() => setExpanded((e) => !e)}
-        style={{ cursor: "pointer" }}
-        marginBottom={expanded ? "space60" : "space0"}
       >
-        <Heading as="h2" variant="heading20" marginBottom="space0">
-          {title}
-        </Heading>
-        <Text as="span" color="colorTextWeak" fontSize="fontSize30">
-          {expanded ? "−" : "+"}
-        </Text>
-      </Box>
-      {expanded && <Box>{children}</Box>}
+        <h2 className="font-serif font-black text-[2rem] leading-[2.5rem] tracking-[-0.02em] text-ink m-0">{title}</h2>
+        <span className="text-ink text-lg">{expanded ? '−' : '+'}</span>
+      </button>
+      {expanded && <div className="mt-6">{children}</div>}
     </SectionRow>
   );
 }
@@ -50,150 +29,134 @@ export default function HomePage() {
       <Head>
         <title>Aayush Iyer</title>
       </Head>
-      <Box>
-        <Grid>
-          <Column span={[12, 12, 4]} offset={[0, 0, 1]}>
-            <Heading as="h1" variant="heading10">
-              I&rsquo;m{" "}
-              <Box as="span" backgroundColor="colorBackgroundBrandHighlight">
-                Aayush Iyer
-              </Box>
-              . I work on building better products.
-            </Heading>
+      <div className="grid grid-cols-12"><div className="col-span-12 lg:col-start-2 lg:col-span-4">
+        <h1 className="font-sans font-black text-[2.75rem] leading-[3.5rem] tracking-[-0.02em] text-ink">
+          I&rsquo;m{' '}
+          <span className="bg-highlight px-0.5">Aayush Iyer</span>
+          . I work on building better products.
+        </h1>
 
-            <Box marginTop="space70">
-              {/* Notes — navigates away */}
-              <SectionRow>
-                <Link href="/notes" legacyBehavior passHref>
-                  <Box as="a" style={{ textDecoration: "none", color: "inherit" }}>
-                    <Box display="flex" alignItems="baseline" columnGap="space30">
-                      <Heading as="h2" variant="heading20" marginBottom="space0">
-                        Notes &amp; Thoughts
-                      </Heading>
-                      <Text as="span" color="colorBorderBrandHighlight" fontSize="fontSize30">
-                        →
-                      </Text>
-                    </Box>
-                  </Box>
-                </Link>
-              </SectionRow>
+        <div className="mt-8">
+          <SectionRow>
+            <Link href="/notes" className="no-underline">
+              <div className="flex items-baseline gap-3">
+                <h2 className="font-serif font-black text-[2rem] leading-[2.5rem] tracking-[-0.02em] text-ink m-0">Notes &amp; Thoughts</h2>
+                <span className="text-ink text-lg">→</span>
+              </div>
+            </Link>
+          </SectionRow>
 
-              {/* Work */}
-              <ExpandableSection title="Work">
-                <Heading as="h3" variant="heading40">
-                  User Experience &amp; UI Platform at Algolia
-                </Heading>
-                <Paragraph>
-                  I lead product, product design, research, and engineering teams
-                  at Algolia.{" "}
-                  <Anchor href="https://www.algolia.com/careers/">We&rsquo;re still hiring</Anchor>{" "}
-                  thoughtfully. The common thread across these teams is a deep
-                  commitment to understanding customer pain and defining what "good quality" looks like.
-                </Paragraph>
-                <Heading as="h3" variant="heading40">
-                  UX at Twilio
-                </Heading>
-                <Paragraph>
-                  I founded the design systems practice at Twilio and grew a team
-                  from an ad-hoc, unsystemized front-end environment to a fully
-                  funded, staffed, and roadmapped discipline. Over time, this
-                  scope evolved to the entire spectrum of UX Infrastructure
-                  including content writing, visual design, and design operations
-                  and focused on alignment of design, engineering, and product to
-                  create great customer experiences.
-                </Paragraph>
-                <Paragraph>
-                  My outputs were both tactical and cultural: setting product
-                  teams up for quick wins by providing resilient, performant UI,
-                  uplevelling the scale at which product design is delivered to an
-                  organization, and focusing on customer inclusion and happiness
-                  through inclusive design, UX engineering, content writing, and
-                  more.
-                </Paragraph>
-                <UnorderedList>
-                  <ListItem>
-                    <Anchor href="https://paste.twilio.design" showExternal>Paste</Anchor>{" "}
-                    A comprehensive UX platform to build great customer experiences
-                  </ListItem>
-                  <ListItem>
-                    <Anchor href="https://www.twilio.com/studio" showExternal>Studio</Anchor>{" "}
-                    A low-code visual programming language to build powerful workflows.
-                  </ListItem>
-                </UnorderedList>
-                <Heading as="h3" variant="heading40">
-                  Other work
-                </Heading>
-                <Paragraph>
-                  The 17 years since my first job as a journalist have shaped my
-                  approach towards building things. Along the way I&rsquo;ve built
-                  hardware jukeboxes, award-winning digital campaigns, and a whole
-                  host of really terrible software - somehow, they all informed
-                  where I got to and where I&rsquo;m going.
-                </Paragraph>
-              </ExpandableSection>
+          <ExpandableSection title="Work">
+            <h3 className="font-serif font-black text-[1.25rem] leading-7 tracking-[-0.02em] text-ink mb-2">
+              User Experience &amp; UI Platform at Algolia
+            </h3>
+            <p className="mb-4">
+              I lead product, product design, research, and engineering teams at Algolia.{' '}
+              <a href="https://www.algolia.com/careers/" target="_blank" rel="noopener noreferrer">
+                We&rsquo;re still hiring
+              </a>{' '}
+              thoughtfully. The common thread across these teams is a deep commitment to understanding
+              customer pain and defining what &ldquo;good quality&rdquo; looks like.
+            </p>
 
-              {/* Writing and Speaking */}
-              <ExpandableSection title="Writing and Speaking">
-                <Stack orientation="vertical" spacing="space60">
-                  <Card>
-                    <Heading as="h3" variant="heading50">
-                      Designing a great developer experience
-                    </Heading>
-                    <Paragraph>
-                      I joined an online roundtable hosted by Evil Martians on the topic of designing tools for developers.
-                    </Paragraph>
-                    <Anchor href="https://www.youtube.com/watch?v=PIhJtTboXZ0" showExternal>Watch podcast</Anchor>
-                  </Card>
-                  <Card>
-                    <Heading as="h3" variant="heading50">
-                      The death of traditional shopping: How AI-powered conversational commerce changes everything
-                    </Heading>
-                    <Paragraph>
-                      A blog post launching Algolia&rsquo;s new AI powered framework for conversational commerce
-                    </Paragraph>
-                    <Anchor href="https://www.algolia.com/blog/ai/ai-conversational-commerce-ux/" showExternal>View article</Anchor>
-                  </Card>
-                  <Card>
-                    <Heading as="h3" variant="heading50">
-                      How we built a unified, inclusive design system to nurture
-                      Twilio&rsquo;s UX
-                    </Heading>
-                    <Paragraph>
-                      I talked about the foundation and operation of Twilio
-                      Paste and its impact on Twilio at SIGNAL, 2021.
-                    </Paragraph>
-                    <Anchor href="https://www.youtube.com/watch?v=55gd38mph2g" showExternal>View talk</Anchor>
-                  </Card>
-                  <Card>
-                    <Heading as="h3" variant="heading50">
-                      Growing Pains: How We Scaled Our Design System Support
-                    </Heading>
-                    <Paragraph>
-                      I talk about the challenges of a growing platform (in this
-                      case, Twilio Paste) and ways to grow support around it.
-                    </Paragraph>
-                    <Link href="/writing/scaling_support" legacyBehavior passHref>
-                      <Anchor>Read article</Anchor>
+            <h3 className="font-serif font-black text-[1.25rem] leading-7 tracking-[-0.02em] text-ink mb-2">UX at Twilio</h3>
+            <p className="mb-4">
+              I founded the design systems practice at Twilio and grew a team from an ad-hoc,
+              unsystemized front-end environment to a fully funded, staffed, and roadmapped
+              discipline. Over time, this scope evolved to the entire spectrum of UX Infrastructure
+              including content writing, visual design, and design operations and focused on
+              alignment of design, engineering, and product to create great customer experiences.
+            </p>
+            <p className="mb-4">
+              My outputs were both tactical and cultural: setting product teams up for quick wins by
+              providing resilient, performant UI, uplevelling the scale at which product design is
+              delivered to an organization, and focusing on customer inclusion and happiness through
+              inclusive design, UX engineering, content writing, and more.
+            </p>
+            <ul className="list-disc pl-6 mb-4">
+              <li className="mb-1">
+                <a href="https://paste.twilio.design" target="_blank" rel="noopener noreferrer">
+                  Paste
+                </a>{' '}
+                A comprehensive UX platform to build great customer experiences
+              </li>
+              <li className="mb-1">
+                <a href="https://www.twilio.com/studio" target="_blank" rel="noopener noreferrer">
+                  Studio
+                </a>{' '}
+                A low-code visual programming language to build powerful workflows.
+              </li>
+            </ul>
+
+            <h3 className="font-serif font-black text-[1.25rem] leading-7 tracking-[-0.02em] text-ink mb-2">Other work</h3>
+            <p className="mb-4">
+              The 17 years since my first job as a journalist have shaped my approach towards
+              building things. Along the way I&rsquo;ve built hardware jukeboxes, award-winning
+              digital campaigns, and a whole host of really terrible software &mdash; somehow, they
+              all informed where I got to and where I&rsquo;m going.
+            </p>
+          </ExpandableSection>
+
+          <ExpandableSection title="Writing and Speaking">
+            <div className="flex flex-col gap-6">
+              {[
+                {
+                  title: 'Designing a great developer experience',
+                  desc: 'I joined an online roundtable hosted by Evil Martians on the topic of designing tools for developers.',
+                  href: 'https://www.youtube.com/watch?v=PIhJtTboXZ0',
+                  label: 'Watch podcast',
+                  external: true,
+                },
+                {
+                  title: 'The death of traditional shopping: How AI-powered conversational commerce changes everything',
+                  desc: "A blog post launching Algolia’s new AI powered framework for conversational commerce",
+                  href: 'https://www.algolia.com/blog/ai/ai-conversational-commerce-ux/',
+                  label: 'View article',
+                  external: true,
+                },
+                {
+                  title: "How we built a unified, inclusive design system to nurture Twilio’s UX",
+                  desc: "I talked about the foundation and operation of Twilio Paste and its impact on Twilio at SIGNAL, 2021.",
+                  href: 'https://www.youtube.com/watch?v=55gd38mph2g',
+                  label: 'View talk',
+                  external: true,
+                },
+                {
+                  title: 'Growing Pains: How We Scaled Our Design System Support',
+                  desc: 'I talk about the challenges of a growing platform (in this case, Twilio Paste) and ways to grow support around it.',
+                  href: '/writing/scaling_support',
+                  label: 'Read article',
+                  external: false,
+                },
+                {
+                  title: "Introducing Studio, Twilio’s low-code visual programming language",
+                  desc: "I introduced Twilio’s low-code programming language and why we built it at SIGNAL 2017, London.",
+                  href: 'https://www.youtube.com/watch?v=VBjVi4mV0Qk',
+                  label: 'View talk',
+                  external: true,
+                },
+              ].map((item) => (
+                <div
+                  key={item.href}
+                  className="border border-border-subtle rounded p-5"
+                >
+                  <h3 className="font-serif font-black text-lg text-ink mb-2">{item.title}</h3>
+                  <p className="mb-3 text-ink-muted text-[0.9rem]">{item.desc}</p>
+                  {item.external ? (
+                    <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-sm">
+                      {item.label}
+                    </a>
+                  ) : (
+                    <Link href={item.href} className="text-sm">
+                      {item.label}
                     </Link>
-                  </Card>
-                  <Card>
-                    <Heading as="h3" variant="heading50">
-                      Introducing Studio, Twilio&rsquo;s low-code visual
-                      programming language
-                    </Heading>
-                    <Paragraph>
-                      I introduced Twilio&rsquo;s low-code programming language
-                      and why we built it at SIGNAL 2017, London.
-                    </Paragraph>
-                    <Anchor href="https://www.youtube.com/watch?v=VBjVi4mV0Qk" showExternal>View talk</Anchor>
-                  </Card>
-                </Stack>
-              </ExpandableSection>
-
-            </Box>
-          </Column>
-        </Grid>
-      </Box>
+                  )}
+                </div>
+              ))}
+            </div>
+          </ExpandableSection>
+        </div>
+      </div></div>
     </>
   );
 }

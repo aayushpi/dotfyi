@@ -1,12 +1,5 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { Box } from '@twilio-paste/core/box';
-import { Grid, Column } from '@twilio-paste/core/grid';
-import { Heading } from '@twilio-paste/core/heading';
-import { Text } from '@twilio-paste/core/text';
-import { Anchor } from '@twilio-paste/core/anchor';
-import { Stack } from '@twilio-paste/core/stack';
-import { ScreenReaderOnly } from '@twilio-paste/core/screen-reader-only';
 import { getAllNotes } from '../../../lib/content';
 import { NoteRow } from '../../../components/NoteRow';
 
@@ -16,48 +9,29 @@ export default function NotesYear({ notes, year }) {
       <Head>
         <title>Notes from {year} — Aayush Iyer</title>
       </Head>
-      <Grid>
-        <Column span={[12, 12, 8]} offset={[0, 0, 1]}>
-          <Box marginBottom="space50">
-            <Stack orientation="horizontal" spacing="space30">
-              <Link href="/" legacyBehavior passHref>
-                <Anchor>
-                  <ScreenReaderOnly>Back to</ScreenReaderOnly> Home
-                </Anchor>
-              </Link>
-              <Text as="span">/</Text>
-              <Link href="/notes" legacyBehavior passHref>
-                <Anchor>Notes</Anchor>
-              </Link>
-              <Text as="span">/</Text>
-            </Stack>
-          </Box>
 
-          <Box marginBottom="space80">
-            <Heading as="h1" variant="heading10" marginBottom="space0">
-              Notes from {year}
-            </Heading>
-          </Box>
+      <div className="grid grid-cols-12"><div className="col-span-12 lg:col-start-2 lg:col-span-8">
+        <div className="mb-6 flex items-center gap-2 text-[18px]">
+          <Link href="/" className="">Home</Link>
+          <span className="text-ink-muted">/</span>
+          <Link href="/notes" className="">Notes</Link>
+          <span className="text-ink-muted">/</span>
+        </div>
 
-          {notes.length === 0 ? (
-            <Box paddingTop="space100">
-              <Text as="p" color="colorTextWeak">
-                Nothing here yet.
-              </Text>
-            </Box>
-          ) : (
-            <Box
-              borderBottomWidth="borderWidth10"
-              borderBottomStyle="solid"
-              borderBottomColor="colorBorderSubtle"
-            >
-              {notes.map((note) => (
-                <NoteRow key={note.slug} note={note} />
-              ))}
-            </Box>
-          )}
-        </Column>
-      </Grid>
+        <div className="mb-12">
+          <h1 className="font-sans font-black text-[2.75rem] leading-[3.5rem] tracking-[-0.02em] text-ink">Notes from {year}</h1>
+        </div>
+
+        {notes.length === 0 ? (
+          <p className="text-ink-muted pt-16">Nothing here yet.</p>
+        ) : (
+          <div className="border-b border-border-subtle">
+            {notes.map((note) => (
+              <NoteRow key={note.slug} note={note} />
+            ))}
+          </div>
+        )}
+      </div></div>
     </>
   );
 }
