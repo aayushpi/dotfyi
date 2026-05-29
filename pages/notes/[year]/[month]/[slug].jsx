@@ -35,7 +35,7 @@ export default function NotePage({ note, year, month }) {
   });
 
   const dateText = (
-    <span className="font-mono text-xs text-ink-muted">
+    <span className="font-mono text-[14px] text-ink">
       <span className="sr-only">{TYPE_LABELS[note.type] || note.type} logged on </span>
       {formatDate(note.date)}
     </span>
@@ -48,7 +48,7 @@ export default function NotePage({ note, year, month }) {
       </h1>
       {note.creator && (
         <div className="mb-4">
-          <span className="text-ink-muted text-sm">
+          <span className="text-ink text-[16px]">
             {note.creator}{note.year ? `, ${note.year}` : ''}
           </span>
         </div>

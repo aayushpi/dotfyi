@@ -123,7 +123,7 @@ export function NoteRow({ note }) {
   const isThought = note.type === 'thought';
 
   const dateText = (
-    <span className="font-mono text-xs text-ink-muted">
+    <span className="font-mono text-[14px] text-ink">
       <span className="sr-only">{TYPE_LABELS[note.type] || note.type} logged on </span>
       {formatDate(note.date)}
     </span>
@@ -144,7 +144,7 @@ export function NoteRow({ note }) {
       </div>
       {note.creator && (
         <div className="mb-4">
-          <span className="text-ink-muted text-sm">
+          <span className="text-ink text-[16px]">
             {note.creator}{note.year ? `, ${note.year}` : ''}
           </span>
         </div>

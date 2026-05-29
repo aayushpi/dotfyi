@@ -12,7 +12,7 @@ module.exports = {
         highlight: '#F98585',
         ink: '#2c3e50',
         'border-subtle': 'rgba(44, 62, 80, 0.2)',
-        'ink-muted': '#5a6a7a',
+        'ink-muted': '#606b85',
       },
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
