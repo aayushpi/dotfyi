@@ -15,7 +15,7 @@ function ExpandableSection({ title, children }) {
         className="flex items-baseline gap-3 cursor-pointer w-full text-left bg-transparent border-none p-0"
         onClick={() => setExpanded((e) => !e)}
       >
-        <h2 className="font-serif font-black text-[2rem] leading-[2.5rem] tracking-[-0.02em] text-ink m-0">{title}</h2>
+        <h2 className="font-serif font-black text-[2rem] leading-[2.5rem] tracking-[-0.02em] text-ink m-0 link-highlight">{title}</h2>
         <span className="text-ink text-lg">{expanded ? '−' : '+'}</span>
       </button>
       {expanded && <div className="mt-6">{children}</div>}
@@ -38,9 +38,9 @@ export default function HomePage() {
 
         <div className="mt-8">
           <SectionRow>
-            <Link href="/notes" className="no-underline">
+            <Link href="/notes" style={{ backgroundImage: 'none', paddingBottom: 0 }}>
               <div className="flex items-baseline gap-3">
-                <h2 className="font-serif font-black text-[2rem] leading-[2.5rem] tracking-[-0.02em] text-ink m-0">Notes &amp; Thoughts</h2>
+                <h2 className="font-serif font-black text-[2rem] leading-[2.5rem] tracking-[-0.02em] text-ink m-0 link-highlight">Notes &amp; Thoughts</h2>
                 <span className="text-ink text-lg">→</span>
               </div>
             </Link>
