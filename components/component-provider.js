@@ -12,18 +12,15 @@ export const mdxComponents = {
   ol: (props) => <ol className="list-decimal pl-6 mb-4" {...props} />,
   li: (props) => <li className="mb-1" {...props} />,
   blockquote: (props) => (
-    <blockquote
-      className="border-l-4 border-highlight pl-5 mx-0 my-4 italic"
-      {...props}
-    />
+    <blockquote className="tick-quote relative my-4 mx-0 pl-6 font-medium" {...props} />
   ),
   hr: () => <hr className="border-border-subtle my-8" />,
   a: ({ href, children }) => {
     const isExternal = href?.startsWith('http');
     if (isExternal) {
-      return <a href={href} target="_blank" rel="noopener noreferrer" className="underline">{children}</a>;
+      return <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>;
     }
-    return <Link href={href || '/'} className="underline">{children}</Link>;
+    return <Link href={href || '/'}>{children}</Link>;
   },
   table: (props) => <table className="w-full mb-4" {...props} />,
   thead: (props) => <thead {...props} />,
