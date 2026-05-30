@@ -64,7 +64,7 @@ export default function ThemeToggle() {
   if (!mounted) return null;
 
   return (
-    <div className="fixed top-6 lg:top-[5.25rem] right-6 z-50">
+    <div className="fixed bottom-6 right-6 lg:bottom-auto lg:top-[5.25rem] z-50">
       <div className="relative">
         <button
           onClick={cycle}
@@ -79,7 +79,7 @@ export default function ThemeToggle() {
         </button>
         {showTooltip && (
           <div
-            className="absolute right-0 top-full mt-1 px-2 py-1 text-[12px] font-mono bg-ink text-bg rounded whitespace-nowrap pointer-events-none"
+            className="absolute right-0 bottom-full mb-1 lg:bottom-auto lg:top-full lg:mb-0 lg:mt-1 px-2 py-1 text-[12px] font-mono bg-ink text-bg rounded whitespace-nowrap pointer-events-none"
           >
             {LABELS[theme]}
           </div>
