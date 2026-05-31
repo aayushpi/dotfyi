@@ -66,18 +66,18 @@ export default function HomePage() {
               ].map((p, i) => (
                 <div
                   key={p.href}
-                  className={`grid grid-cols-[28px_1fr] gap-3.5 py-5 ${i ? 'border-t border-border-subtle' : ''}`}
+                  className={`grid grid-cols-[22px_1fr] gap-3.5 py-[18px] ${i ? 'border-t border-border-subtle' : ''}`}
                 >
-                  <span className="font-mono text-xs text-ink-muted pt-1.5">
-                    {String(i + 1).padStart(2, '0')}
+                  <span className="font-mono text-base font-semibold text-highlight leading-none pt-[5px] flex justify-center">
+                    /
                   </span>
                   <div>
-                    <h3 className="font-serif font-black text-xl leading-[1.6rem] text-ink mb-2">
+                    <h3 className="font-sans font-black text-xl leading-[1.6rem] text-ink mb-2">
                       <a href={p.href} target="_blank" rel="noopener noreferrer">
                         {p.name} ↗
                       </a>
                     </h3>
-                    <p className="mb-2">{p.desc}</p>
+                    <p className="mb-2.5">{p.desc}</p>
                     <span className="font-mono text-[0.7rem] tracking-wide uppercase text-ink-muted">
                       {p.type} · {p.status}
                     </span>
