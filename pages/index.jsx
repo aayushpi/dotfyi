@@ -50,17 +50,13 @@ export default function HomePage() {
             <div className="flex flex-col">
               {[
                 {
-                  name: "Elder Dragon's Actuary",
-                  type: 'Commander companion',
-                  status: 'In progress',
-                  desc: 'Play and track Commander games — life totals, commander damage, and the long-run stats that pile up across a playgroup.',
+                  name: "Elder Dragon Actuary",
+                  desc: 'Statistics and logs for your Commander games.',
                   href: 'https://gocommando.vercel.app/',
                 },
                 {
                   name: 'Scrycast',
-                  type: 'Raycast extension',
-                  status: 'Live',
-                  desc: 'Magic: The Gathering card search for Raycast. Scryfall lookups, rulings, and prices a keystroke away.',
+                  desc: 'Search Scryfall and your personal MTG collection inside Raycast.',
                   href: 'https://www.raycast.com/aayushpi/scrycast',
                 },
               ].map((p, i) => (
@@ -78,9 +74,6 @@ export default function HomePage() {
                       </a>
                     </h3>
                     <p className="mb-2.5">{p.desc}</p>
-                    <span className="font-mono text-[0.7rem] tracking-wide uppercase text-ink-muted">
-                      {p.type} · {p.status}
-                    </span>
                   </div>
                 </div>
               ))}
@@ -146,13 +139,6 @@ export default function HomePage() {
                   desc: 'I joined an online roundtable hosted by Evil Martians on the topic of designing tools for developers.',
                   href: 'https://www.youtube.com/watch?v=PIhJtTboXZ0',
                   label: 'Watch podcast',
-                  external: true,
-                },
-                {
-                  title: 'The death of traditional shopping: How AI-powered conversational commerce changes everything',
-                  desc: "A blog post launching Algolia's new AI powered framework for conversational commerce",
-                  href: 'https://www.algolia.com/blog/ai/ai-conversational-commerce-ux/',
-                  label: 'View article',
                   external: true,
                 },
                 {
