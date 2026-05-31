@@ -46,6 +46,47 @@ export default function HomePage() {
             </Link>
           </SectionRow>
 
+          <ExpandableSection title="Projects">
+            <div className="flex flex-col">
+              {[
+                {
+                  name: "Elder Dragon's Actuary",
+                  type: 'Commander companion',
+                  status: 'In progress',
+                  desc: 'Play and track Commander games — life totals, commander damage, and the long-run stats that pile up across a playgroup.',
+                  href: 'https://gocommando.vercel.app/',
+                },
+                {
+                  name: 'Scrycast',
+                  type: 'Raycast extension',
+                  status: 'Live',
+                  desc: 'Magic: The Gathering card search for Raycast. Scryfall lookups, rulings, and prices a keystroke away.',
+                  href: 'https://www.raycast.com/aayushpi/scrycast',
+                },
+              ].map((p, i) => (
+                <div
+                  key={p.href}
+                  className={`grid grid-cols-[28px_1fr] gap-3.5 py-5 ${i ? 'border-t border-border-subtle' : ''}`}
+                >
+                  <span className="font-mono text-xs text-ink-muted pt-1.5">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <div>
+                    <h3 className="font-serif font-black text-xl leading-[1.6rem] text-ink mb-2">
+                      <a href={p.href} target="_blank" rel="noopener noreferrer">
+                        {p.name} ↗
+                      </a>
+                    </h3>
+                    <p className="mb-2">{p.desc}</p>
+                    <span className="font-mono text-[0.7rem] tracking-wide uppercase text-ink-muted">
+                      {p.type} · {p.status}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </ExpandableSection>
+
           <ExpandableSection title="Work">
             <h3 className="font-serif font-black text-[1.25rem] leading-7 tracking-[-0.02em] text-ink mb-2">
               User Experience &amp; UI Platform at Algolia
@@ -109,13 +150,13 @@ export default function HomePage() {
                 },
                 {
                   title: 'The death of traditional shopping: How AI-powered conversational commerce changes everything',
-                  desc: "A blog post launching Algolia’s new AI powered framework for conversational commerce",
+                  desc: "A blog post launching Algolia's new AI powered framework for conversational commerce",
                   href: 'https://www.algolia.com/blog/ai/ai-conversational-commerce-ux/',
                   label: 'View article',
                   external: true,
                 },
                 {
-                  title: "How we built a unified, inclusive design system to nurture Twilio’s UX",
+                  title: "How we built a unified, inclusive design system to nurture Twilio's UX",
                   desc: "I talked about the foundation and operation of Twilio Paste and its impact on Twilio at SIGNAL, 2021.",
                   href: 'https://www.youtube.com/watch?v=55gd38mph2g',
                   label: 'View talk',
@@ -129,8 +170,8 @@ export default function HomePage() {
                   external: false,
                 },
                 {
-                  title: "Introducing Studio, Twilio’s low-code visual programming language",
-                  desc: "I introduced Twilio’s low-code programming language and why we built it at SIGNAL 2017, London.",
+                  title: "Introducing Studio, Twilio's low-code visual programming language",
+                  desc: "I introduced Twilio's low-code programming language and why we built it at SIGNAL 2017, London.",
                   href: 'https://www.youtube.com/watch?v=VBjVi4mV0Qk',
                   label: 'View talk',
                   external: true,
