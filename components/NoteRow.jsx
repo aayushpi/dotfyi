@@ -32,20 +32,38 @@ export function formatDate(d) {
 
 function CoverImage({ note }) {
   if (!note.cover) return null;
+
+  const W = '8.594rem';
+  const H = '12.891rem';
+  const OFFSET = '0.5rem';
+
   return (
     <div
-      className="overflow-hidden flex-shrink-0"
+      className="relative flex-shrink-0"
       style={{
-        width: '8.594rem',
-        height: '12.891rem',
-        border: '6px solid #F98585',
+        width: `calc(${W} + ${OFFSET})`,
+        height: `calc(${H} + ${OFFSET})`,
       }}
     >
-      <img
-        src={note.cover}
-        alt={note.title}
-        className="w-full h-full object-cover block"
+      <div
+        className="absolute"
+        style={{ right: 0, bottom: 0, width: W, height: H, background: '#F98585' }}
       />
+      <div
+        className="absolute top-0 left-0 overflow-hidden"
+        style={{
+          width: W,
+          height: H,
+          border: '1.5px solid var(--color-ink)',
+          background: 'var(--color-bg)',
+        }}
+      >
+        <img
+          src={note.cover}
+          alt={note.title}
+          className="w-full h-full object-cover block"
+        />
+      </div>
     </div>
   );
 }
