@@ -82,18 +82,18 @@ export default function HomePage() {
 
           <ExpandableSection title="Work">
             <h3 className="font-serif font-black text-[1.25rem] leading-7 tracking-[-0.02em] text-ink mb-2">
+              Product &amp; Design at Stuut
+            </h3>
+            <p className="mb-4">
+              I've joined Stuut as they take on the domain of Accounts Receivable. AR is the largest unmanaged financial portfolio in most large organizations and carries signigicant risks and opportunities. It's early days, and we're hiring. Hit me up!
+            </p>
+            <h3 className="font-serif font-black text-[1.25rem] leading-7 tracking-[-0.02em] text-ink mb-2">
               User Experience &amp; UI Platform at Algolia
             </h3>
             <p className="mb-4">
-              I lead product, product design, research, and engineering teams at Algolia.{' '}
-              <a href="https://www.algolia.com/careers/" target="_blank" rel="noopener noreferrer">
-                We&rsquo;re still hiring
-              </a>{' '}
-              thoughtfully. The common thread across these teams is a deep commitment to understanding
-              customer pain and defining what &ldquo;good quality&rdquo; looks like.
+              I joined Algolia to solve interesting business problems and influence product and engineering teams through a thoughtful application of UX. My role included leading a number of Product teams focused on Merchandising, Generative AI, and ML-powered Recommendations. I also lead the Product Design and Research teams, as well as a team that builds and manages InstantSearch, the industry leading UI library that powers thousands of search interfaces.
             </p>
-
-            <h3 className="font-serif font-black text-[1.25rem] leading-7 tracking-[-0.02em] text-ink mb-2">UX at Twilio</h3>
+            <h3 className="font-serif font-black text-[1.25rem] leading-7 tracking-[-0.02em] text-ink mb-2">User Experience at Twilio</h3>
             <p className="mb-4">
               I founded the design systems practice at Twilio and grew a team from an ad-hoc,
               unsystemized front-end environment to a fully funded, staffed, and roadmapped
