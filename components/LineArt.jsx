@@ -134,6 +134,10 @@ export default function LineArt() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width  = 520 * dpr;
+    canvas.height = 520 * dpr;
+
     const gl = canvas.getContext('webgl', {
       alpha: true,
       antialias: true,
@@ -176,7 +180,7 @@ export default function LineArt() {
       const N  = 72 + Math.floor(rng() * 36);       // 72–107 circles
       const R  = W * 0.42;
       const r  = R * 0.965;
-      const [c0, c1] = rng() < 0.5 ? [0, 0] : [0, 1];
+      const [c0, c1] = [0, 0];
 
       // Centre at canvas corner (W, H) = viewport bottom-right — only top-left quadrant is visible
       const sv = buildSpiroVerts(N, r, R, W, H);
@@ -306,9 +310,7 @@ export default function LineArt() {
   return (
     <canvas
       ref={canvasRef}
-      width={520}
-      height={520}
-      style={{ position: 'fixed', bottom: 0, right: 0, pointerEvents: 'none' }}
+      style={{ position: 'fixed', bottom: 0, right: 0, pointerEvents: 'none', width: '520px', height: '520px' }}
       className="hidden sm:block"
       aria-hidden="true"
     />
