@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import LineArt from '../components/LineArt';
 
 function SectionRow({ children }) {
   return <div className="pt-[1.75rem] pb-3">{children}</div>;
@@ -29,6 +30,7 @@ export default function HomePage() {
       <Head>
         <title>Aayush Iyer</title>
       </Head>
+      <LineArt />
       <div className="grid grid-cols-12"><div className="col-span-12 lg:col-start-2 lg:col-span-4">
         <h1 className="font-sans font-black text-[2.75rem] leading-[3.5rem] tracking-[-0.02em] text-ink">
           I&rsquo;m{' '}
