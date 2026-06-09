@@ -23,13 +23,23 @@ export function SubscribeLink() {
 
   return (
     <>
-      <button
-        type="button"
+      {/* Anchor (not <button>) so it inherits the site-wide link style from
+          globals.css — the animated coral underline. role/keyboard keep it
+          accessible since it opens a modal rather than navigating. */}
+      <a
+        role="button"
+        tabIndex={0}
         onClick={() => setOpen(true)}
-        className="font-[inherit] text-[inherit] underline underline-offset-2 text-ink hover:text-highlight transition-colors bg-transparent border-none p-0 cursor-pointer"
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            setOpen(true);
+          }
+        }}
+        className="cursor-pointer"
       >
         Or an email every fortnight
-      </button>
+      </a>
 
       {mounted &&
         open &&
