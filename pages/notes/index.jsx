@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { getAllNotes } from '../../lib/content';
 import { NoteRow } from '../../components/NoteRow';
+import { SubscribeLink } from '../../components/SubscribeLink';
 
 export default function NotesIndex({ notes }) {
   return (
@@ -18,7 +19,7 @@ export default function NotesIndex({ notes }) {
 
         <div className="mb-12">
           <h1 className="font-sans font-black text-[2.75rem] leading-[3.5rem] tracking-[-0.02em] text-ink mb-2">Notes &amp; Thoughts</h1>
-          <p className="text-ink text-[18px]">A blog about film, books, and ideas.</p>
+          <p className="text-ink text-[18px]">A blog about film, books, and ideas. <SubscribeLink /></p>
         </div>
 
         {notes.length === 0 ? (

@@ -21,6 +21,7 @@
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
     "remark-parse": "^11.0.0",
+    "resend": "^6.12.4",
     "tailwind-merge": "^3.6.0"
   },
   "license": "ISC",
