@@ -52,6 +52,11 @@ export default function HomePage() {
             <div className="flex flex-col">
               {[
                 {
+                  name: "Cardiogram",
+                  desc: 'Real-time telemetry, visualization, and analysis of Formula One races.',
+                  href: 'https://car-diogram.vercel.app/',
+                },
+                {
                   name: "Elder Dragon Actuary",
                   desc: 'Statistics and logs for your Commander games.',
                   href: 'https://gocommando.vercel.app/',
