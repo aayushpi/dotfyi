@@ -34,8 +34,7 @@ export default function HomePage() {
       <div className="grid grid-cols-12"><div className="col-span-12 lg:col-start-2 lg:col-span-4">
         <h1 className="font-sans font-black text-[2.75rem] leading-[3.5rem] tracking-[-0.02em] text-ink">
           I&rsquo;m{' '}
-          <span className="bg-highlight px-0.5">Aayush Iyer</span>
-          . I work on building better products.
+          <span className="bg-highlight px-0.5">Aayush Iyer</span>. I make useful things.
         </h1>
 
         <div className="mt-8">
