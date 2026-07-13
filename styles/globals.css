@@ -101,6 +101,21 @@ html.dark {
     background: #F98585;
   }
 
+  /* Coral page-transition veil (see components/CoralSweep + lib/sweep) */
+  .coral-sweep-veil {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: #F98585;
+    transform: translateY(101%);
+    pointer-events: none;
+    will-change: transform;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .coral-sweep-veil { display: none; }
+  }
+
   .link-highlight {
     background-image: linear-gradient(#F98585, #F98585);
     background-repeat: no-repeat;
