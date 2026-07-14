@@ -25,14 +25,17 @@ const ICONS = {
 
 const LABELS = { auto: 'Auto', light: 'Light', dark: 'Dark' };
 
+// Must match --color-bg in styles/globals.css. Used to keep the browser
+// chrome's theme-color in step with the active theme.
+const BG = { light: '#fce2e0', dark: '#2c3e50' };
+
 function applyTheme(theme) {
   const root = document.documentElement;
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  if (theme === 'dark' || (theme === 'auto' && prefersDark)) {
-    root.classList.add('dark');
-  } else {
-    root.classList.remove('dark');
-  }
+  const dark = theme === 'dark' || (theme === 'auto' && prefersDark);
+  root.classList.toggle('dark', dark);
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.setAttribute('content', dark ? BG.dark : BG.light);
 }
 
 export default function ThemeToggle() {
