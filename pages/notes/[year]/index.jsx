@@ -2,8 +2,10 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { getAllNotes } from '../../../lib/content';
 import { NoteRow } from '../../../components/NoteRow';
+import { useCoralSweep, sweepOnClick } from '../../../lib/sweep';
 
 export default function NotesYear({ notes, year }) {
+  const sweep = useCoralSweep();
   return (
     <>
       <Head>
@@ -12,7 +14,7 @@ export default function NotesYear({ notes, year }) {
 
       <div className="grid grid-cols-12"><div className="col-span-12 lg:col-start-2 lg:col-span-8">
         <div className="mb-6 flex items-center gap-2 text-[18px]">
-          <Link href="/" className="">Home</Link>
+          <Link href="/" onClick={sweepOnClick(sweep, '/', { reverse: true })} className="">Home</Link>
           <span className="text-ink-muted">/</span>
           <Link href="/notes" className="">Notes</Link>
           <span className="text-ink-muted">/</span>

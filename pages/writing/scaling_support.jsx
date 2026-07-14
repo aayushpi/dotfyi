@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { useCoralSweep, sweepOnClick } from '../../lib/sweep';
 
 function UserBubble({ children }) {
   return (
@@ -57,6 +58,7 @@ function EmergencyWidget() {
 }
 
 export default function ScalingSupport() {
+  const sweep = useCoralSweep();
   return (
     <>
       <Head>
@@ -65,7 +67,7 @@ export default function ScalingSupport() {
 
       <div className="mb-10">
         <div className="mb-6 flex items-center gap-2 text-[18px]">
-          <Link href="/" className="no-underline hover:underline">Home</Link>
+          <Link href="/" onClick={sweepOnClick(sweep, '/', { reverse: true })} className="no-underline hover:underline">Home</Link>
           <span className="text-ink-muted">/</span>
           <Link href="/writing" className="no-underline hover:underline">Writing</Link>
           <span className="text-ink-muted">/</span>

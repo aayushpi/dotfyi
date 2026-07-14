@@ -4,6 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import { remark } from 'remark';
 import parse from 'remark-parse';
+import { useCoralSweep, sweepOnClick } from '../lib/sweep';
 
 const LikeCard = ({ title, date, review, type, creator }) => {
   const getTypeEmoji = (t) => {
@@ -135,6 +136,7 @@ export async function getStaticProps() {
 }
 
 export default function Likes({ likes }) {
+  const sweep = useCoralSweep();
   return (
     <>
       <Head>
@@ -143,7 +145,7 @@ export default function Likes({ likes }) {
 
       <div className="max-w-sm">
         <div className="mb-6 flex items-center gap-2 text-[18px]">
-          <Link href="/" className="no-underline hover:underline">Home</Link>
+          <Link href="/" onClick={sweepOnClick(sweep, '/', { reverse: true })} className="no-underline hover:underline">Home</Link>
           <span className="text-ink-muted">/</span>
         </div>
 
