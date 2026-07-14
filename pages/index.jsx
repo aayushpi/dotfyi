@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import LineArt from '../components/LineArt';
+import { useCoralSweep, sweepOnClick } from '../lib/sweep';
 
 function SectionRow({ children }) {
   return <div className="pt-[1.75rem] pb-3">{children}</div>;
@@ -25,6 +26,7 @@ function ExpandableSection({ title, children }) {
 }
 
 export default function HomePage() {
+  const sweep = useCoralSweep();
   return (
     <>
       <Head>
@@ -39,7 +41,11 @@ export default function HomePage() {
 
         <div className="mt-8">
           <SectionRow>
-            <Link href="/notes" style={{ backgroundImage: 'none', paddingBottom: 0 }}>
+            <Link
+              href="/notes"
+              onClick={sweepOnClick(sweep, '/notes')}
+              style={{ backgroundImage: 'none', paddingBottom: 0 }}
+            >
               <div className="flex items-baseline gap-3">
                 <h2 className="font-serif font-black text-[2rem] leading-[2.5rem] tracking-[-0.02em] text-ink m-0 link-highlight">Notes &amp; Thoughts</h2>
                 <span className="text-ink text-lg">→</span>

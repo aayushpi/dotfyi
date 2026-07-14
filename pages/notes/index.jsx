@@ -3,8 +3,10 @@ import Link from 'next/link';
 import { getAllNotes } from '../../lib/content';
 import { NoteRow } from '../../components/NoteRow';
 import { SubscribeLink } from '../../components/SubscribeLink';
+import { useCoralSweep, sweepOnClick } from '../../lib/sweep';
 
 export default function NotesIndex({ notes }) {
+  const sweep = useCoralSweep();
   return (
     <>
       <Head>
@@ -13,7 +15,7 @@ export default function NotesIndex({ notes }) {
 
       <div className="grid grid-cols-12"><div className="col-span-12 lg:col-start-2 lg:col-span-8">
         <div className="mb-6 flex items-center gap-2 text-[18px]">
-          <Link href="/" className="">Home</Link>
+          <Link href="/" onClick={sweepOnClick(sweep, '/', { reverse: true })} className="">Home</Link>
           <span className="text-ink-muted">/</span>
         </div>
 

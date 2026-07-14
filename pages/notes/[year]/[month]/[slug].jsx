@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { getAllNotes, getNoteBySlugMdx, LOG_TYPES } from '../../../../lib/content';
 import { noteUrl, formatDate, TYPE_LABELS } from '../../../../components/NoteRow';
 import LinkPreviewCard from '../../../../components/LinkPreviewCard';
+import { useCoralSweep, sweepOnClick } from '../../../../lib/sweep';
 
 function CoverImage({ note }) {
   if (!note.cover) return null;
@@ -25,6 +26,7 @@ function CoverImage({ note }) {
 }
 
 export default function NotePage({ note, year, month }) {
+  const sweep = useCoralSweep();
   const isLog = LOG_TYPES.includes(note.type);
   const isEssay = note.type === 'essay';
   const isThought = note.type === 'thought';
@@ -89,7 +91,7 @@ export default function NotePage({ note, year, month }) {
         <div className="col-span-12 lg:col-start-2 lg:col-span-8">
         {/* Breadcrumb */}
         <div className="mb-6 flex items-center gap-2 text-[18px] flex-wrap">
-          <Link href="/" className="">Home</Link>
+          <Link href="/" onClick={sweepOnClick(sweep, '/', { reverse: true })} className="">Home</Link>
           <span className="text-ink-muted">/</span>
           <Link href="/notes" className="">Notes</Link>
           <span className="text-ink-muted">/</span>

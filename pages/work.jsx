@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import { useCoralSweep, sweepOnClick } from '../lib/sweep';
 
 function WorkSection({ title, description, links }) {
   return (
@@ -25,6 +26,7 @@ function WorkSection({ title, description, links }) {
 }
 
 export default function Work() {
+  const sweep = useCoralSweep();
   return (
     <>
       <Head>
@@ -33,7 +35,7 @@ export default function Work() {
 
       <div>
         <div className="mb-6 flex items-center gap-2 text-[18px]">
-          <Link href="/" className="no-underline hover:underline">Home</Link>
+          <Link href="/" onClick={sweepOnClick(sweep, '/', { reverse: true })} className="no-underline hover:underline">Home</Link>
           <span className="text-ink-muted">/</span>
         </div>
 
