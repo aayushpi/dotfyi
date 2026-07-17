@@ -14,7 +14,7 @@ A fascinating speculation of what it means to shatter the lens of nationalism an
 
 > We occupy a geography that’s been designated as America. We are impacted by it, but no one lives in America. I live on my block, among my neighbors and the people I see at the grocery store and the gym.
 
-The project of Nationalism is of the enforcement of limits of empathy: to put rails that make us look inward for both the mundane and the muse, to change the name of the feeling of comfort from solidarity to security, to constrict us where we should be growing. 
+The project of Nationalism is to narrow the radius of empathy: to put rails that make us look inward for both the mundane and the muse, to change the name of the feeling of comfort from solidarity to security, to constrict us where we should be growing. 
 
 Two songs that remind me of freedom:
 
