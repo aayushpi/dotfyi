@@ -17,7 +17,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
-        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+        serif: ['var(--font-serif)'],
         mono: ['ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       typography: {

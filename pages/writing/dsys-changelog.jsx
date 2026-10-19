@@ -34,11 +34,11 @@ export default function DsysChangelog() {
           accessible, systemized UI.
         </p>
 
-        <h2 className="font-serif font-black text-2xl text-ink mb-6">People</h2>
+        <h2 className="font-serif text-2xl text-ink mb-6">People</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {[1, 2, 3].map((i) => (
             <div key={i} className="border border-border-subtle rounded p-5">
-              <h3 className="font-serif font-black text-xl text-ink mb-2">2018–2019</h3>
+              <h3 className="font-serif text-xl text-ink mb-2">2018–2019</h3>
               <p>
                 <strong>Engineering:</strong> Part time contribution from an engineer, contractor
               </p>

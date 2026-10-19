@@ -4,6 +4,7 @@ import { MDXProvider } from '@mdx-js/react';
 import { mdxComponents } from '../components/component-provider';
 import ThemeToggle from '../components/ThemeToggle';
 import CoralSweep from '../components/CoralSweep';
+import SerifPicker from '../components/SerifPicker';
 
 const App = ({ Component, pageProps }) => (
   <>
@@ -14,6 +15,7 @@ const App = ({ Component, pageProps }) => (
     <MDXProvider components={mdxComponents}>
       <CoralSweep />
       <ThemeToggle />
+      <SerifPicker />
       <main>
         <div className="px-6 lg:px-0 pt-6 md:pt-4 lg:pt-[5.25rem] pb-16">
           <Component {...pageProps} />

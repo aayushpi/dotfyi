@@ -2,11 +2,11 @@ import Link from 'next/link';
 
 export const mdxComponents = {
   h1: (props) => <h1 className="font-sans font-black text-4xl text-ink mb-4" {...props} />,
-  h2: (props) => <h2 className="font-serif font-black text-3xl text-ink mb-3" {...props} />,
-  h3: (props) => <h3 className="font-serif font-black text-2xl text-ink mb-2" {...props} />,
-  h4: (props) => <h4 className="font-serif font-black text-xl text-ink mb-2" {...props} />,
-  h5: (props) => <h5 className="font-serif font-black text-lg text-ink mb-1" {...props} />,
-  h6: (props) => <h6 className="font-serif font-black text-base text-ink mb-1" {...props} />,
+  h2: (props) => <h2 className="font-serif text-3xl text-ink mb-3" {...props} />,
+  h3: (props) => <h3 className="font-serif text-2xl text-ink mb-2" {...props} />,
+  h4: (props) => <h4 className="font-serif text-xl text-ink mb-2" {...props} />,
+  h5: (props) => <h5 className="font-serif text-lg text-ink mb-1" {...props} />,
+  h6: (props) => <h6 className="font-serif text-base text-ink mb-1" {...props} />,
   p: (props) => <p className="mb-4" {...props} />,
   ul: (props) => <ul className="list-disc pl-6 mb-4" {...props} />,
   ol: (props) => <ol className="list-decimal pl-6 mb-4" {...props} />,

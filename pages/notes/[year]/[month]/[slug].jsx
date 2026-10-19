@@ -45,7 +45,7 @@ export default function NotePage({ note, year, month }) {
 
   const titleMeta = (
     <>
-      <h1 className={`font-black text-[1.75rem] leading-9 tracking-[-0.02em] text-ink mb-2${isThought ? ' italic' : ''}`} style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
+      <h1 className={`font-serif text-[1.75rem] leading-9 tracking-[-0.02em] text-ink mb-2${isThought ? ' italic' : ''}`}>
         {note.title}
       </h1>
       {note.creator && (
@@ -135,7 +135,7 @@ export default function NotePage({ note, year, month }) {
         {isEssay && note.resolvedRefs.length > 0 && (
           <div className="mt-16">
             <hr className="border-border-subtle my-8" />
-            <h2 className="font-serif font-black text-lg text-ink mb-4">Referenced in this essay</h2>
+            <h2 className="font-serif text-lg text-ink mb-4">Referenced in this essay</h2>
             <div>
               {note.resolvedRefs.map((ref) => (
                 <div key={ref.slug} className="py-4">
@@ -155,7 +155,7 @@ export default function NotePage({ note, year, month }) {
         {!isEssay && note.referencedBy.length > 0 && (
           <div className="mt-16">
             <hr className="border-border-subtle my-8" />
-            <h2 className="font-serif font-black text-lg text-ink mb-4">Essays about this</h2>
+            <h2 className="font-serif text-lg text-ink mb-4">Essays about this</h2>
             <div>
               {note.referencedBy.map((essay) => (
                 <div key={essay.slug} className="py-4">

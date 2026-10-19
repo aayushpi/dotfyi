@@ -151,8 +151,7 @@ export function NoteRow({ note }) {
     <>
       <div className="flex items-center gap-2 mb-2">
         <h2
-          className={`font-black text-[1.75rem] leading-9 tracking-[-0.02em] text-ink m-0${isThought ? ' italic' : ''}`}
-          style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+          className={`font-serif text-[1.75rem] leading-9 tracking-[-0.02em] text-ink m-0${isThought ? ' italic' : ''}`}
         >
           <Link href={noteUrl(note)}>
             {note.title}

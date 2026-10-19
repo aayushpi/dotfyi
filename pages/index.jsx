@@ -17,7 +17,7 @@ function ExpandableSection({ title, children }) {
         className="flex items-baseline gap-3 cursor-pointer w-full text-left bg-transparent border-none p-0"
         onClick={() => setExpanded((e) => !e)}
       >
-        <h2 className="font-serif font-black text-[2rem] leading-[2.5rem] tracking-[-0.02em] text-ink m-0 link-highlight">{title}</h2>
+        <h2 className="font-serif text-[2rem] leading-[2.5rem] tracking-[-0.02em] text-ink m-0 link-highlight">{title}</h2>
         <span className="text-ink text-lg">{expanded ? '−' : '+'}</span>
       </button>
       {expanded && <div className="mt-6">{children}</div>}
@@ -47,7 +47,7 @@ export default function HomePage() {
               style={{ backgroundImage: 'none', paddingBottom: 0 }}
             >
               <div className="flex items-baseline gap-3">
-                <h2 className="font-serif font-black text-[2rem] leading-[2.5rem] tracking-[-0.02em] text-ink m-0 link-highlight">Notes &amp; Thoughts</h2>
+                <h2 className="font-serif text-[2rem] leading-[2.5rem] tracking-[-0.02em] text-ink m-0 link-highlight">Notes &amp; Thoughts</h2>
                 <span className="text-ink text-lg">→</span>
               </div>
             </Link>
@@ -93,19 +93,19 @@ export default function HomePage() {
           </ExpandableSection>
 
           <ExpandableSection title="Work">
-            <h3 className="font-serif font-black text-[1.25rem] leading-7 tracking-[-0.02em] text-ink mb-2">
+            <h3 className="font-serif text-[1.25rem] leading-7 tracking-[-0.02em] text-ink mb-2">
               Product &amp; Design at Stuut
             </h3>
             <p className="mb-4">
               I've joined Stuut as they take on the domain of Accounts Receivable. AR is the largest unmanaged financial portfolio in most large organizations and carries signigicant risks and opportunities. It's early days, and we're hiring. Hit me up!
             </p>
-            <h3 className="font-serif font-black text-[1.25rem] leading-7 tracking-[-0.02em] text-ink mb-2">
+            <h3 className="font-serif text-[1.25rem] leading-7 tracking-[-0.02em] text-ink mb-2">
               User Experience &amp; UI Platform at Algolia
             </h3>
             <p className="mb-4">
               I joined Algolia to solve interesting business problems and influence product and engineering teams through a thoughtful application of UX. My role included leading a number of Product teams focused on Merchandising, Generative AI, and ML-powered Recommendations. I also lead the Product Design and Research teams, as well as a team that builds and manages InstantSearch, the industry leading UI library that powers thousands of search interfaces.
             </p>
-            <h3 className="font-serif font-black text-[1.25rem] leading-7 tracking-[-0.02em] text-ink mb-2">User Experience at Twilio</h3>
+            <h3 className="font-serif text-[1.25rem] leading-7 tracking-[-0.02em] text-ink mb-2">User Experience at Twilio</h3>
             <p className="mb-4">
               I founded the design systems practice at Twilio and grew a team from an ad-hoc,
               unsystemized front-end environment to a fully funded, staffed, and roadmapped
@@ -134,7 +134,7 @@ export default function HomePage() {
               </li>
             </ul>
 
-            <h3 className="font-serif font-black text-[1.25rem] leading-7 tracking-[-0.02em] text-ink mb-2">Other work</h3>
+            <h3 className="font-serif text-[1.25rem] leading-7 tracking-[-0.02em] text-ink mb-2">Other work</h3>
             <p className="mb-4">
               The 17 years since my first job as a journalist have shaped my approach towards
               building things. Along the way I&rsquo;ve built hardware jukeboxes, award-winning
@@ -179,7 +179,7 @@ export default function HomePage() {
                   key={item.href}
                   className="border border-border-subtle rounded p-5"
                 >
-                  <h3 className="font-serif font-black text-lg text-ink mb-2">{item.title}</h3>
+                  <h3 className="font-serif text-lg text-ink mb-2">{item.title}</h3>
                   <p className="mb-3 text-ink-muted text-[0.9rem]">{item.desc}</p>
                   {item.external ? (
                     <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-sm">

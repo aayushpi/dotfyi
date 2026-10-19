@@ -7,6 +7,46 @@
   --color-ink: #2c3e50;
   --color-border-subtle: rgba(44, 62, 80, 0.2);
   --color-ink-muted: #606b85;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-serif-weight: 900;
+  --font-serif-settings: normal;
+  --font-serif-adjust: none;
+}
+
+/* Serif variants under evaluation, picked with components/SerifPicker.jsx */
+html[data-serif='playfair'] {
+  --font-serif: 'Playfair', Georgia, serif;
+  --font-serif-weight: 340;
+  --font-serif-settings: 'opsz' 900;
+}
+html[data-serif='instrument'] {
+  --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-serif-weight: 400;
+  --font-serif-adjust: 0.5;
+}
+html[data-serif='fraunces'] {
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-serif-weight: 300;
+  --font-serif-settings: 'opsz' 144, 'SOFT' 0, 'WONK' 1;
+}
+html[data-serif='bodoni'] {
+  --font-serif: 'Bodoni Moda', Georgia, serif;
+  --font-serif-weight: 400;
+  --font-serif-settings: 'opsz' 96;
+}
+html[data-serif='newsreader'] {
+  --font-serif: 'Newsreader', Georgia, serif;
+  --font-serif-weight: 300;
+  --font-serif-settings: 'opsz' 72;
+}
+html[data-serif='source'] {
+  --font-serif: 'Source Serif 4', Georgia, serif;
+  --font-serif-weight: 250;
+  --font-serif-settings: 'opsz' 60;
+}
+html[data-serif='italiana'] {
+  --font-serif: 'Italiana', Georgia, serif;
+  --font-serif-weight: 400;
 }
 
 html.dark {
@@ -56,8 +96,10 @@ html.dark {
   }
 
   h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-weight: 900;
+    font-family: var(--font-serif);
+    font-weight: var(--font-serif-weight);
+    font-variation-settings: var(--font-serif-settings);
+    font-size-adjust: var(--font-serif-adjust);
     color: var(--color-ink);
   }
 
@@ -133,4 +175,10 @@ html.dark {
   .link-highlight:hover {
     background-size: 100% 36%;
   }
+}
+
+.font-serif {
+  font-weight: var(--font-serif-weight);
+  font-variation-settings: var(--font-serif-settings);
+  font-size-adjust: var(--font-serif-adjust);
 }

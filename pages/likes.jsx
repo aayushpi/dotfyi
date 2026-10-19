@@ -45,7 +45,7 @@ const LikeCard = ({ title, date, review, type, creator }) => {
     <div className="border border-border-subtle rounded p-6 mb-6">
       <div className="flex items-start justify-between mb-1">
         <div>
-          <h3 className="font-serif font-black text-xl text-ink m-0">
+          <h3 className="font-serif text-xl text-ink m-0">
             {renderFormattedText(title)}
           </h3>
           {creator && (

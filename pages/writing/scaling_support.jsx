@@ -97,7 +97,7 @@ export default function ScalingSupport() {
             scaled our support, helping our customers and ourselves through these stages.
           </p>
 
-          <h2 className="font-serif font-black text-2xl text-ink mt-8 mb-4">Stage 1: Support as incubation</h2>
+          <h2 className="font-serif text-2xl text-ink mt-8 mb-4">Stage 1: Support as incubation</h2>
           <p className="mb-4">
             In 2018, we didn&rsquo;t have a design system at Twilio. This meant that the most
             efficient way to express a UI solution involved copying older implementations and adopting
@@ -119,7 +119,7 @@ export default function ScalingSupport() {
             and provided enough evidence to make key hires could <em>actually</em> build a system.
           </p>
 
-          <h2 className="font-serif font-black text-2xl text-ink mt-8 mb-4">Stage 2: Support as we scaled</h2>
+          <h2 className="font-serif text-2xl text-ink mt-8 mb-4">Stage 2: Support as we scaled</h2>
           <p className="mb-4">
             Fast forward about a year, and Paste was at the foot of a steep adoption curve. Unlike
             our legacy libraries (which had larger, more complex monolithic components), we had moved
@@ -183,8 +183,8 @@ export default function ScalingSupport() {
             this, they still trusted us.
           </p>
 
-          <h2 className="font-serif font-black text-2xl text-ink mt-8 mb-4">Making the support change</h2>
-          <h3 className="font-serif font-black text-xl text-ink mt-6 mb-3">How we announced it</h3>
+          <h2 className="font-serif text-2xl text-ink mt-8 mb-4">Making the support change</h2>
+          <h3 className="font-serif text-xl text-ink mt-6 mb-3">How we announced it</h3>
           <p className="mb-4">
             We made the support official at an All Hands meeting. But, keeping this change from
             unraveling meant a consistent change in team and customer behavior:{' '}
@@ -195,7 +195,7 @@ export default function ScalingSupport() {
             help.
           </p>
 
-          <h3 className="font-serif font-black text-xl text-ink mt-6 mb-3">Enter the automations</h3>
+          <h3 className="font-serif text-xl text-ink mt-6 mb-3">Enter the automations</h3>
           <p className="mb-4">
             We addressed new users first: using Slack&rsquo;s{' '}
             <a href="https://slack.com/features/workflow-automation" className="underline">Workflow Builder</a>
@@ -252,7 +252,7 @@ export default function ScalingSupport() {
             </li>
           </ul>
 
-          <h2 className="font-serif font-black text-2xl text-ink mt-8 mb-4">Closing thoughts</h2>
+          <h2 className="font-serif text-2xl text-ink mt-8 mb-4">Closing thoughts</h2>
           <p className="mb-4">
             Perfect customer support doesn&rsquo;t exist. Also, there&rsquo;s no single or linear
             way to scale for it.{' '}
