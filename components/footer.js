@@ -4,8 +4,8 @@ import { ContactChat } from './ContactChat';
 const LINKEDIN_URL = 'https://www.linkedin.com/in/aayushiyer/';
 const SIGNOFF_URL = 'https://electricliterature.com/the-great-silence-by-ted-chiang/';
 
-// Same size as the "Notes & Thoughts" heading on the homepage, in Inter.
-const HEADING = 'font-sans font-black text-[2rem] leading-[2.5rem] tracking-[-0.02em] text-ink m-0';
+// Same style as the "Notes & Thoughts" heading on the homepage.
+const HEADING = 'font-serif font-black text-[2rem] leading-[2.5rem] tracking-[-0.02em] text-ink m-0';
 
 export const SiteFooter = () => (
   <footer className="px-6 lg:px-0 pb-32 md:pb-48">
