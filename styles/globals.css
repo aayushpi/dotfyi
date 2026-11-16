@@ -119,6 +119,23 @@ html.dark {
     .coral-sweep-veil { display: none; }
   }
 
+  /* Contact chat "sent" exit: a small wind-up, then off the top of the screen. */
+  @keyframes contact-fly {
+    0%   { transform: translate(0, 0) rotate(0deg); opacity: 1; }
+    18%  { transform: translate(-4px, 10px) rotate(-2deg); opacity: 1; }
+    100% { transform: translate(60px, -120vh) rotate(8deg); opacity: 0.6; }
+  }
+  @keyframes contact-fade {
+    to { opacity: 0; }
+  }
+  .contact-fly {
+    animation: contact-fly 700ms cubic-bezier(.5, 0, .75, 0) forwards;
+    pointer-events: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .contact-fly { animation: contact-fade 250ms ease-out forwards; }
+  }
+
   .link-highlight {
     background-image: linear-gradient(#F98585, #F98585);
     background-repeat: no-repeat;
