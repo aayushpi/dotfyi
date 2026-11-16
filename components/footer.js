@@ -8,7 +8,7 @@ const SIGNOFF_URL = 'https://electricliterature.com/the-great-silence-by-ted-chi
 const HEADING = 'font-sans font-black text-[2rem] leading-[2.5rem] tracking-[-0.02em] text-ink m-0';
 
 export const SiteFooter = () => (
-  <footer className="px-6 lg:px-0 pb-16">
+  <footer className="px-6 lg:px-0 pb-32 md:pb-48">
     <div className="grid grid-cols-12">
       <div className="col-span-12 lg:col-start-2 lg:col-span-10 border-t border-ink pt-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6">
@@ -17,7 +17,7 @@ export const SiteFooter = () => (
               you be good, I love you
             </a>
           </p>
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-6">
             <ContactChat className={HEADING} />
             <p className={HEADING}>
               <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
