@@ -4,6 +4,7 @@ import { MDXProvider } from '@mdx-js/react';
 import { mdxComponents } from '../components/component-provider';
 import ThemeToggle from '../components/ThemeToggle';
 import CoralSweep from '../components/CoralSweep';
+import { SiteFooter } from '../components/footer';
 
 const App = ({ Component, pageProps }) => (
   <>
@@ -19,6 +20,7 @@ const App = ({ Component, pageProps }) => (
           <Component {...pageProps} />
         </div>
       </main>
+      <SiteFooter />
     </MDXProvider>
   </>
 );
