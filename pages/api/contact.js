@@ -34,10 +34,11 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: `Keep it under ${MAX_NOTE} characters.` });
   }
 
-  const from = process.env.CONTACT_FROM || process.env.NEWSLETTER_FROM;
+  // Any address on a Resend-verified domain works; aayush.fyi is verified for the newsletter.
+  const from = process.env.CONTACT_FROM || process.env.NEWSLETTER_FROM || 'Aayush <notes@aayush.fyi>';
   const to = process.env.CONTACT_TO || 'xoxo@aayush.fyi';
-  if (!from) {
-    console.error('contact: CONTACT_FROM / NEWSLETTER_FROM is not set');
+  if (!process.env.RESEND_API_KEY) {
+    console.error('contact: RESEND_API_KEY is not set for this environment');
     return res.status(500).json({ error: 'Messages aren’t set up yet.' });
   }
 

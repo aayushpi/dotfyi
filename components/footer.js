@@ -1,7 +1,6 @@
 import { ContactChat } from './ContactChat';
 
-// TODO: confirm this is the right profile URL.
-const LINKEDIN_URL = 'https://www.linkedin.com/in/aayushiyer/';
+const LINKEDIN_URL = 'https://www.linkedin.com/in/aayushpi/';
 const SIGNOFF_URL = 'https://electricliterature.com/the-great-silence-by-ted-chiang/';
 
 // Same style as the "Notes & Thoughts" heading on the homepage.
