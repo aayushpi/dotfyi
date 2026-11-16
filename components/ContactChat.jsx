@@ -10,6 +10,8 @@ export function ContactChat({ className = '' }) {
   const [status, setStatus] = useState('idle'); // idle | sending | sent | error
   const [error, setError] = useState('');
   const [sentNote, setSentNote] = useState('');
+  const [flying, setFlying] = useState(false);
+  const [justSent, setJustSent] = useState(false);
   const openedAt = useRef(0);
   const wrapRef = useRef(null);
   const emailRef = useRef(null);
@@ -51,13 +53,28 @@ export function ContactChat({ className = '' }) {
       setSentNote(note);
       setNote('');
       setStatus('sent');
+      // Let the confirmation bubble land, then fly the window away.
+      setTimeout(() => setFlying(true), 1100);
     } catch (err) {
       setError(err.message);
       setStatus('error');
     }
   }
 
-  const toggle = () => setOpen((o) => !o);
+  const toggle = () => {
+    if (flying) return;
+    if (!open && status === 'sent') setStatus('idle'); // fresh chat on reopen
+    setOpen((o) => !o);
+  };
+
+  const onFlown = (e) => {
+    if (e.target !== e.currentTarget) return;
+    setFlying(false);
+    setOpen(false);
+    setStatus('idle');
+    setJustSent(true);
+    setTimeout(() => setJustSent(false), 3000);
+  };
 
   return (
     <div ref={wrapRef} className="relative">
@@ -76,15 +93,17 @@ export function ContactChat({ className = '' }) {
         }}
         className={`${className} cursor-pointer`}
       >
-        Send a note
+        {justSent ? 'Sent \u2713' : 'Send a note'}
       </a>
+      <span className="sr-only" aria-live="polite">{status === 'sent' ? 'Note sent.' : ''}</span>
 
       {open && (
         <div
           id="contact-chat"
           role="dialog"
           aria-label="Send a note"
-          className="fixed inset-x-4 bottom-4 z-[60] md:absolute md:inset-x-auto md:left-0 md:bottom-full md:mb-4 md:w-[22rem] bg-bg border border-ink shadow-[6px_6px_0_0_#F98585] flex flex-col max-h-[calc(100vh-2rem)]"
+          onAnimationEnd={onFlown}
+          className={`${flying ? 'contact-fly ' : ''}fixed inset-x-4 bottom-4 z-[60] md:absolute md:inset-x-auto md:left-0 md:bottom-full md:mb-4 md:w-[22rem] bg-bg border border-ink shadow-[6px_6px_0_0_#F98585] flex flex-col max-h-[calc(100vh-2rem)]`}
         >
           <div className="flex items-center justify-between px-4 py-3 border-b border-border-subtle">
             <span className="text-[16px] font-semibold text-ink">Aayush</span>
